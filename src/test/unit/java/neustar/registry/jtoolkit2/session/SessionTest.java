@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import static org.junit.Assert.*;
 
-import com.ausregistry.jtoolkit2.TestEnvironment;
-import com.ausregistry.jtoolkit2.se.StandardCommandType;
+import neustar.registry.jtoolkit2.TestEnvironment;
+import neustar.registry.jtoolkit2.se.StandardCommandType;
 
 import org.junit.After;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 /**
  * An EPP logout command was sent to the server, but didn't achieve its

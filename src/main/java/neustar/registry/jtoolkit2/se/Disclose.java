@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 import org.w3c.dom.Element;
 
@@ -12,8 +12,8 @@ import org.w3c.dom.Element;
  * implemented in such classes as ContactCreateCommand and
  * ContactUpdateCommand.
  *
- * @see com.ausregistry.jtoolkit2.se.ContactCreateCommand
- * @see com.ausregistry.jtoolkit2.se.ContactUpdateCommand
+ * @see neustar.registry.jtoolkit2.se.ContactCreateCommand
+ * @see neustar.registry.jtoolkit2.se.ContactUpdateCommand
  */
 public class Disclose implements Appendable {
     private static final long serialVersionUID = -6183960266526804249L;

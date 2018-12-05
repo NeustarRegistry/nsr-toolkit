@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * This defines the enumeration that maps an extension namespace alias to a namespace definition and the identifier tag

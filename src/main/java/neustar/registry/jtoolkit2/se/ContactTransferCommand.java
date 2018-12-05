@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * The superclass of all contact transfer command classes.  Subclasses are

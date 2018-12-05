@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se.price;
+package neustar.registry.jtoolkit2.se.price;
 
 import java.math.BigDecimal;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.se.*;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.*;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 /**
  * <p>Extension for the EPP Domain Transfer command, representing the Transfer Premium Domain aspect of the

@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.test.infrastructure;
+package neustar.registry.jtoolkit2.test.infrastructure;
 
-import static com.ausregistry.jtoolkit2.test.infrastructure.InetAddressMatcher.matchIpAddress;
+import static neustar.registry.jtoolkit2.test.infrastructure.InetAddressMatcher.matchIpAddress;
 
 import java.util.Arrays;
 
-import com.ausregistry.jtoolkit2.se.Host;
+import neustar.registry.jtoolkit2.se.Host;
 import org.hamcrest.CustomTypeSafeMatcher;
 
 public class HostMatcher extends CustomTypeSafeMatcher<Host> {

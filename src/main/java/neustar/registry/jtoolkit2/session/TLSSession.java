@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -15,24 +15,24 @@ import java.util.logging.Logger;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLSocket;
 
-import com.ausregistry.jtoolkit2.xml.XmlOutputConfig;
+import neustar.registry.jtoolkit2.xml.XmlOutputConfig;
 import org.xml.sax.SAXException;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandType;
-import com.ausregistry.jtoolkit2.se.Greeting;
-import com.ausregistry.jtoolkit2.se.LoginCommand;
-import com.ausregistry.jtoolkit2.se.LogoutCommand;
-import com.ausregistry.jtoolkit2.se.PollRequestCommand;
-import com.ausregistry.jtoolkit2.se.Response;
-import com.ausregistry.jtoolkit2.se.Result;
-import com.ausregistry.jtoolkit2.se.ResultCode;
-import com.ausregistry.jtoolkit2.xml.ParsingException;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandType;
+import neustar.registry.jtoolkit2.se.Greeting;
+import neustar.registry.jtoolkit2.se.LoginCommand;
+import neustar.registry.jtoolkit2.se.LogoutCommand;
+import neustar.registry.jtoolkit2.se.PollRequestCommand;
+import neustar.registry.jtoolkit2.se.Response;
+import neustar.registry.jtoolkit2.se.Result;
+import neustar.registry.jtoolkit2.se.ResultCode;
+import neustar.registry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 
 /**
  * <p>

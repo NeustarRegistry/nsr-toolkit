@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 /**
  * The KeyStore was found in the location specified, but loading of the

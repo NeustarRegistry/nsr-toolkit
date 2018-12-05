@@ -1,16 +1,16 @@
-package com.ausregistry.jtoolkit2.se.price;
+package neustar.registry.jtoolkit2.se.price;
 
-import static com.ausregistry.jtoolkit2.se.ReceiveSE.replaceIndex;
+import static neustar.registry.jtoolkit2.se.ReceiveSE.replaceIndex;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.ausregistry.jtoolkit2.se.Period;
-import com.ausregistry.jtoolkit2.se.PeriodUnit;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.Period;
+import neustar.registry.jtoolkit2.se.PeriodUnit;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * <p>Representation of the EPP Domain Check response extension for Pricing Check aspect of the Domain Name Check
@@ -23,7 +23,7 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * <p>For flexibility, this implementation extracts the data from the response using XPath queries, the expressions
  * for which are defined statically.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.price.DomainCheckPriceV1_2CommandExtension
+ * @see neustar.registry.jtoolkit2.se.price.DomainCheckPriceV1_2CommandExtension
  * @see <a href="http://ausregistry.github.io/doc/pricing-1.2/pricing-1.2.html">Domain Name Check Pricing Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */

@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.util.ArrayList;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * <p>Extension for the EPP Domain Create and Domain Info response, representing the Variant Info
@@ -17,7 +17,7 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * <p>For flexibility, this implementation extracts the data from the response using XPath queries, the expressions
  * for which are defined statically.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.variant.DomainUpdateVariantCommandExtension
+ * @see neustar.registry.jtoolkit2.se.variant.DomainUpdateVariantCommandExtension
  */
 public final class DomainVariantResponseExtension extends
         ResponseExtension {
@@ -47,7 +47,7 @@ public final class DomainVariantResponseExtension extends
     }
 
     /**
-     * @see ResponseExtension#fromXML(com.ausregistry.jtoolkit2.xml.XMLDocument)
+     * @see ResponseExtension#fromXML(neustar.registry.jtoolkit2.xml.XMLDocument)
      */
     public void fromXML(final XMLDocument xmlDoc)
             throws XPathExpressionException {

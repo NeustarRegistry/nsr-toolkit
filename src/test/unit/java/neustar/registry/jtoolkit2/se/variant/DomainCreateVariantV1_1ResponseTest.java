@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.variant;
+package neustar.registry.jtoolkit2.se.variant;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -6,14 +6,14 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 
-import com.ausregistry.jtoolkit2.se.DomainCreateResponse;
-import com.ausregistry.jtoolkit2.se.DomainVariantResponseExtensionV1_1;
-import com.ausregistry.jtoolkit2.se.IdnDomainVariant;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.se.DomainCreateResponse;
+import neustar.registry.jtoolkit2.se.DomainVariantResponseExtensionV1_1;
+import neustar.registry.jtoolkit2.se.IdnDomainVariant;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
 import org.junit.Test;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 
 public class DomainCreateVariantV1_1ResponseTest {
 

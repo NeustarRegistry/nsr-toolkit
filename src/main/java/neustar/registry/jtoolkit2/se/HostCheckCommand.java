@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * A HostCheckCommand is used to check the availability of host objects
  * in a Registry.  Instances of this class generate RFC5730 and RFC5732
  * compliant host check EPP command service elements via the toXML method.
  *
- * @see com.ausregistry.jtoolkit2.se.HostCheckResponse
+ * @see neustar.registry.jtoolkit2.se.HostCheckResponse
  */
 public class HostCheckCommand extends CheckCommand {
     private static final long serialVersionUID = 8765121289983170340L;

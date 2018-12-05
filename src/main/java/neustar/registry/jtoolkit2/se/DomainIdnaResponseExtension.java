@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import javax.xml.xpath.XPathExpressionException;
 
@@ -21,8 +21,8 @@ import javax.xml.xpath.XPathExpressionException;
  * For flexibility, this implementation extracts the data from the response
  * using XPath queries, the expressions for which are defined statically.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainCreateIdnaCommandExtension
- * @see com.ausregistry.jtoolkit2.se.ResponseExtension
+ * @see neustar.registry.jtoolkit2.se.DomainCreateIdnaCommandExtension
+ * @see neustar.registry.jtoolkit2.se.ResponseExtension
  */
 public final class DomainIdnaResponseExtension extends
         ResponseExtension {
@@ -61,7 +61,7 @@ public final class DomainIdnaResponseExtension extends
     }
 
     /**
-     * @see com.ausregistry.jtoolkit2.se.ResponseExtension#fromXML(com.ausregistry.jtoolkit2.xml.XMLDocument)
+     * @see neustar.registry.jtoolkit2.se.ResponseExtension#fromXML(neustar.registry.jtoolkit2.xml.XMLDocument)
      */
     public void fromXML(final XMLDocument xmlDoc)
             throws XPathExpressionException {

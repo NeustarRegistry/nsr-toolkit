@@ -1,7 +1,7 @@
-package com.ausregistry.jtoolkit2;
+package neustar.registry.jtoolkit2;
 
-import com.ausregistry.jtoolkit2.se.*;
-import com.ausregistry.jtoolkit2.session.*;
+import neustar.registry.jtoolkit2.se.*;
+import neustar.registry.jtoolkit2.session.*;
 
 public class PerfTest implements Runnable {
     private static final String PROPS_FILE = "/home2/anthony/etc/toolkit/perftest.props";

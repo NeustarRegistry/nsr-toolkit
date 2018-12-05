@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se.price;
+package neustar.registry.jtoolkit2.se.price;
 
 import java.math.BigDecimal;
 
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandExtension;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandExtension;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 import org.w3c.dom.Element;
 
 /**
@@ -17,8 +17,8 @@ import org.w3c.dom.Element;
  * supplied, should match the renewal fee that is set for the domain name for the one year.
  * The response expected from a server should be handled by a Domain Transfer Response object.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainTransferRequestCommand
- * @see com.ausregistry.jtoolkit2.se.DomainTransferResponse
+ * @see neustar.registry.jtoolkit2.se.DomainTransferRequestCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferResponse
  * @see <a href="http://ausregistry.github.io/doc/price-1.2/price-1.2.html">Domain Name Price Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */

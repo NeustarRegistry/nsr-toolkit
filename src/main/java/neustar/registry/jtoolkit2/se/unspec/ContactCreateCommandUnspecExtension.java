@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se.unspec;
+package neustar.registry.jtoolkit2.se.unspec;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandExtension;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandExtension;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 /**
  * <p>Extension for the EPP Contact Create command, indicating the contact can be used as an EXTContact.  This will
@@ -14,7 +14,7 @@ import com.ausregistry.jtoolkit2.xml.XMLWriter;
  * <p>Use this to command to mark a contact as an EXTContact which will cause NYC specific address validation
  * to be performed. </p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainRenewCommand
+ * @see neustar.registry.jtoolkit2.se.DomainRenewCommand
  */
 public class ContactCreateCommandUnspecExtension implements CommandExtension {
 

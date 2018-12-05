@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se.launch;
+package neustar.registry.jtoolkit2.se.launch;
 
-import static com.ausregistry.jtoolkit2.se.ReceiveSE.replaceIndex;
+import static neustar.registry.jtoolkit2.se.ReceiveSE.replaceIndex;
 
 import java.util.HashMap;
 import java.util.Map;
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.se.tmch.ClaimsInfo;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.se.tmch.ClaimsInfo;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * <p>Representation of the EPP Domain Check response Extension with the Claims key Check aspect of the

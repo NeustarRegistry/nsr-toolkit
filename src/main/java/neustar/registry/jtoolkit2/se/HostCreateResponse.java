@@ -1,15 +1,15 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Use this to access create data for a host as provided in an EPP host create response compliant with RFC5730 and
  * RFC5732. Such a service element is sent by a compliant EPP server in response to a valid host create command,
  * implemented by the HostCreateCommand.
  *
- * @see com.ausregistry.jtoolkit2.se.HostCreateCommand
+ * @see neustar.registry.jtoolkit2.se.HostCreateCommand
  */
 public class HostCreateResponse extends CreateResponse {
     private static final long serialVersionUID = -8243656728549488950L;

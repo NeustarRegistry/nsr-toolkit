@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.test.infrastructure;
+package neustar.registry.jtoolkit2.test.infrastructure;
 
-import com.ausregistry.jtoolkit2.se.InetAddress;
+import neustar.registry.jtoolkit2.se.InetAddress;
 import org.hamcrest.CustomTypeSafeMatcher;
 
 public class InetAddressMatcher extends CustomTypeSafeMatcher<InetAddress> {

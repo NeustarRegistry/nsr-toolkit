@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se.app;
+package neustar.registry.jtoolkit2.se.app;
 
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * <p>Extension for the EPP Domain Create response, representing the Application Create aspect of the Domain Name
@@ -18,7 +18,7 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * <p>For flexibility, this implementation extracts the data from the response using XPath queries, the expressions
  * for which are defined statically.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainCreateCommand
+ * @see neustar.registry.jtoolkit2.se.DomainCreateCommand
  * @see DomainCreateApplicationCommandExtension
  * @see <a href="http://ausregistry.github.io/doc/application-1.0/application-1.0.html">Domain Name Application
  * Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>

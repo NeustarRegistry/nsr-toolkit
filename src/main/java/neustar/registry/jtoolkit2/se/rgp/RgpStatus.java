@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.rgp;
+package neustar.registry.jtoolkit2.se.rgp;
 
 public class RgpStatus {
     private final String status;

@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.secdns.DSData;
-import com.ausregistry.jtoolkit2.se.secdns.DSOrKeyType;
-import com.ausregistry.jtoolkit2.se.secdns.SecDnsDomainUpdateCommandExtension;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.secdns.DSData;
+import neustar.registry.jtoolkit2.se.secdns.DSOrKeyType;
+import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainUpdateCommandExtension;
 
 public class AuDomainModifyRegistrantCommandTest {
     private static String registrantName = "AusRegistry";

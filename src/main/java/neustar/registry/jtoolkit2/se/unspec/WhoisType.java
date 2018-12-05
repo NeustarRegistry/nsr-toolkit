@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.unspec;
+package neustar.registry.jtoolkit2.se.unspec;
 
 public enum WhoisType {
     LEGAL("Legal"),

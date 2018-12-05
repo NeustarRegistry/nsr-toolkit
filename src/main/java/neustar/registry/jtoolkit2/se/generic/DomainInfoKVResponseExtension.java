@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.generic;
+package neustar.registry.jtoolkit2.se.generic;
 
 import java.util.Set;
 import java.util.TreeMap;
@@ -9,8 +9,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Extension of the domain mapping of the EPP info response, as defined in

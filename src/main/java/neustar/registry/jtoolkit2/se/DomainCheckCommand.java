@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * A DomainCheckCommand is used to check the availability of domain objects
  * in a Registry.  Instances of this class generate RFC5730 and RFC5731
  * compliant domain check EPP command service elements via the toXML method.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainCheckResponse
+ * @see neustar.registry.jtoolkit2.se.DomainCheckResponse
  */
 public class DomainCheckCommand extends CheckCommand {
     private static final long serialVersionUID = 3050267498759687925L;

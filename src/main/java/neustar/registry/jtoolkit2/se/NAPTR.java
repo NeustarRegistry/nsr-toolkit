@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 import org.w3c.dom.Element;
 
 /**
@@ -11,14 +11,14 @@ import org.w3c.dom.Element;
  * to ENUM domain objects, or to view attributes of NAPTR records already
  * assigned to ENUM domain objects provisioned in an EPP Registry.
  *
- * @see com.ausregistry.jtoolkit2.se.EnumDomainCreateCommand Associate NAPTR
+ * @see neustar.registry.jtoolkit2.se.EnumDomainCreateCommand Associate NAPTR
  * records with a new ENUM domain object, rather than delegating to
  * nameservers.
  *
- * @see com.ausregistry.jtoolkit2.se.EnumDomainUpdateCommand Add or remove
+ * @see neustar.registry.jtoolkit2.se.EnumDomainUpdateCommand Add or remove
  * NAPTR record associations to/from an ENUM domain object.
  *
- * @see com.ausregistry.jtoolkit2.se.EnumDomainInfoResponse Report assocations
+ * @see neustar.registry.jtoolkit2.se.EnumDomainInfoResponse Report assocations
  * between a domain object and NAPTRs.
  */
 public class NAPTR implements Appendable {

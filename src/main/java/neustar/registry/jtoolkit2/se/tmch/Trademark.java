@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.tmch;
+package neustar.registry.jtoolkit2.se.tmch;
 
 import javax.xml.bind.DatatypeConverter;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 

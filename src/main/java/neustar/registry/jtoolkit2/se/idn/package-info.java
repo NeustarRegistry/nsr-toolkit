@@ -5,5 +5,5 @@
  * @see <a href="http://ausregistry.github.com/doc/premium-1.0/premium-1.0.html">Internationalized Domain Name
  * Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
-package com.ausregistry.jtoolkit2.se.idn;
+package neustar.registry.jtoolkit2.se.idn;
 

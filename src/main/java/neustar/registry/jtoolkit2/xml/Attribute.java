@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.xml;
+package neustar.registry.jtoolkit2.xml;
 
 public class Attribute {
 

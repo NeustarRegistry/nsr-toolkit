@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.xml.Attribute;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.xml.Attribute;
 
 /**
  * Representation of the EPP info command, as defined in RFC5730.
@@ -10,7 +10,7 @@ import com.ausregistry.jtoolkit2.xml.Attribute;
  * and specify the object-specific identifier of the object to request
  * information about.
  *
- * @see com.ausregistry.jtoolkit2.se.InfoResponse
+ * @see neustar.registry.jtoolkit2.se.InfoResponse
  */
 public abstract class InfoCommand extends ObjectCommand {
 

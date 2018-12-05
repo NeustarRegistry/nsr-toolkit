@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.rgp;
+package neustar.registry.jtoolkit2.se.rgp;
 
 /**
  * Used to store an element for a domain restore report that has a text element

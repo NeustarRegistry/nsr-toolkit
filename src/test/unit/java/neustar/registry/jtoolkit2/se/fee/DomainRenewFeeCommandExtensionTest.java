@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.se.fee;
+package neustar.registry.jtoolkit2.se.fee;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.*;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.*;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;

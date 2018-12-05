@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 /**
  * Configure the behaviour of a SessionPool.  {@link
- * com.ausregistry.jtoolkit2.session.Session}s in the pool are configured from
- * the {@link com.ausregistry.jtoolkit2.session.SessionProperties} extended by
+ * neustar.registry.jtoolkit2.session.Session}s in the pool are configured from
+ * the {@link neustar.registry.jtoolkit2.session.SessionProperties} extended by
  * this.
  */
 public interface SessionPoolProperties {

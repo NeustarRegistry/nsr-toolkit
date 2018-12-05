@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Mapping of EPP urn:ar:params:xml:ns:arext-1.0 domainUndelete command

@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 import org.w3c.dom.Element;
 
@@ -10,10 +10,10 @@ import org.w3c.dom.Element;
  * the toXML method, login service elements compliant with the login
  * specification in RFC5730.
  *
- * @see com.ausregistry.jtoolkit2.se.Greeting For services available to be used
+ * @see neustar.registry.jtoolkit2.se.Greeting For services available to be used
  * in the login command on the chosen EPP server.
  *
- * @see com.ausregistry.jtoolkit2.se.LogoutCommand To end a session opened
+ * @see neustar.registry.jtoolkit2.se.LogoutCommand To end a session opened
  * using LoginCommand.
  */
 public final class LoginCommand extends Command {

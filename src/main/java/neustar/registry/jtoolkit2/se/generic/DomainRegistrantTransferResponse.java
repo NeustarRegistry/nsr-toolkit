@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.generic;
+package neustar.registry.jtoolkit2.se.generic;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.se.Response;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.se.Response;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.util.GregorianCalendar;
@@ -15,7 +15,7 @@ import java.util.GregorianCalendar;
  * registrant transfer command, implemented by the
  * DomainRegistrantTransferCommand.
  *
- * @see com.ausregistry.jtoolkit2.se.generic.DomainRegistrantTransferCommand
+ * @see neustar.registry.jtoolkit2.se.generic.DomainRegistrantTransferCommand
  */
 public class DomainRegistrantTransferResponse extends Response {
     private static final long serialVersionUID = -5724827272682186647L;

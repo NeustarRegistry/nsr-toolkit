@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import javax.net.ssl.*;
 import javax.security.auth.x500.X500Principal;
@@ -15,7 +15,7 @@ import java.security.cert.*;
 import java.util.Enumeration;
 import java.util.logging.Logger;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * <p>

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.tmdb.model;
+package neustar.registry.jtoolkit2.tmdb.model;
 
 /**
  *  Represents a "classDesc" element in the 'urn:ietf:params:xml:ns:tmNotice-1.0' namespace,

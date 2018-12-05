@@ -1,12 +1,12 @@
-package com.ausregistry.jtoolkit2.se.rgp;
+package neustar.registry.jtoolkit2.se.rgp;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -21,8 +21,8 @@ import org.w3c.dom.NodeList;
  * <p>For flexibility, this implementation extracts the data from the response using XPath queries, the expressions
  * for which are defined statically.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainInfoCommand
- * @see com.ausregistry.jtoolkit2.se.DomainInfoResponse
+ * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
+ * @see neustar.registry.jtoolkit2.se.DomainInfoResponse
  * @see <a href="http://tools.ietf.org/html/rfc3915">Domain Registry Grace Period Mapping for the
  * Extensible Provisioning Protocol (EPP)</a>
  */
@@ -47,7 +47,7 @@ public final class DomainInfoRgpResponseExtension extends ResponseExtension {
     }
 
     /**
-     * @see com.ausregistry.jtoolkit2.se.ResponseExtension#fromXML(com.ausregistry.jtoolkit2.xml.XMLDocument)
+     * @see neustar.registry.jtoolkit2.se.ResponseExtension#fromXML(neustar.registry.jtoolkit2.xml.XMLDocument)
      */
     @Override
 public void fromXML(final XMLDocument xmlDoc)

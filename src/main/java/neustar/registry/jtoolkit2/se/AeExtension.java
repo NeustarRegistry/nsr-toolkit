@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * A bundled set of constants representing the .ae EPP extension

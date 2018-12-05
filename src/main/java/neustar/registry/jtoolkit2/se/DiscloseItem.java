@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Disclosure preferences are viewed via an instances of this class.  This
@@ -7,8 +7,8 @@ package com.ausregistry.jtoolkit2.se;
  * disclosure status may be found in the result data of a command info
  * response, implemented in the ContactInfoResponse class.
  *
- * @see com.ausregistry.jtoolkit2.se.ContactInfoCommand
- * @see com.ausregistry.jtoolkit2.se.ContactInfoResponse
+ * @see neustar.registry.jtoolkit2.se.ContactInfoCommand
+ * @see neustar.registry.jtoolkit2.se.ContactInfoResponse
  */
 public class DiscloseItem implements java.io.Serializable {
     private static final long serialVersionUID = -7503075321824634366L;

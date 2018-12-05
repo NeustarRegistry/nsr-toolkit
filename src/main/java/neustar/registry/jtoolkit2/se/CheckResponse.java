@@ -1,17 +1,17 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import java.util.HashMap;
 import java.util.Set;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Representation of the EPP check response, as defined in RFC5730. Subclasses
  * of this must specify the object to which the command is mapped. Instances of
  * this class provide an interface to access availability information for each
- * object identified in a {@link com.ausregistry.jtoolkit2.se.CheckCommand}.
+ * object identified in a {@link neustar.registry.jtoolkit2.se.CheckCommand}.
  * This relies on the instance first being initialised by a suitable EPP check
  * response using the method fromXML. For flexibility, this implementation
  * extracts the data from the response using XPath queries, the expressions for
@@ -19,7 +19,7 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  *
  * @param <I> the type of object identifier used in this check response
  *
- * @see com.ausregistry.jtoolkit2.se.CheckCommand
+ * @see neustar.registry.jtoolkit2.se.CheckCommand
  */
 public abstract class CheckResponse<I> extends DataResponse {
 

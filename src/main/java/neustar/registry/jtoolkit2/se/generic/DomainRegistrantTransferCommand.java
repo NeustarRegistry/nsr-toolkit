@@ -1,16 +1,16 @@
-package com.ausregistry.jtoolkit2.se.generic;
+package neustar.registry.jtoolkit2.se.generic;
 
 import java.util.GregorianCalendar;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandType;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.Period;
-import com.ausregistry.jtoolkit2.xml.XmlOutputConfig;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandType;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.Period;
+import neustar.registry.jtoolkit2.xml.XmlOutputConfig;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 

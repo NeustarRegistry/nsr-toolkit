@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.se.app.DomainInfoApplicationResponseExtension;
-import com.ausregistry.jtoolkit2.se.generic.DomainInfoKVResponseExtension;
-import com.ausregistry.jtoolkit2.se.idn.DomainInfoIdnResponseExtension;
-import com.ausregistry.jtoolkit2.se.rgp.DomainInfoRgpResponseExtension;
-import com.ausregistry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
-import com.ausregistry.jtoolkit2.xml.ParsingException;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.se.app.DomainInfoApplicationResponseExtension;
+import neustar.registry.jtoolkit2.se.generic.DomainInfoKVResponseExtension;
+import neustar.registry.jtoolkit2.se.idn.DomainInfoIdnResponseExtension;
+import neustar.registry.jtoolkit2.se.rgp.DomainInfoRgpResponseExtension;
+import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
+import neustar.registry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

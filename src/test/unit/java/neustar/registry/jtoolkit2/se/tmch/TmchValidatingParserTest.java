@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.tmch;
+package neustar.registry.jtoolkit2.se.tmch;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Matchers.any;
@@ -25,8 +25,8 @@ import java.security.cert.*;
 import java.util.Arrays;
 import java.util.Date;
 
-import com.ausregistry.jtoolkit2.se.tmch.exception.*;
-import com.ausregistry.jtoolkit2.test.infrastructure.ReflectionUtils;
+import neustar.registry.jtoolkit2.se.tmch.exception.*;
+import neustar.registry.jtoolkit2.test.infrastructure.ReflectionUtils;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;

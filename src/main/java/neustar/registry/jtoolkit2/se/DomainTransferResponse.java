@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import java.util.GregorianCalendar;
 
@@ -15,12 +15,12 @@ import javax.xml.xpath.XPathExpressionException;
  * transfer command, implemented by a subclass of the DomainTransferCommand
  * class.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainTransferCommand
- * @see com.ausregistry.jtoolkit2.se.DomainTransferRequestCommand
- * @see com.ausregistry.jtoolkit2.se.DomainTransferApproveCommand
- * @see com.ausregistry.jtoolkit2.se.DomainTransferCancelCommand
- * @see com.ausregistry.jtoolkit2.se.DomainTransferRejectCommand
- * @see com.ausregistry.jtoolkit2.se.DomainTransferQueryCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferRequestCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferApproveCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferCancelCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferRejectCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferQueryCommand
  */
 public class DomainTransferResponse extends TransferResponse {
     private static final long serialVersionUID = -3652461689615678734L;

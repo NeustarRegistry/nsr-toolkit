@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.tmdb;
+package neustar.registry.jtoolkit2.tmdb;
 
 import static com.harlap.test.http.MockHttpServer.Method;
 import static org.hamcrest.CoreMatchers.is;
@@ -12,8 +12,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import ari.dnrs.test.infrastructure.RegistryMockSSLHttpServer;
-import com.ausregistry.jtoolkit2.tmdb.model.TmClaim;
-import com.ausregistry.jtoolkit2.tmdb.model.TmNotice;
+import neustar.registry.jtoolkit2.tmdb.model.TmClaim;
+import neustar.registry.jtoolkit2.tmdb.model.TmNotice;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

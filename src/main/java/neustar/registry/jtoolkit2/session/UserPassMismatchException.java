@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * The credentials supplied to the EPP login command were considered invalid

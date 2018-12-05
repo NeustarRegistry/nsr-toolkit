@@ -1,7 +1,7 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import static com.ausregistry.jtoolkit2.se.DomainInfoResponseTest.DomainInfoResponseBuilder.infoResponseBuilder;
-import static com.ausregistry.jtoolkit2.test.infrastructure.HostMatcher.matchHost;
+import static neustar.registry.jtoolkit2.se.DomainInfoResponseTest.DomainInfoResponseBuilder.infoResponseBuilder;
+import static neustar.registry.jtoolkit2.test.infrastructure.HostMatcher.matchHost;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.arrayContaining;
 import static org.junit.Assert.assertArrayEquals;
@@ -14,9 +14,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import org.junit.Test;
 
 public class DomainInfoResponseTest {

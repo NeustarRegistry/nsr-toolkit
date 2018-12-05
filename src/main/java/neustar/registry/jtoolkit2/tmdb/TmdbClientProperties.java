@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.tmdb;
+package neustar.registry.jtoolkit2.tmdb;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

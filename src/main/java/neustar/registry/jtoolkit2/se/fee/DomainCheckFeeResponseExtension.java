@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.fee;
+package neustar.registry.jtoolkit2.se.fee;
 
 
-import com.ausregistry.jtoolkit2.se.*;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.*;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -10,7 +10,7 @@ import javax.xml.xpath.XPathExpressionException;
 import java.math.BigDecimal;
 import java.util.*;
 
-import static com.ausregistry.jtoolkit2.se.ReceiveSE.replaceIndex;
+import static neustar.registry.jtoolkit2.se.ReceiveSE.replaceIndex;
 
 /**
  * <p>Extension for the EPP Domain Check response, representing the Fee

@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
-import com.ausregistry.jtoolkit2.se.CommandType;
+import neustar.registry.jtoolkit2.se.CommandType;
 
 /**
  * Extend the capabilities of a StatsViewer by supporting modification of the available statistics.
@@ -9,13 +9,13 @@ public interface StatsManager extends StatsViewer {
 
     /**
      * Increment the result count for the given code. This is reflected in the return value of
-     * {@link com.ausregistry.jtoolkit2.session.StatsViewer#getResultCodeCount}.
+     * {@link neustar.registry.jtoolkit2.session.StatsViewer#getResultCodeCount}.
      */
     void incResultCounter(int resultCode);
 
     /**
      * Increment the command count for the given command type. This is reflected in the return value of
-     * {@link com.ausregistry.jtoolkit2.session.StatsViewer#getCommandCount}.
+     * {@link neustar.registry.jtoolkit2.session.StatsViewer#getCommandCount}.
      */
     void incCommandCounter(CommandType type);
 

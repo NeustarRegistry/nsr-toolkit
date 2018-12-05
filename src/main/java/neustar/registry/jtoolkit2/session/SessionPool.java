@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
-import com.ausregistry.jtoolkit2.se.Greeting;
-import com.ausregistry.jtoolkit2.se.CommandType;
+import neustar.registry.jtoolkit2.se.Greeting;
+import neustar.registry.jtoolkit2.se.CommandType;
 
 import java.io.IOException;
 
 /**
  * A SessionPool has responsibility for maintaining a persistent pool of EPP
  * sessions to a single EPP server.  A pool may only grow to the size specified
- * in its {@link com.ausregistry.jtoolkit2.session.SessionPoolProperties} and
+ * in its {@link neustar.registry.jtoolkit2.session.SessionPoolProperties} and
  * after successful initialisation may be instructed to hold sessions open for
  * at least the time specified by the client timeout property.  The client must
  * correctly specify the EPP server's timeout value in order for the
@@ -16,9 +16,9 @@ import java.io.IOException;
  * responsible for actually running a keep-alive loop; see the implementation of
  * the {@code run()} method in the package private class SessionManagerImpl for
  * an example of how to use the keep-alive feature.  By default, the {@link
- * com.ausregistry.jtoolkit2.session.SessionManagerFactory} will provide
+ * neustar.registry.jtoolkit2.session.SessionManagerFactory} will provide
  * that implementation of {@link
- * com.ausregistry.jtoolkit2.session.SessionManager}.
+ * neustar.registry.jtoolkit2.session.SessionManager}.
  */
 public interface SessionPool {
     /**

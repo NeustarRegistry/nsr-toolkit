@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se.secdns;
+package neustar.registry.jtoolkit2.se.secdns;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandExtension;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandExtension;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 /**
  * Processes the &lt;update&gt; element as documented in RFC5910.

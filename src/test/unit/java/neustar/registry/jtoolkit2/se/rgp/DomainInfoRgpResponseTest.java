@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se.rgp;
+package neustar.registry.jtoolkit2.se.rgp;
 
 import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.List;
 
-import com.ausregistry.jtoolkit2.se.DomainInfoResponse;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.se.DomainInfoResponse;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import org.junit.Test;
 
 public class DomainInfoRgpResponseTest {

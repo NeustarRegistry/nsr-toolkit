@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.secdns;
+package neustar.registry.jtoolkit2.se.secdns;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,10 +6,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.DomainCreateCommand;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.DomainCreateCommand;
 
 public class SecDnsDomainCreateCommandExtensionAddTest {
 

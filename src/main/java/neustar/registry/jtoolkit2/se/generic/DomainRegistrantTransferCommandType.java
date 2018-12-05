@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se.generic;
+package neustar.registry.jtoolkit2.se.generic;
 
-import com.ausregistry.jtoolkit2.se.CommandType;
+import neustar.registry.jtoolkit2.se.CommandType;
 
 /**
  * The base class for the Domain Registrant Transfer Command.

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Use this to approve the transfer of a domain object currently pending
@@ -7,7 +7,7 @@ package com.ausregistry.jtoolkit2.se;
  * compliant domain transfer EPP command service elements via the toXML method
  * with the transfer operation set to "approve".
  *
- * @see com.ausregistry.jtoolkit2.se.DomainTransferResponse
+ * @see neustar.registry.jtoolkit2.se.DomainTransferResponse
  */
 public class DomainTransferApproveCommand extends DomainTransferCommand {
     private static final long serialVersionUID = 5057086047385703151L;

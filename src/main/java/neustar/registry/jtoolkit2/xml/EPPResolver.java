@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.xml;
+package neustar.registry.jtoolkit2.xml;
 
 import java.io.InputStream;
 import java.util.*;
@@ -9,11 +9,11 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.URIResolver;
 import javax.xml.transform.stream.StreamSource;
 
-import com.ausregistry.jtoolkit2.ConfigurationError;
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ExtensionImpl;
-import com.ausregistry.jtoolkit2.se.StandardObjectType;
+import neustar.registry.jtoolkit2.ConfigurationError;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ExtensionImpl;
+import neustar.registry.jtoolkit2.se.StandardObjectType;
 
 /**
  * Provides URI to Source resolution service as specified by the URIResolver interface.

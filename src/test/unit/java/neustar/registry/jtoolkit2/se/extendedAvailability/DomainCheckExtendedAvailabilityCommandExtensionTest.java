@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se.extendedAvailability;
+package neustar.registry.jtoolkit2.se.extendedAvailability;
 
 import static org.junit.Assert.assertEquals;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.DomainCheckCommand;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.DomainCheckCommand;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;

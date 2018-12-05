@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se.block;
+package neustar.registry.jtoolkit2.se.block;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandExtension;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandExtension;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 /**
  * <p>Extension for the EPP Domain Info command, representing the Block Info aspect of the Block extension.</p>
@@ -14,7 +14,7 @@ import com.ausregistry.jtoolkit2.xml.XMLWriter;
  * compliant with RFC5730 and RFC5731. The response expected from a server should be
  * handled by a Domain Info Response with the Block Info Response extension.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainInfoCommand
+ * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
  * @see DomainInfoBlockResponseExtension
  * @see <a href="http://ausregistry.github.io/doc/block-1.0/block-1.0.html">Block Extension Mapping for the
  * Extensible Provisioning Protocol (EPP)</a>

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.xml;
+package neustar.registry.jtoolkit2.xml;
 
 import java.util.logging.Logger;
 
@@ -6,8 +6,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.session.FactoryConfigurationError;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.session.FactoryConfigurationError;
 
 /**
  * Provides an implementation of DefaultHandler.  The default {@link
@@ -35,14 +35,14 @@ public final class HandlerFactory {
     /**
      * Create a new DefaultHandler instance.  The implementation defaults to
      * org.xml.sax.helpers.DefaultHandler but may be overridden by setting
-     * the system property com.ausregistry.jtoolkit2.errhandler.class to the
+     * the system property neustar.registry.jtoolkit2.errhandler.class to the
      * full name of the alternative class.
      */
     public static DefaultHandler newInstance()
         throws FactoryConfigurationError {
 
         String handlerClass = System.getProperty(
-                "com.ausregistry.jtoolkit2.errhandler.class");
+                "neustar.registry.jtoolkit2.errhandler.class");
 
         if (handlerClass != null) {
             return newInstance(handlerClass);

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.extendedAvailability;
+package neustar.registry.jtoolkit2.se.extendedAvailability;
 
 import java.util.GregorianCalendar;
 

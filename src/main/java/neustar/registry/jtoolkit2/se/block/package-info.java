@@ -5,5 +5,5 @@
  * @see <a href="http://ausregistry.github.com/doc/block-1.0/block-1.0.html">
  *     Block Extension for the Extensible Provisioning Protocol (EPP)</a>
  */
-package com.ausregistry.jtoolkit2.se.block;
+package neustar.registry.jtoolkit2.se.block;
 

@@ -1,16 +1,16 @@
-package com.ausregistry.jtoolkit2.demo;
+package neustar.registry.jtoolkit2.demo;
 
-import com.ausregistry.jtoolkit2.se.DomainCreateCommand;
-import com.ausregistry.jtoolkit2.se.DomainCreateResponse;
-import com.ausregistry.jtoolkit2.se.ResultCode;
-import com.ausregistry.jtoolkit2.se.secdns.DSData;
-import com.ausregistry.jtoolkit2.se.secdns.DSOrKeyType;
-import com.ausregistry.jtoolkit2.se.secdns.SecDnsDomainCreateCommandExtension;
-import com.ausregistry.jtoolkit2.session.SessionManager;
-import com.ausregistry.jtoolkit2.session.SessionManagerFactory;
-import com.ausregistry.jtoolkit2.session.SessionManagerProperties;
-import com.ausregistry.jtoolkit2.session.SessionManagerPropertiesImpl;
-import com.ausregistry.jtoolkit2.session.Transaction;
+import neustar.registry.jtoolkit2.se.DomainCreateCommand;
+import neustar.registry.jtoolkit2.se.DomainCreateResponse;
+import neustar.registry.jtoolkit2.se.ResultCode;
+import neustar.registry.jtoolkit2.se.secdns.DSData;
+import neustar.registry.jtoolkit2.se.secdns.DSOrKeyType;
+import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainCreateCommandExtension;
+import neustar.registry.jtoolkit2.session.SessionManager;
+import neustar.registry.jtoolkit2.session.SessionManagerFactory;
+import neustar.registry.jtoolkit2.session.SessionManagerProperties;
+import neustar.registry.jtoolkit2.session.SessionManagerPropertiesImpl;
+import neustar.registry.jtoolkit2.session.Transaction;
 
 /**
  * A demonstration of the steps required to perform a domain create utilising the SECDNS extension.

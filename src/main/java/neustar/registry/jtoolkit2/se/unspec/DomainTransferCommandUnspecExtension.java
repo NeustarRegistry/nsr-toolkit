@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se.unspec;
+package neustar.registry.jtoolkit2.se.unspec;
 
-import static com.ausregistry.jtoolkit2.se.ExtendedObjectType.UNSPEC;
+import static neustar.registry.jtoolkit2.se.ExtendedObjectType.UNSPEC;
 
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandExtension;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandExtension;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 import org.w3c.dom.Element;
 
 /**
@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
  *
  * <p>This extension is also used to specify the UIN for transfer in the .travel zone.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainTransferRequestCommand
+ * @see neustar.registry.jtoolkit2.se.DomainTransferRequestCommand
  */
 public class DomainTransferCommandUnspecExtension implements CommandExtension {
     private String uin;

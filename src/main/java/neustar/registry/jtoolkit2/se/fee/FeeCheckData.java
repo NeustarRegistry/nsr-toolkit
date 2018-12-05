@@ -1,7 +1,7 @@
-package com.ausregistry.jtoolkit2.se.fee;
+package neustar.registry.jtoolkit2.se.fee;
 
 
-import com.ausregistry.jtoolkit2.se.Period;
+import neustar.registry.jtoolkit2.se.Period;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

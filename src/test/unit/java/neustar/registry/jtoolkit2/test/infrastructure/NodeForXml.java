@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.test.infrastructure;
+package neustar.registry.jtoolkit2.test.infrastructure;
 
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;

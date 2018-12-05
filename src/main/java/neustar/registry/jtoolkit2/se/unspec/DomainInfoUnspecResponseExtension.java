@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.unspec;
+package neustar.registry.jtoolkit2.se.unspec;
 
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import javax.xml.xpath.XPathExpressionException;
 
 /**

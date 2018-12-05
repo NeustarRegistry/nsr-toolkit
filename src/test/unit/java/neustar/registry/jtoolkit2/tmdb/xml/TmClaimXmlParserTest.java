@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.tmdb.xml;
+package neustar.registry.jtoolkit2.tmdb.xml;
 
-import static com.ausregistry.jtoolkit2.test.infrastructure.ToolkitMatchers.isNodeForXml;
+import static neustar.registry.jtoolkit2.test.infrastructure.ToolkitMatchers.isNodeForXml;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
@@ -11,7 +11,7 @@ import static org.powermock.api.mockito.PowerMockito.whenNew;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.ByteArrayInputStream;
 
-import com.ausregistry.jtoolkit2.tmdb.model.*;
+import neustar.registry.jtoolkit2.tmdb.model.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

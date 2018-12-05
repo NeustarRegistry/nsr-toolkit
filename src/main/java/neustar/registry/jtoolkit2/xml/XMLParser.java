@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.xml;
+package neustar.registry.jtoolkit2.xml;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * An XMLParser parses an XML document in String form and generates a DOM

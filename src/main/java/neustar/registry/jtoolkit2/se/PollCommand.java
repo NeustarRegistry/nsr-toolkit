@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * Representation of the EPP poll command, as defined in RFC5730.  Subclasses

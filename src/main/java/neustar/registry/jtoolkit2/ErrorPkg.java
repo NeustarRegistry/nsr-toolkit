@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2;
+package neustar.registry.jtoolkit2;
 
 import javax.xml.bind.DatatypeConverter;
 import java.io.FileNotFoundException;

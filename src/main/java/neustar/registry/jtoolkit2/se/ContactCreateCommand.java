@@ -1,13 +1,13 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * Use this to request that a contact object be provisioned in an EPP Registry.
  * Instances of this class generate RFC5730 and RFC5733 compliant contact
  * create EPP command service elements via the toXML method.
  *
- * @see com.ausregistry.jtoolkit2.se.ContactCreateResponse
+ * @see neustar.registry.jtoolkit2.se.ContactCreateResponse
  */
 public class ContactCreateCommand extends CreateCommand {
     private static final long serialVersionUID = -3827811718418723589L;

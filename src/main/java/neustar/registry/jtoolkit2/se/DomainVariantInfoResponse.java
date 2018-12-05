@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * server that supports the variant-1.0 extension, in response to a valid
  * Domain Variant Info command.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainVariantInfoCommand
+ * @see neustar.registry.jtoolkit2.se.DomainVariantInfoCommand
  */
 public class DomainVariantInfoResponse extends DataResponse {
 

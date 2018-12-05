@@ -1,32 +1,32 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import java.io.IOException;
 import java.util.logging.Logger;
 
 import org.xml.sax.SAXException;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.Greeting;
-import com.ausregistry.jtoolkit2.se.Response;
-import com.ausregistry.jtoolkit2.se.Result;
-import com.ausregistry.jtoolkit2.se.ResultCode;
-import com.ausregistry.jtoolkit2.xml.EPPSchemaProvider;
-import com.ausregistry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.Greeting;
+import neustar.registry.jtoolkit2.se.Response;
+import neustar.registry.jtoolkit2.se.Result;
+import neustar.registry.jtoolkit2.se.ResultCode;
+import neustar.registry.jtoolkit2.xml.EPPSchemaProvider;
+import neustar.registry.jtoolkit2.xml.ParsingException;
 
 /**
  * <p>
  * AusRegistry&rsquo;s basic implementation of the SessionManager interface. Upon successful configuration, it
- * guarantees that a pool of {@link com.ausregistry.jtoolkit2.session.Session}s will be available for processing
- * {@link com.ausregistry.jtoolkit2.session.Transaction}s. A SessionManager is configured from a
- * {@link com.ausregistry.jtoolkit2.session.SessionManagerProperties} object. This implementation provides only a
+ * guarantees that a pool of {@link neustar.registry.jtoolkit2.session.Session}s will be available for processing
+ * {@link neustar.registry.jtoolkit2.session.Transaction}s. A SessionManager is configured from a
+ * {@link neustar.registry.jtoolkit2.session.SessionManagerProperties} object. This implementation provides only a
  * blocking implementation of the <code>execute</code> method. It will create a
- * {@link com.ausregistry.jtoolkit2.session.SessionPool}. By default, the
- * {@link com.ausregistry.jtoolkit2.session.SessionPool} will use the
- * {@link com.ausregistry.jtoolkit2.session.TLSSession} implementation of the
- * {@link com.ausregistry.jtoolkit2.session.Session} interface. It also implements its own
- * {@link com.ausregistry.jtoolkit2.session.StatsViewer}.
+ * {@link neustar.registry.jtoolkit2.session.SessionPool}. By default, the
+ * {@link neustar.registry.jtoolkit2.session.SessionPool} will use the
+ * {@link neustar.registry.jtoolkit2.session.TLSSession} implementation of the
+ * {@link neustar.registry.jtoolkit2.session.Session} interface. It also implements its own
+ * {@link neustar.registry.jtoolkit2.session.StatsViewer}.
  * </p>
  *
  * <p>
@@ -73,11 +73,11 @@ public class SessionManagerImpl implements SessionManager {
     /**
      * Configure the SessionManager from the given set of properties. This can also be used to reconfigure the
      * SessionManager dynamically at any time, including changes to the managed
-     * {@link com.ausregistry.jtoolkit2.session.SessionPool}. A change of password should be performed using {@link
+     * {@link neustar.registry.jtoolkit2.session.SessionPool}. A change of password should be performed using {@link
      * #changePassword(String, String) changePassword}. Following a change of password,
      * the properties source should be updated to reflect the change. If this is not done, then the next invocation of
      * configure will fail due to session login failures. A successful call to configure indicates that subsequent
-     * invocations of <a href="#execute(com.ausregistry.jtoolkit2.session.Transaction)">execute</a> may succeed
+     * invocations of <a href="#execute(neustar.registry.jtoolkit2.session.Transaction)">execute</a> may succeed
      * (dependent on the semantics of the command and the context). If the configuration fails and a previous invocation
      * of configure succeeded, then the previous configuration remains in effect, but the causal exception is thrown. If
      * the configuration fails and there was no previous valid configuration, then an exception is raised and the
@@ -159,7 +159,7 @@ public class SessionManagerImpl implements SessionManager {
 
     /**
      * Prepare the SessionManager for providing Transaction processing services. This initialises the
-     * {@link com.ausregistry.jtoolkit2.session.SessionPool} managed by the SessionManager, guaranteeing that any
+     * {@link neustar.registry.jtoolkit2.session.SessionPool} managed by the SessionManager, guaranteeing that any
      * requirements defined by SessionPool properties are met, providing the pool is initialised successfully.
      *
      * @throws SessionConfigurationException
@@ -327,7 +327,7 @@ public class SessionManagerImpl implements SessionManager {
      * Try to process a single transaction. Up to {@code MAX_ACCEPTABLE_FAIL_COUNT} attempts will be made to process the
      * transaction in cases where I/O errors or non-protocol server errors occur during processing. Use of the
      * underlying session is protected against concurrent use by other threads by using the getSession/releaseSession
-     * features of this SessionManager's {@link com.ausregistry.jtoolkit2.session.SessionPool}. This method guarantees
+     * features of this SessionManager's {@link neustar.registry.jtoolkit2.session.SessionPool}. This method guarantees
      * that the session used will be returned to the pool before the method returns.
      *
      * @throws FatalSessionException
@@ -434,12 +434,12 @@ public class SessionManagerImpl implements SessionManager {
 
     /**
      * Pipeline execute a sequence of commands over a single session. A single
-     * {@link com.ausregistry.jtoolkit2.session.Session} is used in order to guarantee ordering of command effects. Only
-     * those transactions in the UNPROCESSED or RETRY states are executed. The number of transactions in the PROCESSED
-     * state following attempted execution of all eligible transactions is returned. If the number returned is less than
-     * the number of transactions supplied, then the state of each transaction should be checked prior to getting
-     * information from the contained response object. If the state is PROCESSED, then it is safe to use any of the
-     * methods on the response. If the state is RETRY, then it is possible that a further attempt to execute the
+     * {@link neustar.registry.jtoolkit2.session.Session} is used in order to guarantee ordering of command effects.
+     * Only those transactions in the UNPROCESSED or RETRY states are executed. The number of transactions in the
+     * PROCESSED state following attempted execution of all eligible transactions is returned. If the number returned is
+     * less than the number of transactions supplied, then the state of each transaction should be checked prior to
+     * getting information from the contained response object. If the state is PROCESSED, then it is safe to use any of
+     * the methods on the response. If the state is RETRY, then it is possible that a further attempt to execute the
      * transaction will succeed. If the state is FATAL_ERROR, then the transaction should not be re-attempted. In either
      * of these cases, the getCause method can be used to determine the reason the transaction failed. If the state
      * remains UNPROCESSED, it indicates that an error which occurred in processing an earlier transaction would have
@@ -449,7 +449,7 @@ public class SessionManagerImpl implements SessionManager {
      * @throws FatalSessionException
      *             No session was available to process any transactions (possibly due to misconfiguration or service
      *             unavailability - check the exception message and log records). See the description in
-     *             {@link com.ausregistry.jtoolkit2.session.SessionManager#execute(Transaction[])} for recommended
+     *             {@link neustar.registry.jtoolkit2.session.SessionManager#execute(Transaction[])} for recommended
      *             action.
      *
      * @throws IOException
@@ -457,8 +457,8 @@ public class SessionManagerImpl implements SessionManager {
      *
      * @throws IllegalStateException
      *             The SessionManager had been shutdown or not started up prior to invoking this method. See
-     *             {@link com.ausregistry.jtoolkit2.session.SessionManager#startup} and
-     *             {@link com.ausregistry.jtoolkit2.session.SessionManager#shutdown}.
+     *             {@link neustar.registry.jtoolkit2.session.SessionManager#startup} and
+     *             {@link neustar.registry.jtoolkit2.session.SessionManager#shutdown}.
      *
      * @return On success, the length of the transaction array; on failure, the index of the first failed transaction.
      */

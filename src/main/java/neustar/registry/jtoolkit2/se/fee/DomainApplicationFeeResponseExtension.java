@@ -1,13 +1,13 @@
-package com.ausregistry.jtoolkit2.se.fee;
+package neustar.registry.jtoolkit2.se.fee;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.math.BigDecimal;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * <p>Extension for the EPP Domain Create response, representing the Fee
@@ -18,8 +18,8 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * values supplied, should match the fees that are set for the domain name for the requested period.
  * The response expected from a server should be handled by a Domain Create Response.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainCreateCommand
- * @see com.ausregistry.jtoolkit2.se.DomainCreateResponse
+ * @see neustar.registry.jtoolkit2.se.DomainCreateCommand
+ * @see neustar.registry.jtoolkit2.se.DomainCreateResponse
  * @see <a href="https://tools.ietf.org/html/draft-brown-epp-fees-03">Domain Name Fee Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */

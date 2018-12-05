@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -6,10 +6,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.secdns.DSData;
-import com.ausregistry.jtoolkit2.se.secdns.DSOrKeyType;
-import com.ausregistry.jtoolkit2.se.secdns.SecDnsDomainUpdateCommandExtension;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.secdns.DSData;
+import neustar.registry.jtoolkit2.se.secdns.DSOrKeyType;
+import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainUpdateCommandExtension;
 
 public class DomainUpdateCommandTest {
     private static DomainAdd add, add1, add2, add3;

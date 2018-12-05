@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import java.util.GregorianCalendar;
 
@@ -14,7 +14,7 @@ import javax.xml.xpath.XPathExpressionException;
  * sent by a compliant EPP server in response to a valid domain info command,
  * implemented by the DomainInfoCommand class.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainInfoCommand
+ * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
  */
 public class DomainInfoResponse extends InfoResponse {
 

@@ -1,12 +1,12 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Provides access to EPP server parameters as published in an EPP greeting

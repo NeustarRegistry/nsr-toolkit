@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.app;
+package neustar.registry.jtoolkit2.se.app;
 
 
 import static org.junit.Assert.assertEquals;
@@ -7,9 +7,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ausregistry.jtoolkit2.se.DomainCreateResponse;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.se.DomainCreateResponse;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 
 public class DomainCreateApplicationResponseExtensionTest {
 

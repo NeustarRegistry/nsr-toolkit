@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.price;
+package neustar.registry.jtoolkit2.se.price;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,12 +6,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.DomainCheckCommand;
-import com.ausregistry.jtoolkit2.se.Period;
-import com.ausregistry.jtoolkit2.se.PeriodUnit;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.DomainCheckCommand;
+import neustar.registry.jtoolkit2.se.Period;
+import neustar.registry.jtoolkit2.se.PeriodUnit;
 
 public class DomainCheckPriceV1_2CommandExtensionTest {
 

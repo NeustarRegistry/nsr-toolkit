@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se.rgp;
+package neustar.registry.jtoolkit2.se.rgp;
 
 import java.util.List;
 
-import com.ausregistry.jtoolkit2.se.Response;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.Response;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * <p>Representation of the EPP Domain Update response with the Redemption Status aspect of the

@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.tmch.exception;
+package neustar.registry.jtoolkit2.se.tmch.exception;
 
 import java.security.cert.X509Certificate;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 public class TmchCertificateRevokedException extends RuntimeException {
 

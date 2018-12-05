@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
-import com.ausregistry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.Timer;
 /**
  * Test the only published feature of the AeDomainCreateCommand class, which
  * is to build a valid EPP create domain XML command given specified parameters

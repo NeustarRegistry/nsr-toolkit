@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.tmdb.xml;
+package neustar.registry.jtoolkit2.tmdb.xml;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -7,9 +7,9 @@ import javax.xml.xpath.XPathExpressionException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.tmdb.model.TmNotice;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.tmdb.model.TmNotice;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;

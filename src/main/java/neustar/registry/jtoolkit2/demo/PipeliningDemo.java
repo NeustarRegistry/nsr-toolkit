@@ -1,20 +1,20 @@
-package com.ausregistry.jtoolkit2.demo;
+package neustar.registry.jtoolkit2.demo;
 
-import com.ausregistry.jtoolkit2.se.ContactCheckCommand;
-import com.ausregistry.jtoolkit2.se.ContactCheckResponse;
-import com.ausregistry.jtoolkit2.se.DomainCheckCommand;
-import com.ausregistry.jtoolkit2.se.DomainCheckResponse;
-import com.ausregistry.jtoolkit2.se.DomainInfoCommand;
-import com.ausregistry.jtoolkit2.se.DomainInfoResponse;
-import com.ausregistry.jtoolkit2.se.HostCheckCommand;
-import com.ausregistry.jtoolkit2.se.HostCheckResponse;
-import com.ausregistry.jtoolkit2.se.Result;
-import com.ausregistry.jtoolkit2.se.ResultCode;
-import com.ausregistry.jtoolkit2.session.SessionManager;
-import com.ausregistry.jtoolkit2.session.SessionManagerFactory;
-import com.ausregistry.jtoolkit2.session.SessionManagerProperties;
-import com.ausregistry.jtoolkit2.session.SessionManagerPropertiesImpl;
-import com.ausregistry.jtoolkit2.session.Transaction;
+import neustar.registry.jtoolkit2.se.ContactCheckCommand;
+import neustar.registry.jtoolkit2.se.ContactCheckResponse;
+import neustar.registry.jtoolkit2.se.DomainCheckCommand;
+import neustar.registry.jtoolkit2.se.DomainCheckResponse;
+import neustar.registry.jtoolkit2.se.DomainInfoCommand;
+import neustar.registry.jtoolkit2.se.DomainInfoResponse;
+import neustar.registry.jtoolkit2.se.HostCheckCommand;
+import neustar.registry.jtoolkit2.se.HostCheckResponse;
+import neustar.registry.jtoolkit2.se.Result;
+import neustar.registry.jtoolkit2.se.ResultCode;
+import neustar.registry.jtoolkit2.session.SessionManager;
+import neustar.registry.jtoolkit2.session.SessionManagerFactory;
+import neustar.registry.jtoolkit2.session.SessionManagerProperties;
+import neustar.registry.jtoolkit2.session.SessionManagerPropertiesImpl;
+import neustar.registry.jtoolkit2.session.Transaction;
 
 /**
  * A demonstration of the steps required to pipeline a series of commands

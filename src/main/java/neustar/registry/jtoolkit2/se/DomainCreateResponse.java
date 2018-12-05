@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import java.util.GregorianCalendar;
 
@@ -14,7 +14,7 @@ import javax.xml.xpath.XPathExpressionException;
  * is sent by a compliant EPP server in response to a valid domain create
  * command, implemented by the DomainCreateCommand.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainCreateCommand
+ * @see neustar.registry.jtoolkit2.se.DomainCreateCommand
  */
 public class DomainCreateResponse extends CreateResponse {
     private static final long serialVersionUID = -5724827272682186647L;

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;

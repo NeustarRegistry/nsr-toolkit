@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
 
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
-import com.ausregistry.jtoolkit2.xml.XmlOutputConfig;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.xml.XmlOutputConfig;
 
 /**
  * This defines the operations or actions for sending XML to an EPP based server.  It defines the user level logger.

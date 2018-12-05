@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se.block;
+package neustar.registry.jtoolkit2.se.block;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * <p>Extension for the EPP Domain Info response, representing the Block Info aspects of the Block extension.</p>
@@ -16,8 +16,8 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * <p>For flexibility, this implementation extracts the data from the response using XPath queries, the expressions
  * for which are defined statically.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainInfoCommand
- * @see com.ausregistry.jtoolkit2.se.block.DomainInfoBlockCommandExtension
+ * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
+ * @see neustar.registry.jtoolkit2.se.block.DomainInfoBlockCommandExtension
  * @see <a href="http://ausregistry.github.io/doc/block-1.0/block-1.0.html">Block Extension Mapping for the
  * Extensible Provisioning Protocol (EPP)</a>
  */

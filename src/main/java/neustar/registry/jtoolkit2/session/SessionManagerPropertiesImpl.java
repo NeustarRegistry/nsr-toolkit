@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.util.Enumeration;
 import java.util.Vector;
 
-import com.ausregistry.jtoolkit2.se.CommandType;
+import neustar.registry.jtoolkit2.se.CommandType;
 
 /**
  * A SessionManager is configured based on a SessionManagerProperties instance. This class loads properties from a

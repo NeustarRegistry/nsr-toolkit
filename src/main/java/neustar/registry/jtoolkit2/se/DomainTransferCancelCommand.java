@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Use this to cancel the transfer of a domain object currently pending
@@ -7,7 +7,7 @@ package com.ausregistry.jtoolkit2.se;
  * generate RFC5730 and RFC5731 compliant domain transfer EPP command service
  * elements via the toXML method with the transfer operation set to "cancel".
  *
- * @see com.ausregistry.jtoolkit2.se.DomainTransferResponse
+ * @see neustar.registry.jtoolkit2.se.DomainTransferResponse
  */
 public class DomainTransferCancelCommand extends DomainTransferCommand {
     private static final long serialVersionUID = 4459609896155243761L;

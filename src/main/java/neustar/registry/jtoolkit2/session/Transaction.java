@@ -1,16 +1,16 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.Response;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.Response;
 
 /**
  * Each EPP command/response pair is modelled as a Transaction.  A Transaction
  * associates a Response with a Command to enable the user to determine the
  * effect of each command.  The {@link
- * com.ausregistry.jtoolkit2.session.SessionManager} takes either a single
+ * neustar.registry.jtoolkit2.session.SessionManager} takes either a single
  * Transaction or an array of Transactions as an argument to {@link
- * com.ausregistry.jtoolkit2.session.SessionManager#execute}.
+ * neustar.registry.jtoolkit2.session.SessionManager#execute}.
  */
 public class Transaction {
     private Command command;
@@ -40,8 +40,8 @@ public class Transaction {
     /**
      * Get the current state of this Transaction.
      *
-     * @see com.ausregistry.jtoolkit2.session.SessionManagerImpl#execute(Transaction[])
-     * @see com.ausregistry.jtoolkit2.session.TransactionState
+     * @see neustar.registry.jtoolkit2.session.SessionManagerImpl#execute(Transaction[])
+     * @see neustar.registry.jtoolkit2.session.TransactionState
      */
     public TransactionState getState() {
         return state;

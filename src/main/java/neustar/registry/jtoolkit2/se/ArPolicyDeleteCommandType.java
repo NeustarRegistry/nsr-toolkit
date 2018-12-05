@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 class ArPolicyDeleteCommandType implements CommandType {
     private static final long serialVersionUID = -1657269428024677014L;

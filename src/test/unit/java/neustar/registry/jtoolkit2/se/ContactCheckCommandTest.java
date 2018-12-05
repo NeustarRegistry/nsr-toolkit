@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-import com.ausregistry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.Timer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

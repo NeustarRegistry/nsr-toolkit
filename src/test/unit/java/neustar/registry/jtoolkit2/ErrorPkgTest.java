@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2;
+package neustar.registry.jtoolkit2;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;

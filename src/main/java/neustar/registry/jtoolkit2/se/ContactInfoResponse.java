@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Use this to access contact object information as provided in an EPP contact
@@ -10,7 +10,7 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * sent by a compliant EPP server in response to a valid contact info command,
  * implemented by the ContactInfoCommand class.
  *
- * @see com.ausregistry.jtoolkit2.se.ContactInfoCommand
+ * @see neustar.registry.jtoolkit2.se.ContactInfoCommand
  */
 public class ContactInfoResponse extends InfoResponse {
     private static final long serialVersionUID = 8856905477910465383L;

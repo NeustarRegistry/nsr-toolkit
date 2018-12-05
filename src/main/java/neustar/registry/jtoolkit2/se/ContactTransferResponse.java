@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import javax.xml.xpath.XPathExpressionException;
 
@@ -11,12 +11,12 @@ import javax.xml.xpath.XPathExpressionException;
  * transfer command, implemented by a subclass of the ContactTransferCommand
  * class.
  *
- * @see com.ausregistry.jtoolkit2.se.ContactTransferCommand
- * @see com.ausregistry.jtoolkit2.se.ContactTransferRequestCommand
- * @see com.ausregistry.jtoolkit2.se.ContactTransferApproveCommand
- * @see com.ausregistry.jtoolkit2.se.ContactTransferCancelCommand
- * @see com.ausregistry.jtoolkit2.se.ContactTransferRejectCommand
- * @see com.ausregistry.jtoolkit2.se.ContactTransferQueryCommand
+ * @see neustar.registry.jtoolkit2.se.ContactTransferCommand
+ * @see neustar.registry.jtoolkit2.se.ContactTransferRequestCommand
+ * @see neustar.registry.jtoolkit2.se.ContactTransferApproveCommand
+ * @see neustar.registry.jtoolkit2.se.ContactTransferCancelCommand
+ * @see neustar.registry.jtoolkit2.se.ContactTransferRejectCommand
+ * @see neustar.registry.jtoolkit2.se.ContactTransferQueryCommand
  */
 public class ContactTransferResponse extends TransferResponse {
     private static final long serialVersionUID = -3303074732303130291L;

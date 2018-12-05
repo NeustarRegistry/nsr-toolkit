@@ -1,17 +1,17 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.se.app.DomainInfoApplicationResponseExtension;
-import com.ausregistry.jtoolkit2.se.idn.ietf.DomainInfoIetfIdnResponseExtension;
+import neustar.registry.jtoolkit2.se.app.DomainInfoApplicationResponseExtension;
+import neustar.registry.jtoolkit2.se.idn.ietf.DomainInfoIetfIdnResponseExtension;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import com.ausregistry.jtoolkit2.se.generic.DomainInfoKVResponseExtension;
-import com.ausregistry.jtoolkit2.se.idn.DomainInfoIdnResponseExtension;
-import com.ausregistry.jtoolkit2.se.rgp.DomainInfoRgpResponseExtension;
-import com.ausregistry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.generic.DomainInfoKVResponseExtension;
+import neustar.registry.jtoolkit2.se.idn.DomainInfoIdnResponseExtension;
+import neustar.registry.jtoolkit2.se.rgp.DomainInfoRgpResponseExtension;
+import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Use this to access poll response information, as provided in an EPP poll
@@ -21,11 +21,11 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * getDomainTransferResponse methods may return object-specific information,
  * which is in addition to any message queue data potentially available via the
  * {@code getMessage} and related methods in the {@link
- * com.ausregistry.jtoolkit2.se.Response} class.
+ * neustar.registry.jtoolkit2.se.Response} class.
  *
- * @see com.ausregistry.jtoolkit2.se.PollCommand
- * @see com.ausregistry.jtoolkit2.se.PollRequestCommand
- * @see com.ausregistry.jtoolkit2.se.PollAckCommand
+ * @see neustar.registry.jtoolkit2.se.PollCommand
+ * @see neustar.registry.jtoolkit2.se.PollRequestCommand
+ * @see neustar.registry.jtoolkit2.se.PollAckCommand
  */
 public class PollResponse extends Response {
     private static final long serialVersionUID = 8823883186209520812L;

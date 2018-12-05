@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se.secdns;
+package neustar.registry.jtoolkit2.se.secdns;
 
 import java.util.ArrayList;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 /**
  * Models the &lt;add&gt;, &lt;infData&gt; and &lt;create&gt; elements as documented in RFC5910.

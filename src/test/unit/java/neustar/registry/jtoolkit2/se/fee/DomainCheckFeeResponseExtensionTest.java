@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.fee;
+package neustar.registry.jtoolkit2.se.fee;
 
-import com.ausregistry.jtoolkit2.se.DomainCheckResponse;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.se.DomainCheckResponse;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import org.junit.Test;
 
 import java.math.BigDecimal;

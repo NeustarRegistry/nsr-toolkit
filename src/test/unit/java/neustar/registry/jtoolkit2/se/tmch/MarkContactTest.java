@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se.tmch;
+package neustar.registry.jtoolkit2.se.tmch;
 
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import org.junit.Before;
 import org.junit.Test;
 import org.w3c.dom.Element;

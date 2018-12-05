@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import java.util.GregorianCalendar;
 
@@ -13,13 +13,13 @@ import javax.xml.xpath.XPathExpressionException;
  * Subclasses of this must specify the object to which the command is mapped.
  * Instances of this class provide an interface to access transfer response
  * data for the object identified in a {@link
- * com.ausregistry.jtoolkit2.se.TransferCommand}.  This relies on the instance
+ * neustar.registry.jtoolkit2.se.TransferCommand}.  This relies on the instance
  * first being initialised by a suitable EPP transfer response using the method
  * fromXML.  For flexibility, this implementation extracts the data from the
  * response using XPath queries, the expressions for which are defined
  * statically.
  *
- * @see com.ausregistry.jtoolkit2.se.TransferCommand
+ * @see neustar.registry.jtoolkit2.se.TransferCommand
  */
 public abstract class TransferResponse extends DataResponse {
 

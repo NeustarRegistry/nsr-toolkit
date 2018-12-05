@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 import org.w3c.dom.Element;
 
@@ -10,7 +10,7 @@ import org.w3c.dom.Element;
  * domain update EPP command service elements via the toXML method.  The
  * response expected from a server should be handled by a Response object.
  *
- * @see com.ausregistry.jtoolkit2.se.Response
+ * @see neustar.registry.jtoolkit2.se.Response
  */
 public class DomainUpdateCommand extends UpdateCommand {
     private static final long serialVersionUID = 2409916920503111390L;

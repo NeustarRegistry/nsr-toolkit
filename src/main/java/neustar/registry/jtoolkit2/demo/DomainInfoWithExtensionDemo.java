@@ -1,17 +1,17 @@
-package com.ausregistry.jtoolkit2.demo;
+package neustar.registry.jtoolkit2.demo;
 
 import java.util.List;
 
-import com.ausregistry.jtoolkit2.se.DomainInfoCommand;
-import com.ausregistry.jtoolkit2.se.DomainInfoResponse;
-import com.ausregistry.jtoolkit2.se.ResultCode;
-import com.ausregistry.jtoolkit2.se.secdns.DSData;
-import com.ausregistry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
-import com.ausregistry.jtoolkit2.session.SessionManager;
-import com.ausregistry.jtoolkit2.session.SessionManagerFactory;
-import com.ausregistry.jtoolkit2.session.SessionManagerProperties;
-import com.ausregistry.jtoolkit2.session.SessionManagerPropertiesImpl;
-import com.ausregistry.jtoolkit2.session.Transaction;
+import neustar.registry.jtoolkit2.se.DomainInfoCommand;
+import neustar.registry.jtoolkit2.se.DomainInfoResponse;
+import neustar.registry.jtoolkit2.se.ResultCode;
+import neustar.registry.jtoolkit2.se.secdns.DSData;
+import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
+import neustar.registry.jtoolkit2.session.SessionManager;
+import neustar.registry.jtoolkit2.session.SessionManagerFactory;
+import neustar.registry.jtoolkit2.session.SessionManagerProperties;
+import neustar.registry.jtoolkit2.session.SessionManagerPropertiesImpl;
+import neustar.registry.jtoolkit2.session.Transaction;
 
 /**
  * A demonstration of the steps required to perform a domain info, with the response

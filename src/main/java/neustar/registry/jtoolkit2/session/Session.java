@@ -1,12 +1,12 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import java.io.IOException;
 
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.Greeting;
-import com.ausregistry.jtoolkit2.se.Response;
-import com.ausregistry.jtoolkit2.xml.ParsingException;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.Greeting;
+import neustar.registry.jtoolkit2.se.Response;
+import neustar.registry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * EPP is a session-oriented service - all commands (except session management)
@@ -145,7 +145,7 @@ public interface Session {
      * Write an EPP service element to the transport layer service, with the
      * intention of sending the command to the connected EPP server.  The
      * service element is modelled by the specified {@link
-     * com.ausregistry.jtoolkit2.se.Command} instance.  The XML representation
+     * neustar.registry.jtoolkit2.se.Command} instance.  The XML representation
      * of the service element is obtained from the toXML method of the Command
      * instance.
      *
@@ -186,7 +186,7 @@ public interface Session {
      * @throws InterruptedException The thread was interrupted while waiting to
      * acquire the lock on the session.
      *
-     * @see com.ausregistry.jtoolkit2.session.SessionProperties#getAcquireTimeout()
+     * @see neustar.registry.jtoolkit2.session.SessionProperties#getAcquireTimeout()
      */
     void acquire() throws InterruptedException, TimeoutException;
 

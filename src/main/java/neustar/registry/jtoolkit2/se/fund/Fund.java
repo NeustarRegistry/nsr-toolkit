@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.fund;
+package neustar.registry.jtoolkit2.se.fund;
 
 import java.math.BigDecimal;
 

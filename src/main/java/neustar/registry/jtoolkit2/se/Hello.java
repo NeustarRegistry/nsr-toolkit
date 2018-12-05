@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.xml.XmlOutputConfig;
+import neustar.registry.jtoolkit2.xml.XmlOutputConfig;
 
 /**
  * Use this to request service information in the form of an EPP greeting

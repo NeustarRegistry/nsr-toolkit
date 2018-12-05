@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import java.util.GregorianCalendar;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * Use this to request the renewal of a domain object provisioned in an EPP
@@ -13,7 +13,7 @@ import com.ausregistry.jtoolkit2.ErrorPkg;
  * response expected from a server should be handled by a DomainRenewResponse
  * object.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainRenewResponse
+ * @see neustar.registry.jtoolkit2.se.DomainRenewResponse
  */
 public class DomainRenewCommand extends ObjectCommand {
     private static final long serialVersionUID = 4860769492565708028L;

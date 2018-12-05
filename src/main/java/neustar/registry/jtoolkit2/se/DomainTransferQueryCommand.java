@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Use this to query the transfer state of a domain object.  Instances of this
@@ -6,7 +6,7 @@ package com.ausregistry.jtoolkit2.se;
  * service elements via the toXML method with the transfer operation set to
  * "query".
  *
- * @see com.ausregistry.jtoolkit2.se.DomainTransferResponse
+ * @see neustar.registry.jtoolkit2.se.DomainTransferResponse
  */
 public class DomainTransferQueryCommand extends DomainTransferCommand {
     private static final long serialVersionUID = 4925536271075701036L;

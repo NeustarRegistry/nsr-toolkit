@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se.tmch;
+package neustar.registry.jtoolkit2.se.tmch;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
-import static com.ausregistry.jtoolkit2.se.ReceiveSE.replaceIndex;
+import static neustar.registry.jtoolkit2.se.ReceiveSE.replaceIndex;
 
 /**
  * <p>Representation of the EPP Domain Check response Extension with the Claims key Check aspect of the
@@ -22,7 +22,7 @@ import static com.ausregistry.jtoolkit2.se.ReceiveSE.replaceIndex;
  * <p>For flexibility, this implementation extracts the data from the response using XPath queries, the expressions
  * for which are defined statically.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.tmch.TmchDomainCheckCommandExtension
+ * @see neustar.registry.jtoolkit2.se.tmch.TmchDomainCheckCommandExtension
  * @see <a href="http://ausregistry.github.io/doc/tmch-1.0/tmch-1.0.html">Trademark Clearinghouse Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */

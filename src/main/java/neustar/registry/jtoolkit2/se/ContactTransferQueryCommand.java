@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Use this to query the transfer state of a contact object.  Instances of this
@@ -6,7 +6,7 @@ package com.ausregistry.jtoolkit2.se;
  * service elements via the toXML method with the transfer operation set to
  * "query".
  *
- * @see com.ausregistry.jtoolkit2.se.ContactTransferResponse
+ * @see neustar.registry.jtoolkit2.se.ContactTransferResponse
  */
 public class ContactTransferQueryCommand extends ContactTransferCommand {
     private static final long serialVersionUID = -3757779708062910617L;

@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.fee;
+package neustar.registry.jtoolkit2.se.fee;
 
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.math.BigDecimal;
@@ -15,8 +15,8 @@ import java.math.BigDecimal;
  * supplied, should match the fees that are set for the domain name for the requested period.
  * The response expected from a server should be handled by a Domain Renew Response.</p>
  *
- * @see com.ausregistry.jtoolkit2.se.DomainRenewCommand
- * @see com.ausregistry.jtoolkit2.se.DomainRenewResponse
+ * @see neustar.registry.jtoolkit2.se.DomainRenewCommand
+ * @see neustar.registry.jtoolkit2.se.DomainRenewResponse
  * @see <a href="https://tools.ietf.org/html/draft-brown-epp-fees-03">Domain Name Fee Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */

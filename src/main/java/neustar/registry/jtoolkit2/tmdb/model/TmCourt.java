@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.tmdb.model;
+package neustar.registry.jtoolkit2.tmdb.model;
 
 import java.util.ArrayList;
 import java.util.List;

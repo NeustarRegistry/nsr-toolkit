@@ -1,13 +1,13 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 import org.w3c.dom.Element;
 
 /**
  * Use this to set IDNA Domain extension properties for an EPP Domain Create
  * command.
  *
- * @see com.ausregistry.jtoolkit2.se.DomainIdnaResponseExtension
+ * @see neustar.registry.jtoolkit2.se.DomainIdnaResponseExtension
  */
 public final class DomainCreateIdnaCommandExtension implements CommandExtension {
     private static final long serialVersionUID = -8945007354471832288L;

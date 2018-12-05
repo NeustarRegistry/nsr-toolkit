@@ -4,5 +4,5 @@
  * @see <a href="http://tools.ietf.org/html/rfc5910">RFC5910: Domain Name System (DNS) Security Extensions Mapping
  * for the Extensible Provisioning Protocol (EPP)</a>
  */
-package com.ausregistry.jtoolkit2.se.secdns;
+package neustar.registry.jtoolkit2.se.secdns;
 

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.tmch;
+package neustar.registry.jtoolkit2.se.tmch;
 
 import javax.xml.bind.DatatypeConverter;
 import javax.xml.crypto.MarshalException;
@@ -20,16 +20,16 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.*;
 import java.util.*;
 
-import com.ausregistry.jtoolkit2.se.tmch.exception.*;
-import com.ausregistry.jtoolkit2.xml.NamespaceContextImpl;
-import com.ausregistry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.se.tmch.exception.*;
+import neustar.registry.jtoolkit2.xml.NamespaceContextImpl;
+import neustar.registry.jtoolkit2.xml.ParsingException;
 import org.apache.commons.codec.DecoderException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import static com.ausregistry.jtoolkit2.se.ExtendedObjectType.SIGNED_MARK_DATA;
-import static com.ausregistry.jtoolkit2.se.ExtendedObjectType.XML_DSIG;
+import static neustar.registry.jtoolkit2.se.ExtendedObjectType.SIGNED_MARK_DATA;
+import static neustar.registry.jtoolkit2.se.ExtendedObjectType.XML_DSIG;
 
 /**
  * This defines the operations to facilitate validation and parsing of signed mark data for TMCH.

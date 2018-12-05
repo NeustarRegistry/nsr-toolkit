@@ -1,17 +1,17 @@
-package com.ausregistry.jtoolkit2.se.generic;
+package neustar.registry.jtoolkit2.se.generic;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandExtension;
-import com.ausregistry.jtoolkit2.se.DomainCreateCommand;
-import com.ausregistry.jtoolkit2.se.DomainRenewCommand;
-import com.ausregistry.jtoolkit2.se.DomainTransferRequestCommand;
-import com.ausregistry.jtoolkit2.se.DomainUpdateCommand;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandExtension;
+import neustar.registry.jtoolkit2.se.DomainCreateCommand;
+import neustar.registry.jtoolkit2.se.DomainRenewCommand;
+import neustar.registry.jtoolkit2.se.DomainTransferRequestCommand;
+import neustar.registry.jtoolkit2.se.DomainUpdateCommand;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;

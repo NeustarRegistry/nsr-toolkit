@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Use this to access availability data for hosts as provided in an EPP host
@@ -10,7 +10,7 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * sent by a compliant EPP server in response to a valid host check command,
  * implemented by the HostCheckCommand class.
  *
- * @see com.ausregistry.jtoolkit2.se.HostCheckCommand
+ * @see neustar.registry.jtoolkit2.se.HostCheckCommand
  */
 public class HostCheckResponse extends CheckResponse<String> {
 

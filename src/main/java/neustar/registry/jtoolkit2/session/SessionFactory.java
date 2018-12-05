@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 /**
  * This factory provides instances of Session implementations.  The default
- * Session implementation is com.ausregistry.jtoolkit2.session.TLSSession.
+ * Session implementation is neustar.registry.jtoolkit2.session.TLSSession.
  * Alternative implementations may be loaded as described in the newInstance
  * descriptions.
  */
@@ -15,14 +15,14 @@ public final class SessionFactory {
     /**
      * Create a new Session instance.  The implementation defaults to
      * TLSSession but may be overridden by setting the system property
-     * com.ausregistry.jtoolkit2.session.class to the full name of the
+     * neustar.registry.jtoolkit2.session.class to the full name of the
      * alternative class.
      */
     public static Session newInstance(SessionProperties props)
         throws SessionConfigurationException {
 
         String sessionClass = System.getProperty(
-                "com.ausregistry.jtoolkit2.session.class");
+                "neustar.registry.jtoolkit2.session.class");
         if (sessionClass != null) {
             return newInstance(props, sessionClass);
         }

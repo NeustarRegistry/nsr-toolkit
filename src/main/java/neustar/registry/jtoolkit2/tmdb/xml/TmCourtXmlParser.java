@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.tmdb.xml;
+package neustar.registry.jtoolkit2.tmdb.xml;
 
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import com.ausregistry.jtoolkit2.tmdb.model.TmCourt;
+import neustar.registry.jtoolkit2.tmdb.model.TmCourt;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 

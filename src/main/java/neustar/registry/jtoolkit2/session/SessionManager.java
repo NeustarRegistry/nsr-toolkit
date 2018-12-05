@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import java.io.IOException;
 
-import com.ausregistry.jtoolkit2.se.Greeting;
-import com.ausregistry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.se.Greeting;
+import neustar.registry.jtoolkit2.xml.ParsingException;
 
 /**
  * This defines the operations or actions required for a SessionManager.

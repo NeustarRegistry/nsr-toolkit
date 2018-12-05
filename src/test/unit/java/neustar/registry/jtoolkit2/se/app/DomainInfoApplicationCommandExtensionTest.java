@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.app;
+package neustar.registry.jtoolkit2.se.app;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -6,12 +6,12 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.*;
-import com.ausregistry.jtoolkit2.se.tmch.TmchDomainInfoResponseExtension;
-import com.ausregistry.jtoolkit2.xml.ParsingException;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.*;
+import neustar.registry.jtoolkit2.se.tmch.TmchDomainInfoResponseExtension;
+import neustar.registry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;

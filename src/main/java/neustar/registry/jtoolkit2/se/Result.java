@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.ausregistry.jtoolkit2.xml.XMLBuilderSJSXP;
-import com.ausregistry.jtoolkit2.xml.XmlOutputConfig;
+import neustar.registry.jtoolkit2.xml.XMLBuilderSJSXP;
+import neustar.registry.jtoolkit2.xml.XmlOutputConfig;
 
 /**
  * This class models the result element of EPP responses. From RFC5730: <blockquote> One or more {@code <result>}

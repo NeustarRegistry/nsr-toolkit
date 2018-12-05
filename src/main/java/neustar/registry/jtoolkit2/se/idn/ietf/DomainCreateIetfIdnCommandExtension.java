@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.idn.ietf;
+package neustar.registry.jtoolkit2.se.idn.ietf;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.se.*;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.se.*;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 import org.w3c.dom.Element;
 
 /**

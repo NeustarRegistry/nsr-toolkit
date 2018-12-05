@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Use this to access availability data for contacts as provided in an EPP
@@ -10,7 +10,7 @@ import com.ausregistry.jtoolkit2.xml.XMLDocument;
  * element is sent by a compliant EPP server in response to a valid contact
  * check command, implemented by the ContactCheckCommand class.
  *
- * @see com.ausregistry.jtoolkit2.se.ContactCheckCommand
+ * @see neustar.registry.jtoolkit2.se.ContactCheckCommand
  */
 public class ContactCheckResponse extends CheckResponse<String> {
     private static final long serialVersionUID = -8516482858545087664L;

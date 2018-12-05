@@ -5,5 +5,5 @@
  * @see <a href="http://ausregistry.github.com/doc/kv-1.0/kv-1.0.html">Key-Value Mapping for the Extensible
  * Provisioning Protocol (EPP)</a>
  */
-package com.ausregistry.jtoolkit2.se.generic;
+package neustar.registry.jtoolkit2.se.generic;
 

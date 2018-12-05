@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 /**
  * Thrown when configuration of a SessionManager fails and a previous

@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.test.infrastructure;
+package neustar.registry.jtoolkit2.test.infrastructure;
 
 import org.mockito.Matchers;
 import org.w3c.dom.Node;

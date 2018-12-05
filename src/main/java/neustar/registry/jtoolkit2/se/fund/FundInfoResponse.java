@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se.fund;
+package neustar.registry.jtoolkit2.se.fund;
 
 import javax.xml.xpath.XPathExpressionException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ausregistry.jtoolkit2.se.DataResponse;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.StandardCommandType;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.DataResponse;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.StandardCommandType;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -18,7 +18,7 @@ import org.w3c.dom.NodeList;
  * in response to a valid fund info command, implemented by the
  * FundInfoCommand class.
  *
- * @see com.ausregistry.jtoolkit2.se.fund.FundInfoCommand
+ * @see neustar.registry.jtoolkit2.se.fund.FundInfoCommand
  */
 
 public class FundInfoResponse extends DataResponse {

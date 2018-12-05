@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -9,14 +9,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.TestEnvironment;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.PollRequestCommand;
-import com.ausregistry.jtoolkit2.se.PollResponse;
-import com.ausregistry.jtoolkit2.se.Response;
-import com.ausregistry.jtoolkit2.se.Result;
-import com.ausregistry.jtoolkit2.se.StandardCommandType;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.TestEnvironment;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.PollRequestCommand;
+import neustar.registry.jtoolkit2.se.PollResponse;
+import neustar.registry.jtoolkit2.se.Response;
+import neustar.registry.jtoolkit2.se.Result;
+import neustar.registry.jtoolkit2.se.StandardCommandType;
 
 public class SessionManagerTest {
     private static final int PARALLEL_DEGREE = 3;

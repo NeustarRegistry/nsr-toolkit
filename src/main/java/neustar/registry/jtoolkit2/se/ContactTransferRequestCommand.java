@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Use this to request the transfer of a contact object from another client.
@@ -7,7 +7,7 @@ package com.ausregistry.jtoolkit2.se;
  * compliant contact transfer EPP command service elements via the toXML method
  * with the transfer operation set to "request".
  *
- * @see com.ausregistry.jtoolkit2.se.ContactTransferResponse
+ * @see neustar.registry.jtoolkit2.se.ContactTransferResponse
  */
 public class ContactTransferRequestCommand extends ContactTransferCommand {
     private static final long serialVersionUID = -9000322724457879276L;

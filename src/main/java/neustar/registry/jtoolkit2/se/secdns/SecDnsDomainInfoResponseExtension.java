@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se.secdns;
+package neustar.registry.jtoolkit2.se.secdns;
 
 import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Process the &lt;infData&gt; element as documented in RFC5910.

@@ -1,10 +1,10 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import static com.ausregistry.jtoolkit2.se.Host.hostObjects;
+import static neustar.registry.jtoolkit2.se.Host.hostObjects;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * Mapping of EPP urn:ietf:params:xml:ns:domain-1.0 create command specified in

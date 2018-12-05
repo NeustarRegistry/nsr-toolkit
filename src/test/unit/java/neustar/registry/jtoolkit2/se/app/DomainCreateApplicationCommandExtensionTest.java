@@ -1,12 +1,12 @@
-package com.ausregistry.jtoolkit2.se.app;
+package neustar.registry.jtoolkit2.se.app;
 
 import static org.junit.Assert.assertEquals;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.DomainCreateCommand;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.DomainCreateCommand;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;

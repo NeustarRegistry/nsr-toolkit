@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se.generic;
+package neustar.registry.jtoolkit2.se.generic;
 
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.CommandExtension;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.CommandExtension;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 /**
  * This class models the command elements as specified in the XML schema
@@ -27,8 +27,8 @@ public final class DomainKVCommandExtension implements CommandExtension {
      * @param commandType
      *            the type of command
      *
-     * @see com.ausregistry.jtoolkit2.se.CommandExtension#CREATE
-     * @see com.ausregistry.jtoolkit2.se.CommandExtension#UPDATE
+     * @see neustar.registry.jtoolkit2.se.CommandExtension#CREATE
+     * @see neustar.registry.jtoolkit2.se.CommandExtension#UPDATE
      */
     public DomainKVCommandExtension(final String commandType) {
         kvLists = new TreeMap<String, TreeMap<String, String>>();

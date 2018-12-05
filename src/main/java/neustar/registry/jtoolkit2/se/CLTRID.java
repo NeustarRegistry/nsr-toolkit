@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
-import com.ausregistry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.Timer;
 
 import java.text.SimpleDateFormat;
 import java.text.FieldPosition;

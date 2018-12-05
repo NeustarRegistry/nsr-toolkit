@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.xml;
+package neustar.registry.jtoolkit2.xml;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -10,9 +10,9 @@ import java.util.logging.Logger;
 
 import javax.xml.namespace.NamespaceContext;
 
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.ExtensionImpl;
-import com.ausregistry.jtoolkit2.se.StandardObjectType;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.ExtensionImpl;
+import neustar.registry.jtoolkit2.se.StandardObjectType;
 
 /**
  * <p>

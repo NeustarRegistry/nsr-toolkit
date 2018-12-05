@@ -1,9 +1,9 @@
-package com.ausregistry.jtoolkit2.se.block;
+package neustar.registry.jtoolkit2.se.block;
 
 import org.w3c.dom.Element;
 
-import com.ausregistry.jtoolkit2.se.*;
-import com.ausregistry.jtoolkit2.xml.XMLWriter;
+import neustar.registry.jtoolkit2.se.*;
+import neustar.registry.jtoolkit2.xml.XMLWriter;
 
 /**
  * <p>Extension for the EPP Domain Create command, representing the Create Block aspects of the Block extension.</p>

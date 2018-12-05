@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2;
+package neustar.registry.jtoolkit2;
 
 /**
  * An error occurred during toolkit configuration from which recovery without

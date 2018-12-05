@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2;
+package neustar.registry.jtoolkit2;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
@@ -6,7 +6,7 @@ import java.util.logging.FileHandler;
 /**
  * A trivial subclass of FileHandler intended to provide support for
  * configuration specific to maintenance logging.  The configuration properties
- * are set via <code>com.ausregistry.jtoolkit2.MaintenanceHandler.*</code>
+ * are set via <code>neustar.registry.jtoolkit2.MaintenanceHandler.*</code>
  * parameters in the logging parameters file.  See the documentation of the
  * <code>FileHandler</code> for a description of the available parameters.
  */

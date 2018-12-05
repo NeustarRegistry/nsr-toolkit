@@ -7,5 +7,5 @@
  * <li>Command Pipelining</li>
  * </ol>.
  */
-package com.ausregistry.jtoolkit2.demo;
+package neustar.registry.jtoolkit2.demo;
 

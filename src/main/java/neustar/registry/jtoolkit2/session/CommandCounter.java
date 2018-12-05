@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
-import com.ausregistry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.Timer;
 
-import com.ausregistry.jtoolkit2.se.CommandType;
+import neustar.registry.jtoolkit2.se.CommandType;
 
 import java.util.List;
 import java.util.ListIterator;

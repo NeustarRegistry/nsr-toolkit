@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se.unspec;
+package neustar.registry.jtoolkit2.se.unspec;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.Command;
-import com.ausregistry.jtoolkit2.se.ContactCreateCommand;
-import com.ausregistry.jtoolkit2.se.IntPostalInfo;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.Command;
+import neustar.registry.jtoolkit2.se.ContactCreateCommand;
+import neustar.registry.jtoolkit2.se.IntPostalInfo;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;

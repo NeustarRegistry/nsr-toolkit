@@ -1,12 +1,12 @@
-package com.ausregistry.jtoolkit2.se.launch;
+package neustar.registry.jtoolkit2.se.launch;
 
-import static com.ausregistry.jtoolkit2.se.ExtendedObjectType.MARK;
+import static neustar.registry.jtoolkit2.se.ExtendedObjectType.MARK;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import com.ausregistry.jtoolkit2.se.ResponseExtension;
-import com.ausregistry.jtoolkit2.se.tmch.MarksList;
-import com.ausregistry.jtoolkit2.xml.XMLDocument;
+import neustar.registry.jtoolkit2.se.ResponseExtension;
+import neustar.registry.jtoolkit2.se.tmch.MarksList;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 import org.w3c.dom.Element;
 
 /**

@@ -1,11 +1,11 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Use this to request that a host object be provisioned in an EPP Registry.
  * Instances of this class generate RFC5730 and RFC5732 compliant host create
  * EPP command service elements via the toXML method.
  *
- * @see com.ausregistry.jtoolkit2.se.HostCreateResponse
+ * @see neustar.registry.jtoolkit2.se.HostCreateResponse
  */
 public class HostCreateCommand extends CreateCommand {
     private static final long serialVersionUID = -3161264324911932444L;

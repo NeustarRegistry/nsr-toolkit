@@ -1,12 +1,12 @@
-package com.ausregistry.jtoolkit2.session;
+package neustar.registry.jtoolkit2.session;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ausregistry.jtoolkit2.se.StandardCommandType;
-import com.ausregistry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.StandardCommandType;
+import neustar.registry.jtoolkit2.Timer;
 
 /**
  * @author anthony
@@ -26,7 +26,7 @@ public class CommandCounterTest {
     }
 
     /**
-     * Test method for {@link com.ausregistry.jtoolkit2.session.CommandCounter#increment(com.ausregistry.jtoolkit2.se.CommandType)}.
+     * Test method for {@link neustar.registry.jtoolkit2.session.CommandCounter#increment(neustar.registry.jtoolkit2.se.CommandType)}.
      */
     @Test
     public void testIncrement() {
@@ -36,7 +36,7 @@ public class CommandCounterTest {
     }
 
     /**
-     * Test method for {@link com.ausregistry.jtoolkit2.session.CommandCounter#getCount(com.ausregistry.jtoolkit2.se.CommandType)}.
+     * Test method for {@link neustar.registry.jtoolkit2.session.CommandCounter#getCount(neustar.registry.jtoolkit2.se.CommandType)}.
      */
     @Test
     public void testGetCount() {
@@ -46,7 +46,7 @@ public class CommandCounterTest {
     }
 
     /**
-     * Test method for {@link com.ausregistry.jtoolkit2.session.CommandCounter#getRecentCount(com.ausregistry.jtoolkit2.se.CommandType)}.
+     * Test method for {@link neustar.registry.jtoolkit2.session.CommandCounter#getRecentCount(neustar.registry.jtoolkit2.se.CommandType)}.
      */
     @Test
     public void testGetRecentCount() {
@@ -56,7 +56,7 @@ public class CommandCounterTest {
     }
 
     /**
-     * Test method for {@link com.ausregistry.jtoolkit2.session.CommandCounter#getTotal()}.
+     * Test method for {@link neustar.registry.jtoolkit2.session.CommandCounter#getTotal()}.
      */
     @Test
     public void testGetTotal() {
@@ -64,7 +64,7 @@ public class CommandCounterTest {
     }
 
     /**
-     * Test method for {@link com.ausregistry.jtoolkit2.session.CommandCounter#getRecentTotal()}.
+     * Test method for {@link neustar.registry.jtoolkit2.session.CommandCounter#getRecentTotal()}.
      */
     @Test
     public void testGetRecentTotal() {
@@ -75,7 +75,7 @@ public class CommandCounterTest {
     }
 
     /**
-     * Test method for {@link com.ausregistry.jtoolkit2.session.CommandCounter#getExactRecentTotal()}.
+     * Test method for {@link neustar.registry.jtoolkit2.session.CommandCounter#getExactRecentTotal()}.
      */
     @Test
     public void testGetExactRecentTotal() {

@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se;
+package neustar.registry.jtoolkit2.se;
 
 /**
  * Notification data specific to contact objects.  Refer to
- * {@link com.ausregistry.jtoolkit2.se.NotificationResponse} for further
+ * {@link neustar.registry.jtoolkit2.se.NotificationResponse} for further
  * details.
  */
 public class ContactNotificationResponse extends NotificationResponse {

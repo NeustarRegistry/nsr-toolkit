@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.tmch;
+package neustar.registry.jtoolkit2.se.tmch;
 
 /**
  * Represents a holder's entitlement from the Trademark Clearing House extension,

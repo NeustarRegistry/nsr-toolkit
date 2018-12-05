@@ -1,6 +1,6 @@
-package com.ausregistry.jtoolkit2.se.tmch.exception;
+package neustar.registry.jtoolkit2.se.tmch.exception;
 
-import com.ausregistry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 public class SmdSignatureInvalidException extends RuntimeException {
     @Override

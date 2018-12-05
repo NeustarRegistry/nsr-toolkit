@@ -5,5 +5,5 @@
  * @see <a href="http://ausregistry.github.com/doc/price-1.0/price-1.0.html">
  *     Domain Name Price Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
-package com.ausregistry.jtoolkit2.se.price;
+package neustar.registry.jtoolkit2.se.price;
 

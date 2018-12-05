@@ -1,7 +1,7 @@
-package com.ausregistry.jtoolkit2.se.unspec;
+package neustar.registry.jtoolkit2.se.unspec;
 
-import com.ausregistry.jtoolkit2.xml.ParsingException;
-import com.ausregistry.jtoolkit2.xml.XMLParser;
+import neustar.registry.jtoolkit2.xml.ParsingException;
+import neustar.registry.jtoolkit2.xml.XMLParser;
 import javax.xml.xpath.XPathExpressionException;
 import org.junit.Before;
 import org.junit.Test;

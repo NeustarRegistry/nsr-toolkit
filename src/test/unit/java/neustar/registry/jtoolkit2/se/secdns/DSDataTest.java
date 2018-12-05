@@ -1,4 +1,4 @@
-package com.ausregistry.jtoolkit2.se.secdns;
+package neustar.registry.jtoolkit2.se.secdns;
 
 import static org.junit.Assert.assertTrue;
 

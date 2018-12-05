@@ -1,14 +1,14 @@
-package com.ausregistry.jtoolkit2.se.variant;
+package neustar.registry.jtoolkit2.se.variant;
 
 import static org.junit.Assert.assertEquals;
 
-import com.ausregistry.jtoolkit2.se.IdnDomainVariant;
+import neustar.registry.jtoolkit2.se.IdnDomainVariant;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ausregistry.jtoolkit2.Timer;
-import com.ausregistry.jtoolkit2.se.CLTRID;
-import com.ausregistry.jtoolkit2.se.DomainUpdateCommand;
+import neustar.registry.jtoolkit2.Timer;
+import neustar.registry.jtoolkit2.se.CLTRID;
+import neustar.registry.jtoolkit2.se.DomainUpdateCommand;
 
 public class DomainUpdateVariantCommandExtensionV1_1Test {
 

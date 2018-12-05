@@ -1,8 +1,8 @@
-package com.ausregistry.jtoolkit2.se.rgp;
+package neustar.registry.jtoolkit2.se.rgp;
 
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.StandardObjectType;
-import com.ausregistry.jtoolkit2.se.UpdateCommand;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.StandardObjectType;
+import neustar.registry.jtoolkit2.se.UpdateCommand;
 import org.w3c.dom.Element;
 
 /**

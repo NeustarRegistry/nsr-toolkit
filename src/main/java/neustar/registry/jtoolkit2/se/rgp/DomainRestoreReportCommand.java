@@ -1,12 +1,12 @@
-package com.ausregistry.jtoolkit2.se.rgp;
+package neustar.registry.jtoolkit2.se.rgp;
 
 import java.util.GregorianCalendar;
 
-import com.ausregistry.jtoolkit2.EPPDateFormatter;
-import com.ausregistry.jtoolkit2.ErrorPkg;
-import com.ausregistry.jtoolkit2.se.ExtendedObjectType;
-import com.ausregistry.jtoolkit2.se.StandardObjectType;
-import com.ausregistry.jtoolkit2.se.UpdateCommand;
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.ErrorPkg;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.StandardObjectType;
+import neustar.registry.jtoolkit2.se.UpdateCommand;
 import org.w3c.dom.Element;
 
 /**
