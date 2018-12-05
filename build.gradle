@@ -15,9 +15,9 @@ apply plugin: 'maven'
 ext {
     junitVersion = '4.11'
     artifactsDir = "$projectDir/artifacts"
-    artifactGroupId = 'au.com.ausregistry'
+    artifactGroupId = 'neustar.registry'
     gradleWrapperVersion = '2.7'
-    pagesProjectDir = "$projectDir/../ari-toolkit-gitpages"
+    pagesProjectDir = "$projectDir/../nsr-toolkit-gitpages"
     checkstyleConfDirPath = "$projectDir/checkstyle/"
 
     commonsCodecVersion          = '1.10'
@@ -135,7 +135,7 @@ task wrapper(type: Wrapper) {
 
 jar {
     manifest {
-        attributes('Specification-Title': 'ari java toolkit',
+        attributes('Specification-Title': 'nsr java toolkit',
         'Specification-Version': "${version}",
         'Implementation-Version': "${version}",
         "Implementation-Timestamp": new Date())
@@ -210,7 +210,7 @@ uploadArchives << {
     if (!System.properties.keySet().containsAll('repoUrl', 'repoUsername', 'repoPassword')) {
         copy {
             from(javadoc.destinationDir)
-            into "$pagesProjectDir/javadoc/ari-toolkit"
+            into "$pagesProjectDir/javadoc/nsr-toolkit"
         }
     }
 }
