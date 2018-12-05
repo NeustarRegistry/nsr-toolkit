@@ -19,7 +19,7 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  *
  * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
  * @see neustar.registry.jtoolkit2.se.DomainInfoResponse
- * @see <a href="http://ausregistry.github.io/doc/idn-1.0/idn-1.0.html">Internationalized Domain Name Extension
+ * @see <a href="http://neustarregistry.github.io/doc/idn-1.0/idn-1.0.html">Internationalized Domain Name Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public final class DomainInfoIdnResponseExtension extends ResponseExtension {

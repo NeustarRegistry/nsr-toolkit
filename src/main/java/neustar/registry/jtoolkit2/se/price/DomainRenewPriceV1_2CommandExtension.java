@@ -19,7 +19,7 @@ import org.w3c.dom.Element;
  *
  * @see neustar.registry.jtoolkit2.se.DomainRenewCommand
  * @see neustar.registry.jtoolkit2.se.DomainRenewResponse
- * @see <a href="http://ausregistry.github.io/doc/price-1.2/price-1.2.html">Domain Name Price Extension
+ * @see <a href="http://neustarregistry.github.io/doc/price-1.2/price-1.2.html">Domain Name Price Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainRenewPriceV1_2CommandExtension implements CommandExtension {

@@ -19,7 +19,7 @@ import org.w3c.dom.Element;
  *
  * @see neustar.registry.jtoolkit2.se.DomainCreateCommand
  * @see neustar.registry.jtoolkit2.se.DomainCreateResponse
- * @see <a href="http://ausregistry.github.io/doc/price-1.1/price-1.1.html">Domain Name Price Extension
+ * @see <a href="http://neustarregistry.github.io/doc/price-1.1/price-1.1.html">Domain Name Price Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 

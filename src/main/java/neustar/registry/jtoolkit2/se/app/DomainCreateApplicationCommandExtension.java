@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
  *
  * @see neustar.registry.jtoolkit2.se.DomainCreateCommand
  * @see neustar.registry.jtoolkit2.se.app.DomainCreateApplicationResponseExtension
- * @see <a href="http://ausregistry.github.io/doc/application-1.0/application-1.0.html">Domain Name Application
+ * @see <a href="http://neustarregistry.github.io/doc/application-1.0/application-1.0.html">Domain Name Application
  * Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainCreateApplicationCommandExtension implements CommandExtension {

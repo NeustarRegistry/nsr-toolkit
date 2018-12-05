@@ -20,7 +20,7 @@ import neustar.registry.jtoolkit2.xml.XMLWriter;
  *
  * @see neustar.registry.jtoolkit2.se.DomainRenewCommand
  * @see neustar.registry.jtoolkit2.se.DomainRenewResponse
- * @see <a href="http://ausregistry.github.io/doc/price-1.0/price-1.0.html">Domain Name Price Extension
+ * @see <a href="http://neustarregistry.github.io/doc/price-1.0/price-1.0.html">Domain Name Price Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainRenewPriceCommandExtension implements CommandExtension {

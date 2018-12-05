@@ -11,7 +11,7 @@ import neustar.registry.jtoolkit2.xml.XMLWriter;
 import org.w3c.dom.Element;
 
 /**
- * Models the ARI EPP Extension for synchronising the expiry date of a Domain Name.
+ * Models the EPP Extension for synchronising the expiry date of a Domain Name.
  */
 public class SyncDomainUpdateCommandExtension implements CommandExtension {
 

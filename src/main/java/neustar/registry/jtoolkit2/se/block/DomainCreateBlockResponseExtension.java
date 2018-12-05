@@ -18,7 +18,7 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  *
  * @see neustar.registry.jtoolkit2.se.DomainCreateCommand
  * @see neustar.registry.jtoolkit2.se.block.DomainCreateBlockCommandExtension
- * @see <a href="http://ausregistry.github.io/doc/block-1.0/block-1.0.html">Block Extension Mapping for the
+ * @see <a href="http://neustarregistry.github.io/doc/block-1.0/block-1.0.html">Block Extension Mapping for the
  * Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainCreateBlockResponseExtension extends ResponseExtension {

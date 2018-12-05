@@ -1,5 +1,5 @@
 /**
- * Contains examples of using the ARI Java Toolkit.  These include:
+ * Contains examples of using the Neustar Java Toolkit.  These include:
  * <ol>
  * <li>Domain Check</li>
  * <li>Domain Create with extensions</li>

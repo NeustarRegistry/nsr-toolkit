@@ -19,7 +19,7 @@ import org.w3c.dom.Element;
  *
  * @see neustar.registry.jtoolkit2.se.rgp.DomainRestoreReportCommand
  * @see neustar.registry.jtoolkit2.se.rgp.DomainRestoreResponse
- * @see <a href="http://ausregistry.github.io/doc/price-1.1/price-1.1.html">Domain Name Price Extension
+ * @see <a href="http://neustarregistry.github.io/doc/price-1.1/price-1.1.html">Domain Name Price Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainRestoreRequestPriceV1_1CommandExtension implements CommandExtension {

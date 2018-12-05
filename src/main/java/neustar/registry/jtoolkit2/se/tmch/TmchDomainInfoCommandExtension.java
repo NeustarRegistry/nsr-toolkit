@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
  * from a server should be handled by a Domain Info Response.</p>
  *
  * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
- * @see <a href="http://ausregistry.github.io/doc/tmch-1.0/tmch-1.0.html">Domain Name Trademark Clearing House
+ * @see <a href="http://neustarregistry.github.io/doc/tmch-1.0/tmch-1.0.html">Domain Name Trademark Clearing House
  * Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class TmchDomainInfoCommandExtension implements CommandExtension {

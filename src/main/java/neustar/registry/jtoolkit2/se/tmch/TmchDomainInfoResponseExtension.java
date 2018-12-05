@@ -20,7 +20,7 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  *
  * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
  * @see neustar.registry.jtoolkit2.se.tmch.TmchDomainInfoResponseExtension
- * @see <a href="http://ausregistry.github.io/doc/tmch-1.0/tmch-1.0.html">Domain Name Trademark Clearing House
+ * @see <a href="http://neustarregistry.github.io/doc/tmch-1.0/tmch-1.0.html">Domain Name Trademark Clearing House
  * Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class TmchDomainInfoResponseExtension extends ResponseExtension {

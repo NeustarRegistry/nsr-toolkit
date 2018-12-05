@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
  *
  * @see neustar.registry.jtoolkit2.se.DomainDeleteCommand
  * @see neustar.registry.jtoolkit2.se.Response
- * @see <a href="http://ausregistry.github.io/doc/block-1.0/block-1.0.html">Block Extension Mapping for the
+ * @see <a href="http://neustarregistry.github.io/doc/block-1.0/block-1.0.html">Block Extension Mapping for the
  * Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainDeleteBlockCommandExtension implements CommandExtension {

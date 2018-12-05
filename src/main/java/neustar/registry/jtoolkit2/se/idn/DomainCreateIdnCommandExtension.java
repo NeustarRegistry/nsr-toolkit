@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
  *
  * @see neustar.registry.jtoolkit2.se.DomainCreateCommand
  * @see neustar.registry.jtoolkit2.se.DomainCreateResponse
- * @see <a href="http://ausregistry.github.io/doc/idn-1.0/idn-1.0.html">Internationalized Domain Name Extension
+ * @see <a href="http://neustarregistry.github.io/doc/idn-1.0/idn-1.0.html">Internationalized Domain Name Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public final class DomainCreateIdnCommandExtension implements CommandExtension {

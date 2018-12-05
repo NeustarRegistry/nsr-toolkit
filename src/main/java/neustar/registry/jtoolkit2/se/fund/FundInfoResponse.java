@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 
 /**
  * Use this to access fund object information as provided in an EPP fund
- * info response. Such a service element is sent by a ari registry server
+ * info response. Such a service element is sent by a Neustar registry server
  * in response to a valid fund info command, implemented by the
  * FundInfoCommand class.
  *

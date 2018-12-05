@@ -21,7 +21,7 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  *
  * @see neustar.registry.jtoolkit2.se.DomainInfoCommand
  * @see DomainInfoApplicationCommandExtension
- * @see <a href="http://ausregistry.github.io/doc/application-1.0/application-1.0.html">Domain Name Application
+ * @see <a href="http://neustarregistry.github.io/doc/application-1.0/application-1.0.html">Domain Name Application
  * Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainInfoApplicationResponseExtension extends ResponseExtension {

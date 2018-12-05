@@ -17,7 +17,7 @@ import neustar.registry.jtoolkit2.xml.ParsingException;
 
 /**
  * <p>
- * AusRegistry&rsquo;s basic implementation of the SessionManager interface. Upon successful configuration, it
+ * Neustar&rsquo;s basic implementation of the SessionManager interface. Upon successful configuration, it
  * guarantees that a pool of {@link neustar.registry.jtoolkit2.session.Session}s will be available for processing
  * {@link neustar.registry.jtoolkit2.session.Transaction}s. A SessionManager is configured from a
  * {@link neustar.registry.jtoolkit2.session.SessionManagerProperties} object. This implementation provides only a

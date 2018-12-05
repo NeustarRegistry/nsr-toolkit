@@ -24,7 +24,7 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  * for which are defined statically.</p>
  *
  * @see neustar.registry.jtoolkit2.se.price.DomainCheckPriceV1_2CommandExtension
- * @see <a href="http://ausregistry.github.io/doc/pricing-1.2/pricing-1.2.html">Domain Name Check Pricing Extension
+ * @see <a href="http://neustarregistry.github.io/doc/pricing-1.2/pricing-1.2.html">Domain Name Check Pricing Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainCheckPriceV1_2ResponseExtension extends ResponseExtension {

@@ -22,8 +22,8 @@ import java.util.Map;
  * for which are defined statically.</p>
  *
  * @see neustar.registry.jtoolkit2.se.extendedAvailability.DomainCheckExtendedAvailabilityCommandExtension
- * @see <a href="http://ausregistry.github.io/doc/exAvail-1.0/exAvail-1.0.html">Domain Name Check Extended Availability
- * Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
+ * @see <a href="http://neustarregistry.github.io/doc/exAvail-1.0/exAvail-1.0.html">Domain Name Check Extended
+ * Availability Extension Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainCheckExtendedAvailabilityResponseExtension extends ResponseExtension {
 

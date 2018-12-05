@@ -23,7 +23,7 @@ import org.w3c.dom.Element;
  *
  * @see neustar.registry.jtoolkit2.se.DomainUpdateCommand
  * @see neustar.registry.jtoolkit2.se.Response
- * @see <a href="http://ausregistry.github.io/doc/variant-1.1/variant-1.1.html">Domain Name Variant Extension
+ * @see <a href="http://neustarregistry.github.io/doc/variant-1.1/variant-1.1.html">Domain Name Variant Extension
  * Mapping for the Extensible Provisioning Protocol (EPP)</a>
  */
 public class DomainUpdateVariantCommandExtensionV1_1 implements CommandExtension {
