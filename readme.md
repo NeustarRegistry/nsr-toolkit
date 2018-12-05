@@ -1,14 +1,14 @@
-[![Build Status](https://travis-ci.org/AusRegistry/ari-toolkit.png)](https://travis-ci.org/AusRegistry/ari-toolkit)
+[![Build Status](https://travis-ci.org/NeustarRegistry/nsr-toolkit.png)](https://travis-ci.org/NeustarRegistry/nsr-toolkit)
 ## Downloads
 
-The latest ari-toolkit is available for download. [ari-toolkit v3.11.5](http://ausregistry.github.com/repo/au/com/ausregistry/arjtk/3.11.5/arjtk-3.11.5.jar) ([sources](http://ausregistry.github.com/repo/au/com/ausregistry/arjtk/3.11.5/arjtk-3.11.5-sources.jar) | [javadoc](http://ausregistry.github.com/repo/au/com/ausregistry/arjtk/3.11.5/arjtk-3.11.5-javadoc.jar))
+The latest nsr-toolkit is available for download. [nsr-toolkit v4.0.0](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-javadoc.jar))
 
 For more information, please read [Installation and Setup](#installation-and-setup).
 
 
 ## Building
 
-To build the ari-toolkit, you must have the Java Development Kit (JDK) v7.0 or above installed. The project can be built with the command `gradlew build`.
+To build the nsr-toolkit, you must have the Java Development Kit (JDK) v7.0 or above installed. The project can be built with the command `gradlew build`.
 
 
 ## Introduction
@@ -43,42 +43,42 @@ This toolkit also provides a mechanism to perform the following Trademark Cleari
 
 #### Direct download
 
-    Obtain the latest toolkit here: [Toolkit v3.11.5](http://ausregistry.github.com/repo/au/com/ausregistry/arjtk/3.11.5/arjtk-3.11.5.jar) ([sources](http://ausregistry.github.com/repo/au/com/ausregistry/arjtk/3.11.5/arjtk-3.11.5-sources.jar) | [javadoc](http://ausregistry.github.com/repo/au/com/ausregistry/arjtk/3.11.5/arjtk-3.11.5-javadoc.jar))
+    Obtain the latest toolkit here: [Toolkit v4.0.0](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-javadoc.jar))
 
 #### Dependency Management
 
 Use your build's dependency management tool to automatically download the toolkit from our repository.
 
-* Repository: `http://ausregistry.github.com/repo/`
-* groupId: `au.com.ausregistry`
-* artifactId: `arjtk`
-* version: `3.11.5`
+* Repository: `http://neustarregistry.github.io/repo/`
+* groupId: `neustar.registry`
+* artifactId: `nsrjtk`
+* version: `4.0.0`
 
 For example (using Maven):
 
     <repositories>
        <repository>
-          <id>ausregistry.com.au</id>
-          <url>http://ausregistry.github.com/repo</url>
+          <id>neustar.registry</id>
+          <url>http://neustarregistry.github.io/repo</url>
        </repository>
     </repositories>
 
     <dependencies>
        <dependency>
-          <groupId>au.com.ausregistry</groupId>
-          <artifactId>arjtk</artifactId>
-          <version>3.11.5</version>
+          <groupId>neustar.registry</groupId>
+          <artifactId>nsrjtk</artifactId>
+          <version>4.0.0</version>
        </dependency>
     </dependencies>
 
 
 #### Contribute
 
-You can view the source on [GitHub/AusRegistry](http://github.com/ausregistry/ari-toolkit). Contributions via pull requests are welcome.
+You can view the source on [GitHub/NeustarRegistry](http://github.com/neustarregistry/nsr-toolkit). Contributions via pull requests are welcome.
 
 ### Development documentation
 
-The javadoc is available online: [Toolkit javadoc](http://ausregistry.github.com/javadoc/ari-toolkit/index.html)
+The javadoc is available online: [Toolkit javadoc](http://neustarregistry.github.io/javadoc/nsr-toolkit/index.html)
 
 ### Environment
 
@@ -241,7 +241,7 @@ The Toolkit is comprised of two components, one for communicating with the regis
 
 ### Connection and Session Management
 
-The Toolkit facilitates connections to the registry using classes in the com.ausregistry.jtoolkit2.session package. Clients obtain one instance of the SessionManager to be shared amongst all client threads that interact with the registry. The SessionManager provides a pool of connections that are automatically created as required. EPP session management is transparent to users of the SessionManager with EPP login commands issued when new connections are established.
+The Toolkit facilitates connections to the registry using classes in the neustar.registry.jtoolkit2.session package. Clients obtain one instance of the SessionManager to be shared amongst all client threads that interact with the registry. The SessionManager provides a pool of connections that are automatically created as required. EPP session management is transparent to users of the SessionManager with EPP login commands issued when new connections are established.
 
 Note that the object and extension URIs provided in the EPP login command are sourced from the namespaces declared in the default properties file. Developers can comment out, or add new namespace URIs to have them sent to the registry during login.
 
@@ -263,7 +263,7 @@ While construction of commands leads the caller to provide the minimal set of in
 
     xml.validation.enable=true
 
-Applications looking to extend the command/response framework should model their code from extensions provided in the core Toolkit. The com.ausregistry.jtoolkit2.se.secdns package provides an example command extension, and its use is documented in the section **Using extensions with commands**.
+Applications looking to extend the command/response framework should model their code from extensions provided in the core Toolkit. The neustar.registry.jtoolkit2.se.secdns package provides an example command extension, and its use is documented in the section **Using extensions with commands**.
 
 ###	Logging
 
@@ -425,7 +425,7 @@ An encoded SMD can be validated and parsed as follows:
 
 ## Trademark Claims Notice
 
-The Toolkit facilitates connections to the TMDB using classes in the com.ausregistry.jtoolkit2.tmdb package.
+The Toolkit facilitates connections to the TMDB using classes in the neustar.registry.jtoolkit2.tmdb package.
 
 ### Configuration
 
