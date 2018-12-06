@@ -13,9 +13,9 @@ To build the nsr-toolkit, you must have the Java Development Kit (JDK) v7.0 or a
 
 ## Introduction
 
-These are client-side libraries that implement the core EPP specifications, the domain, host and contact mappings of the specifications, and mappings for extensions operated by ARI.
+These are client-side libraries that implement the core EPP specifications, the domain, host and contact mappings of the specifications, and mappings for extensions operated by Neustar.
 
-The Extensible Provisioning Protocol (EPP) was selected as the registry-registrar protocol for communication between ARI Registry Services' Domain Name Registry System (DNRS) and the registrars licensed to interact with the registry.
+The Extensible Provisioning Protocol (EPP) was selected as the registry-registrar protocol for communication between Neustar Registry Services' Domain Name Registry System (DNRS) and the registrars licensed to interact with the registry.
 
 The core EPP specifications provide for management of domains, hosts (for DNS delegation), and contacts (for enabling communication with the entities responsible for a domain name registration). The protocol is extensible in various ways, including support for; extension to objects other than domains, hosts and contacts, extension of the commands defined on existing objects, and extension of the protocol to commands not defined in the core protocol.
 
@@ -28,7 +28,7 @@ These services are best bundled in a library which each registrar can utilise to
 
 ### Toolkit Overview
 
-The EPP toolkit developed and supplied by ARI provides client-side libraries that implement the EPP specifications described in RFC 5730-5734, and extension mappings for published RFCs and proprietary extensions implemented in Registries developed by ARI. These libraries are broken down into two key modules: an extensible set of EPP service element mappings to classes (object-oriented programming paradigm), and an EPP network transport module.
+The EPP toolkit developed and supplied by Neustar provides client-side libraries that implement the EPP specifications described in RFC 5730-5734, and extension mappings for published RFCs and proprietary extensions implemented in Registries developed by Neustar. These libraries are broken down into two key modules: an extensible set of EPP service element mappings to classes (object-oriented programming paradigm), and an EPP network transport module.
 
 The service element mapping module provides a simple means of translating between EPP service elements and their programmatic representation. The network transport module, which depends on session management service elements in the service element module, provides the following services; service information discovery, opening and closing EPP sessions, and sending and receiving EPP service elements.
 
@@ -43,7 +43,7 @@ This toolkit also provides a mechanism to perform the following Trademark Cleari
 
 #### Direct download
 
-    Obtain the latest toolkit here: [Toolkit v4.0.0](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-javadoc.jar))
+Obtain the latest toolkit here: [Toolkit v4.0.0](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.0.0/nsrjtk-4.0.0-javadoc.jar))
 
 #### Dependency Management
 
@@ -116,7 +116,7 @@ The default configuration for log files contain XML sent to and received from th
 
 ## Quick Start Guide
 
-ARI's EPP Toolkit allows you to send commands to an EPP service and receive back responses. To send commands it is necessary to create a session, which will handle socket connection, the EPP greeting, and logging in.
+Neustar's EPP Toolkit allows you to send commands to an EPP service and receive back responses. To send commands it is necessary to create a session, which will handle socket connection, the EPP greeting, and logging in.
 
 **Create a session**
 
@@ -235,6 +235,12 @@ Obtain the information from the response extension:
 
     if (idnResponse.isInitialised()) {String languageTag = idnResponse.getLanguageTag();}
 
+## Upgrading guide
+
+### Upgrading from 3.x to 4.0
+
+Since version 4.0.0 of the library, the package `"com.ausregistry"` has been renamed to `"neustar.registry"`. Hence the Java applications that has been using any earlier version of this library will have to replace the `import` statements globally in source code, if they wish to use the version 4.x.
+
 ## Implementation Notes
 
 The Toolkit is comprised of two components, one for communicating with the registry, and the second to map java objects into their XML representation conforming to the EPP specifications. These two components are discussed briefly below.
@@ -304,7 +310,7 @@ Alternatively, the user may implement custom handler classes and register those 
 
 ### Trademark Clearing House (TMCH)
 
-The toolkit provides an API to integrate with Registries to perform TMCH related functionality using ARI TMCH extension.
+The toolkit provides an API to integrate with Registries to perform TMCH related functionality using Neustar TMCH extension.
 It also provides an API to validate and parse SignedMarkData (SMD) file and access its contents,
 
 Given an input SMD file, the base64-encoded part of this file must be extracted:
