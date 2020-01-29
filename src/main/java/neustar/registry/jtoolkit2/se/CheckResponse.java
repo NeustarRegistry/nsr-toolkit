@@ -103,7 +103,7 @@ public abstract class CheckResponse<I> extends DataResponse {
      * @return an object identifier
      * @throws XPathExpressionException
      */
-    protected abstract I getKey(final XMLDocument xmlDoc, final String qry)
+    protected abstract I getKey(XMLDocument xmlDoc, String qry)
             throws XPathExpressionException;
 
     @Override
