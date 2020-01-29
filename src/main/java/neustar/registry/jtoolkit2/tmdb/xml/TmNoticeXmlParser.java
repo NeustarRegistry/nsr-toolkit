@@ -1,5 +1,6 @@
 package neustar.registry.jtoolkit2.tmdb.xml;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -16,12 +17,13 @@ import org.xml.sax.SAXException;
 
 public class TmNoticeXmlParser {
 
-
     public TmNotice parse(String noticeXml) throws IOException, TmNoticeXmlParseException {
 
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 
         try {
+            documentBuilderFactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document = documentBuilder.parse(new ByteArrayInputStream(noticeXml.getBytes()));
 

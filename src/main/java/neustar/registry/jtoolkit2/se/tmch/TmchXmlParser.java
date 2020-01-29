@@ -1,5 +1,6 @@
 package neustar.registry.jtoolkit2.se.tmch;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -45,8 +46,7 @@ public class TmchXmlParser {
      * @throws java.io.IOException In case the input stream cannot be read
      * @throws org.apache.commons.codec.DecoderException In case the stream cannot be decoded
      */
-    public static byte[] decodeSignedMarkData(final InputStream encodedSignedMarkData) throws DecoderException,
-            IOException {
+    public static byte[] decodeSignedMarkData(final InputStream encodedSignedMarkData) throws IOException {
         return Base64.decodeBase64(loadInputStreamIntoString(encodedSignedMarkData));
     }
 
@@ -61,7 +61,7 @@ public class TmchXmlParser {
      * @throws org.apache.commons.codec.DecoderException In case the stream cannot be decoded
      */
     public static SignedMarkData parseEncodedSignedMarkData(final InputStream decodedSignedMarkData) throws
-            IOException, DecoderException, ParserConfigurationException, SAXException {
+            IOException, ParserConfigurationException, SAXException {
         return parseDecodedSignedMarkData(new ByteArrayInputStream(decodeSignedMarkData(decodedSignedMarkData)));
     }
 
@@ -86,6 +86,8 @@ public class TmchXmlParser {
             ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         documentBuilderFactory.setNamespaceAware(true);
+        documentBuilderFactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 
          return documentBuilder.parse(decodedSignedMarkData);

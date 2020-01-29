@@ -1,35 +1,60 @@
 package neustar.registry.jtoolkit2.se.tmch;
 
+import static neustar.registry.jtoolkit2.se.ExtendedObjectType.SIGNED_MARK_DATA;
+import static neustar.registry.jtoolkit2.se.ExtendedObjectType.XML_DSIG;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CRL;
+import java.security.cert.CRLException;
+import java.security.cert.CertPath;
+import java.security.cert.CertPathValidator;
+import java.security.cert.CertPathValidatorException;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.PKIXParameters;
+import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 import javax.xml.bind.DatatypeConverter;
 import javax.xml.crypto.MarshalException;
 import javax.xml.crypto.dsig.XMLSignature;
 import javax.xml.crypto.dsig.XMLSignatureException;
 import javax.xml.crypto.dsig.XMLSignatureFactory;
 import javax.xml.crypto.dsig.dom.DOMValidateContext;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
-import java.io.*;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.cert.*;
-import java.util.*;
 
-import neustar.registry.jtoolkit2.se.tmch.exception.*;
-import neustar.registry.jtoolkit2.xml.NamespaceContextImpl;
-import neustar.registry.jtoolkit2.xml.ParsingException;
 import org.apache.commons.codec.DecoderException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-import static neustar.registry.jtoolkit2.se.ExtendedObjectType.SIGNED_MARK_DATA;
-import static neustar.registry.jtoolkit2.se.ExtendedObjectType.XML_DSIG;
+import neustar.registry.jtoolkit2.se.tmch.exception.ExpiredSignedMarkDataException;
+import neustar.registry.jtoolkit2.se.tmch.exception.InvalidSignedMarkDataException;
+import neustar.registry.jtoolkit2.se.tmch.exception.NotYetValidSignedMarkDataException;
+import neustar.registry.jtoolkit2.se.tmch.exception.SmdSignatureInvalidException;
+import neustar.registry.jtoolkit2.se.tmch.exception.SmdSignatureMissingException;
+import neustar.registry.jtoolkit2.se.tmch.exception.TmchCertificateInvalidTypeException;
+import neustar.registry.jtoolkit2.se.tmch.exception.TmchCertificateRevokedException;
+import neustar.registry.jtoolkit2.se.tmch.exception.TmchInvalidCertificateException;
+import neustar.registry.jtoolkit2.se.tmch.exception.TmchSmdRevokedException;
+import neustar.registry.jtoolkit2.xml.NamespaceContextImpl;
+import neustar.registry.jtoolkit2.xml.ParsingException;
 
 /**
  * This defines the operations to facilitate validation and parsing of signed mark data for TMCH.
@@ -57,7 +82,6 @@ public class TmchValidatingParser extends TmchXmlParser {
     private final CertificateFactory certificateFactory;
     private final KeyStore icannCertificateTrustStore;
 
-    private DocumentBuilderFactory documentBuilderFactory;
     private XPath xPath;
     private final XMLSignatureFactory xmlSignatureFactory;
 
@@ -76,8 +100,6 @@ public class TmchValidatingParser extends TmchXmlParser {
     public TmchValidatingParser(InputStream certificateRevocationList, InputStream smdRevocationList,
                                 InputStream tmchIssuingAuthorityCert)
             throws CertificateException, CRLException, IOException, KeyStoreException, NoSuchAlgorithmException {
-        documentBuilderFactory = DocumentBuilderFactory.newInstance();
-        documentBuilderFactory.setNamespaceAware(true);
 
         certificateFactory = CertificateFactory.getInstance("X.509");
         certRevocationList = certificateFactory.generateCRL(certificateRevocationList);
@@ -149,7 +171,7 @@ public class TmchValidatingParser extends TmchXmlParser {
      * @throws InvalidAlgorithmParameterException if an exception occurs while validating SMD certificate
      */
     public SignedMarkData validateAndParseEncodedSignedMarkData(InputStream encodedSignedMarkData) throws
-            ParsingException, IOException, DecoderException, ParserConfigurationException, XPathExpressionException,
+            IOException, DecoderException, ParserConfigurationException, XPathExpressionException,
             NoSuchAlgorithmException, CertificateException, KeyStoreException, InvalidAlgorithmParameterException,
             SAXException {
         return validateEncodedSignedMarkDataForDate(encodedSignedMarkData, new Date());
@@ -157,7 +179,7 @@ public class TmchValidatingParser extends TmchXmlParser {
 
     private SignedMarkData validateEncodedSignedMarkDataForDate(InputStream encodedSignedMarkData,
                                                                 Date dateForValidation) throws
-            ParsingException, IOException, DecoderException, ParserConfigurationException, XPathExpressionException,
+            IOException, DecoderException, ParserConfigurationException, XPathExpressionException,
             NoSuchAlgorithmException, CertificateException, KeyStoreException, InvalidAlgorithmParameterException,
             SAXException {
 
@@ -247,8 +269,7 @@ public class TmchValidatingParser extends TmchXmlParser {
         }
     }
 
-    private X509Certificate assertCertificateNotRevoked(X509Certificate x509Certificate)
-            throws XPathExpressionException {
+    private X509Certificate assertCertificateNotRevoked(X509Certificate x509Certificate) {
 
         if (certRevocationList.isRevoked(x509Certificate)) {
             throw new TmchCertificateRevokedException(x509Certificate);
