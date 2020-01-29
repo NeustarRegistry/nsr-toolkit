@@ -44,7 +44,6 @@ public class TmchXmlParser {
      * @param encodedSignedMarkData Input stream to the base64-encoded data to decode
      * @return The decoded XML SMD data
      * @throws java.io.IOException In case the input stream cannot be read
-     * @throws org.apache.commons.codec.DecoderException In case the stream cannot be decoded
      */
     public static byte[] decodeSignedMarkData(final InputStream encodedSignedMarkData) throws IOException {
         return Base64.decodeBase64(loadInputStreamIntoString(encodedSignedMarkData));
@@ -58,7 +57,6 @@ public class TmchXmlParser {
      * @throws java.io.IOException In case the input stream cannot be read
      * @throws ParserConfigurationException In case an error occurs while parsing
      * @throws SAXException In case an error occurs while parsing
-     * @throws org.apache.commons.codec.DecoderException In case the stream cannot be decoded
      */
     public static SignedMarkData parseEncodedSignedMarkData(final InputStream decodedSignedMarkData) throws
             IOException, ParserConfigurationException, SAXException {

@@ -161,7 +161,6 @@ public class TmchValidatingParser extends TmchXmlParser {
      * @param encodedSignedMarkData Input stream to the base64-encoded SMD to be validated
      * @return if the input SMD is valid the parsed SignedMarkDate object
      * @throws IOException In case the input stream cannot be read
-     * @throws ParsingException In case an error occurs while parsing
      * @throws DecoderException In case the stream cannot be decoded
      * @throws XPathExpressionException if an exception occurs while parsing the decoded SMD
      * @throws ParserConfigurationException if an exception occurs while parsing the decoded SMD
