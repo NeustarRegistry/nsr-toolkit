@@ -62,7 +62,7 @@ public class DomainCreateCommand extends CreateCommand {
         String[] billingContacts, Host[] nameservers, Period period, boolean asHostAttribute) {
         super(StandardObjectType.DOMAIN, name);
 
-        if (name == null || pw == null) {
+        if (name == null) {
             throw new IllegalArgumentException(ErrorPkg.getMessage(
                 "se.domain.create.missing_arg"));
         }
@@ -108,10 +108,10 @@ public class DomainCreateCommand extends CreateCommand {
         }
 
         xmlWriter.appendChild(
-            xmlWriter.appendChild(
-                objElement,
-                "authInfo"),
-            "pw").setTextContent(pw);
+                xmlWriter.appendChild(
+                        objElement,
+                        "authInfo"),
+                "pw").setTextContent(pw);
     }
 }
 

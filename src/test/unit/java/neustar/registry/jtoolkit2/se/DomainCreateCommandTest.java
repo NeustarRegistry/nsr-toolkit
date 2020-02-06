@@ -88,4 +88,33 @@ public class DomainCreateCommandTest {
         }
     }
 
+    @Test
+    public void shouldIncludeAuthinfoTagWithEmptyPwWhenAuthinfoNull() {
+        Command cmd = new DomainCreateCommand("jtkutest.com.au", null,
+                "JTKCON", new String[] {"JTKCON", "JTKCON2"},
+                null, new String[] {"JTKCON3"},
+                new String[] {"ns1.jtkutest.com", "ns2.jtkutest.com"},
+                new Period(6));
+        try {
+            String xml = cmd.toXML();
+            assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\"?><epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd\"><command><create><create xmlns=\"urn:ietf:params:xml:ns:domain-1.0\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:domain-1.0 domain-1.0.xsd\"><name>jtkutest.com.au</name><period unit=\"y\">6</period><ns><hostObj>ns1.jtkutest.com</hostObj><hostObj>ns2.jtkutest.com</hostObj></ns><registrant>JTKCON</registrant><contact type=\"tech\">JTKCON</contact><contact type=\"tech\">JTKCON2</contact><contact type=\"billing\">JTKCON3</contact><authInfo><pw/></authInfo></create></create><clTRID>JTKUTEST.20070101.010101.0</clTRID></command></epp>", xml);
+        } catch (SAXException saxe) {
+            fail(saxe.getMessage());
+        }
+    }
+
+    @Test
+    public void shouldIncludeAuthinfoTagWithEmptyPwWhenAuthinfoEmpty() {
+        Command cmd = new DomainCreateCommand("jtkutest.com.au", "",
+                "JTKCON", new String[] {"JTKCON", "JTKCON2"},
+                null, new String[] {"JTKCON3"},
+                new String[] {"ns1.jtkutest.com", "ns2.jtkutest.com"},
+                new Period(6));
+        try {
+            String xml = cmd.toXML();
+            assertEquals("<?xml version=\"1.0\" encoding=\"UTF-8\"?><epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd\"><command><create><create xmlns=\"urn:ietf:params:xml:ns:domain-1.0\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:domain-1.0 domain-1.0.xsd\"><name>jtkutest.com.au</name><period unit=\"y\">6</period><ns><hostObj>ns1.jtkutest.com</hostObj><hostObj>ns2.jtkutest.com</hostObj></ns><registrant>JTKCON</registrant><contact type=\"tech\">JTKCON</contact><contact type=\"tech\">JTKCON2</contact><contact type=\"billing\">JTKCON3</contact><authInfo><pw/></authInfo></create></create><clTRID>JTKUTEST.20070101.010101.0</clTRID></command></epp>", xml);
+        } catch (SAXException saxe) {
+            fail(saxe.getMessage());
+        }
+    }
 }
