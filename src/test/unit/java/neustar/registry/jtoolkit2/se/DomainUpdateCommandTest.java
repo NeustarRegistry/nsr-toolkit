@@ -201,4 +201,17 @@ public class DomainUpdateCommandTest {
             fail(saxe.getMessage());
         }
     }
+
+    @Test
+    public void testDomainUpdateChangeAuthInfoToNull() {
+        Command cmd = new DomainUpdateCommand("jtkutest.com.au", null, add, rem3, "JTKCON", true);
+        try {
+            String xml = cmd.toXML();
+            assertEquals(
+                    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd\"><command><update><update xmlns=\"urn:ietf:params:xml:ns:domain-1.0\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:domain-1.0 domain-1.0.xsd\"><name>jtkutest.com.au</name><add><ns><hostObj>ns1.jtkutest.com.au</hostObj><hostObj>ns2.jtkutest.com.au</hostObj></ns><contact type=\"tech\">JTKCON</contact><contact type=\"admin\">JTKCON2</contact><contact type=\"billing\">JTKCON3</contact><status s=\"clientHold\">non-payment</status></add><rem><contact type=\"tech\">JTKCON2</contact><contact type=\"admin\">JTKCON</contact><status s=\"clientDeleteProhibited\"/></rem><chg><registrant>JTKCON</registrant><authInfo><null/></authInfo></chg></update></update><clTRID>JTKUTEST.20070101.010101.0</clTRID></command></epp>",
+                    xml);
+        } catch (SAXException saxe) {
+            fail(saxe.getMessage());
+        }
+    }
 }

@@ -1,8 +1,8 @@
 package neustar.registry.jtoolkit2.se;
 
-import neustar.registry.jtoolkit2.ErrorPkg;
-
 import org.w3c.dom.Element;
+
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * Use this to request the update of a domain object provisioned in an EPP
@@ -29,13 +29,12 @@ public class DomainUpdateCommand extends UpdateCommand {
      * @throws IllegalArgumentException if {@code name} is {@code null}.
      */
     public DomainUpdateCommand(String name, String pw,
-            DomainAdd add, DomainRem rem, String registrantID) {
-
+                               DomainAdd add, DomainRem rem, String registrantID, boolean removeAuthInfo) {
         super(StandardObjectType.DOMAIN, name);
 
         if (name == null) {
             throw new IllegalArgumentException(ErrorPkg.getMessage(
-                        "se.domain.update.name.missing"));
+                    "se.domain.update.name.missing"));
         }
 
         if (add != null) {
@@ -46,23 +45,33 @@ public class DomainUpdateCommand extends UpdateCommand {
             rem.appendToElement(xmlWriter, objElement);
         }
 
-        if (pw != null || registrantID != null) {
+        if (registrantID != null || pw != null || removeAuthInfo) {
             Element chg = xmlWriter.appendChild(objElement, "chg");
-
             if (registrantID != null) {
                 xmlWriter.appendChild(
                         chg,
                         "registrant").setTextContent(registrantID);
             }
-
             if (pw != null) {
                 xmlWriter.appendChild(
                         xmlWriter.appendChild(
                             chg,
                             "authInfo"),
-                        "pw").setTextContent(pw);
+                    "pw").setTextContent(pw);
+            } else if (removeAuthInfo) {
+                xmlWriter.appendChild(
+                        xmlWriter.appendChild(
+                            chg,
+                            "authInfo"),
+                    "null");
             }
+
         }
+    }
+
+    public DomainUpdateCommand(String name, String pw,
+            DomainAdd add, DomainRem rem, String registrantID) {
+        this(name, pw, add, rem, registrantID, false);
     }
 }
 
