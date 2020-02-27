@@ -74,7 +74,7 @@ public class ContactCreateCommand extends CreateCommand {
 
         super(StandardObjectType.CONTACT, id);
 
-        if (id == null || pw == null
+        if (id == null
                 || (postalInfo == null && localPostalInfo == null)
                 || email == null) {
             throw new IllegalArgumentException(ErrorPkg.getMessage(
@@ -112,8 +112,8 @@ public class ContactCreateCommand extends CreateCommand {
 
         xmlWriter.appendChild(
                 xmlWriter.appendChild(
-                    objElement,
-                    "authInfo"),
+                        objElement,
+                        "authInfo"),
                 "pw").setTextContent(pw);
 
         if (disclose != null) {
