@@ -239,7 +239,7 @@ Obtain the information from the response extension:
 
 ### Upgrading from 3.x to 4.0
 
-Since version 4.0.1 of the library, the package `"com.ausregistry"` has been renamed to `"neustar.registry"`. Hence the Java applications that has been using any earlier version of this library will have to replace the `import` statements globally in source code, if they wish to use the version 4.x.
+Since version 4.0 of the library, the package `"com.ausregistry"` has been renamed to `"neustar.registry"`. Hence the Java applications that has been using any earlier version of this library will have to replace the `import` statements globally in source code, if they wish to use the version 4.x.
 
 ## Implementation Notes
 
