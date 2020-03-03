@@ -1,8 +1,8 @@
 package neustar.registry.jtoolkit2.se;
 
-import neustar.registry.jtoolkit2.ErrorPkg;
-
 import org.w3c.dom.Element;
+
+import neustar.registry.jtoolkit2.ErrorPkg;
 
 /**
  * Use this to request the update of a contact object provisioned in an EPP
@@ -30,16 +30,15 @@ public class ContactUpdateCommand extends UpdateCommand {
      * @throws IllegalArgumentException if {@code id} is {@code null}.
      */
     public ContactUpdateCommand(String id, String pw,
-            Status[] addStatuses, String[] remStatuses,
-            IntPostalInfo newIntPostalInfo, LocalPostalInfo newLocPostalInfo,
-            String newVoice, String newVoiceExt, String newFax,
-            String newFaxExt, String newEmail, Disclose disclose) {
-
+                                Status[] addStatuses, String[] remStatuses,
+                                IntPostalInfo newIntPostalInfo, LocalPostalInfo newLocPostalInfo,
+                                String newVoice, String newVoiceExt, String newFax,
+                                String newFaxExt, String newEmail, Disclose disclose, boolean removeAuthInfo) {
         super(StandardObjectType.CONTACT, id);
 
         if (id == null) {
             throw new IllegalArgumentException(ErrorPkg.getMessage(
-                        "se.contact.update.id.missing"));
+                    "se.contact.update.id.missing"));
         }
 
         if (addStatuses != null) {
@@ -98,14 +97,29 @@ public class ContactUpdateCommand extends UpdateCommand {
         if (pw != null) {
             xmlWriter.appendChild(
                     xmlWriter.appendChild(
-                        chg,
-                        "authInfo"),
+                            chg,
+                            "authInfo"),
                     "pw").setTextContent(pw);
+        } else if (removeAuthInfo) {
+            xmlWriter.appendChild(
+                    xmlWriter.appendChild(
+                            chg,
+                            "authInfo"),
+                    "pw").setTextContent(null);
         }
 
         if (disclose != null) {
             disclose.appendToElement(xmlWriter, chg);
         }
+    }
+
+    public ContactUpdateCommand(String id, String pw,
+            Status[] addStatuses, String[] remStatuses,
+            IntPostalInfo newIntPostalInfo, LocalPostalInfo newLocPostalInfo,
+            String newVoice, String newVoiceExt, String newFax,
+            String newFaxExt, String newEmail, Disclose disclose) {
+        this(id, pw, addStatuses, remStatuses, newIntPostalInfo, newLocPostalInfo, newVoice, newVoiceExt, newFax,
+                newFaxExt, newEmail, disclose, false);
     }
 }
 
