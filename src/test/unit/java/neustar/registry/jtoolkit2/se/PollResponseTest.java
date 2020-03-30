@@ -1,21 +1,24 @@
 package neustar.registry.jtoolkit2.se;
 
+import static neustar.registry.jtoolkit2.se.maintenance.MaintenanceWindowInfoResponseBuilder.infoResponseBuilder;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
 import neustar.registry.jtoolkit2.EPPDateFormatter;
 import neustar.registry.jtoolkit2.se.app.DomainInfoApplicationResponseExtension;
 import neustar.registry.jtoolkit2.se.generic.DomainInfoKVResponseExtension;
 import neustar.registry.jtoolkit2.se.idn.DomainInfoIdnResponseExtension;
+import neustar.registry.jtoolkit2.se.maintenance.MaintenanceWindowInfoResponse;
 import neustar.registry.jtoolkit2.se.rgp.DomainInfoRgpResponseExtension;
 import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
 import neustar.registry.jtoolkit2.xml.ParsingException;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
 import neustar.registry.jtoolkit2.xml.XMLParser;
-import org.junit.Test;
-
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
 
 public class PollResponseTest {
     private static final String XML_1 = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd\"><response><result code=\"1301\"><msg>Command completed successfully; ack to dequeue</msg></result><msgQ count=\"5\" id=\"12345\"><qDate>2000-06-08T22:00:00.0Z</qDate><msg>Transfer requested.</msg></msgQ><resData><domain:trnData xmlns:domain=\"urn:ietf:params:xml:ns:domain-1.0\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:domain-1.0 domain-1.0.xsd\"><domain:name>example.com</domain:name><domain:trStatus>pending</domain:trStatus><domain:reID>ClientX</domain:reID><domain:reDate>2000-06-08T22:00:00.0Z</domain:reDate><domain:acID>ClientY</domain:acID><domain:acDate>2000-06-13T22:00:00.0Z</domain:acDate><domain:exDate>2002-09-08T22:00:00.0Z</domain:exDate></domain:trnData></resData><trID><clTRID>ABC-12345</clTRID><svTRID>54321-XYZ</svTRID></trID></response></epp>";
@@ -25,18 +28,13 @@ public class PollResponseTest {
     private static final String XML_5 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd\"><response><result code=\"1000\"><msg>Command completed successfully</msg></result><resData><infData xmlns=\"urn:ietf:params:xml:ns:domain-1.0\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:domain-1.0 domain-1.0.xsd\"><name>domain.zone</name><roid>D0000003-AR</roid><status s=\"ok\" lang=\"en\"/><registrant>EXAMPLE</registrant><contact type=\"tech\">EXAMPLE</contact><ns><hostObj>ns1.example.com.au</hostObj><hostObj>ns2.example.com.au</hostObj></ns><host>ns1.example.com.au</host><host>ns2.exmaple.com.au</host><clID>Registrar</clID><crID>Registrar</crID><crDate>2008-02-10T00:00:00.0Z</crDate><upDate>2008-02-10T00:00:00.0Z</upDate><exDate>2008-02-10T00:00:00.0Z</exDate><authInfo><pw>0192pqow</pw></authInfo></infData></resData><extension><app:infData xmlns:app=\"urn:ar:params:xml:ns:application-1.0\" xsi:schemaLocation=\"urn:ar:params:xml:ns:application-1.0 application-1.0.xsd\"><app:id>applicationId</app:id><app:phase>phase</app:phase><app:status s=\"applied\" /></app:infData><tmch:infData xmlns:tmch=\"urn:ar:params:xml:ns:tmch-1.0\"><tmch:smd>ZW5jb2RlZFNpZ25lZE1hcmtEYXRh</tmch:smd></tmch:infData></extension><trID><clTRID>ABC-12345</clTRID><svTRID>54321-XYZ</svTRID></trID></response></epp>";
     private static final String XML_6 = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd\"><response><result code=\"1301\"><msg>Command completed successfully; ack to dequeue</msg></result><msgQ count=\"5\" id=\"12345\"><qDate>2000-06-08T22:00:00.0Z</qDate><msg>Transfer requested.</msg></msgQ><resData>\n <domain:trnData xmlns:domain=\"urn:ietf:params:xml:ns:domain-1.0\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:domain-1.0 domain-1.0.xsd\"><domain:name>example.com</domain:name><domain:trStatus>pending</domain:trStatus><domain:reID>ClientX</domain:reID><domain:reDate>2000-06-08T22:00:00.0Z</domain:reDate><domain:acID>ClientY</domain:acID><domain:acDate>2000-06-13T22:00:00.0Z</domain:acDate><domain:exDate>2002-09-08T22:00:00.0Z</domain:exDate></domain:trnData></resData><trID><clTRID>ABC-12345</clTRID><svTRID>54321-XYZ</svTRID></trID></response></epp>";
 
-    private PollResponse xmlPollResponse(String xml) {
-        final XMLParser parser = new XMLParser();
-        PollResponse pollResponse = new PollResponse();
-        XMLDocument doc;
-        try {
-            doc = parser.parse(xml);
-            pollResponse.fromXML(doc);
-            return pollResponse;
-        } catch (ParsingException e) {
-            fail("Cannot parse given XML to a PollResponse!");
-            throw new IllegalStateException();
-        }
+    @Test
+    public void shouldRetrieveMaintenanceWindowInfoResponse() {
+        String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><epp xmlns=\"urn:ietf:params:xml:ns:epp-1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd\"><response><result code=\"1301\"><msg>Command completed successfully; ack to dequeue</msg></result><msgQ count=\"5\" id=\"12345\"><qDate>2000-06-08T22:00:00.0Z</qDate><msg>Transfer requested.</msg></msgQ>"
+                + infoResponseBuilder("maint-win-id").buildResponse()
+                + "<trID><clTRID>ABC-12345</clTRID><svTRID>54321-XYZ</svTRID></trID></response></epp>";
+        final MaintenanceWindowInfoResponse response = xmlPollResponse(xml).getMaintInfoResponse();
+        assertThat(response.getId(), is("maint-win-id"));
     }
 
     @Test
@@ -192,4 +190,19 @@ public class PollResponseTest {
         assertEquals("ClientX", hostInfoResponse.getCreateClient());
         assertEquals("ClientX", hostInfoResponse.getUpdateClient());
     }
+
+    private PollResponse xmlPollResponse(String xml) {
+        final XMLParser parser = new XMLParser();
+        PollResponse pollResponse = new PollResponse();
+        XMLDocument doc;
+        try {
+            doc = parser.parse(xml);
+            pollResponse.fromXML(doc);
+            return pollResponse;
+        } catch (ParsingException e) {
+            fail("Cannot parse given XML to a PollResponse!");
+            throw new IllegalStateException();
+        }
+    }
+
 }

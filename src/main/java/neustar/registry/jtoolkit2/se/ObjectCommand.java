@@ -10,6 +10,7 @@ import neustar.registry.jtoolkit2.ErrorPkg;
  */
 public abstract class ObjectCommand extends Command {
     private static final long serialVersionUID = 6432275322668381115L;
+    private static final String SE_OBJECT_MISSING_ARG = "se.object.missing_arg";
     protected org.w3c.dom.Element objElement;
     private ObjectType objType;
 
@@ -27,7 +28,7 @@ public abstract class ObjectCommand extends Command {
 
         if (objectType == null || idents == null || idents.length == 0) {
             throw new IllegalArgumentException(
-                    ErrorPkg.getMessage("se.object.missing_arg"));
+                    ErrorPkg.getMessage(SE_OBJECT_MISSING_ARG));
         }
 
         objType = objectType;
@@ -50,7 +51,7 @@ public abstract class ObjectCommand extends Command {
 
         if (objectType == null || ident == null) {
             throw new IllegalArgumentException(
-                    ErrorPkg.getMessage("se.object.missing_arg"));
+                    ErrorPkg.getMessage(SE_OBJECT_MISSING_ARG));
         }
 
         objType = objectType;
@@ -73,7 +74,7 @@ public abstract class ObjectCommand extends Command {
 
         if (objectType == null) {
             throw new IllegalArgumentException(
-                    ErrorPkg.getMessage("se.object.missing_arg"));
+                    ErrorPkg.getMessage(SE_OBJECT_MISSING_ARG));
         }
 
         objType = objectType;
@@ -94,7 +95,7 @@ public abstract class ObjectCommand extends Command {
 
         if (objectType == null || ident == null) {
             throw new IllegalArgumentException(
-                    ErrorPkg.getMessage("se.object.missing_arg"));
+                    ErrorPkg.getMessage(SE_OBJECT_MISSING_ARG));
         }
 
         objType = objectType;
@@ -116,7 +117,7 @@ public abstract class ObjectCommand extends Command {
                 objType.getSchemaLocation());
     }
 
-    ObjectType getObjectType() {
+    public ObjectType getObjectType() {
         return objType;
     }
 }

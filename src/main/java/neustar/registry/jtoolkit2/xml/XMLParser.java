@@ -2,8 +2,8 @@ package neustar.registry.jtoolkit2.xml;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,6 +24,7 @@ import neustar.registry.jtoolkit2.ErrorPkg;
  * Uses the user level logger.
  */
 public class XMLParser {
+    public static final String USER_LOGGER = ".user";
     private static DocumentBuilderFactory builderFactory;
     private static String pname;
     private static boolean isInitialised = false;
@@ -50,7 +51,7 @@ public class XMLParser {
             builder = builderFactory.newDocumentBuilder();
             builder.setErrorHandler(HandlerFactory.newInstance());
         } catch (ParserConfigurationException pce) {
-            pce.printStackTrace();
+            Logger.getLogger(pname + USER_LOGGER).log(Level.SEVERE, "XML parser configuration:", pce);
         }
     }
 
@@ -69,13 +70,13 @@ public class XMLParser {
                         true);
                 builderFactory.setSchema(EPPSchemaProvider.getSchema());
             } catch (UnsupportedOperationException uoe) {
-                Logger.getLogger(pname + ".user").warning(uoe.getMessage());
-                Logger.getLogger(pname + ".user").warning(
+                Logger.getLogger(pname + USER_LOGGER).warning(uoe.getMessage());
+                Logger.getLogger(pname + USER_LOGGER).warning(
                         ErrorPkg.getMessage(
                             "xml.parser.operation.unsupported"));
             } catch (ParserConfigurationException pce) {
-                Logger.getLogger(pname + ".user").warning(pce.getMessage());
-                Logger.getLogger(pname + ".user").warning(
+                Logger.getLogger(pname + USER_LOGGER).warning(pce.getMessage());
+                Logger.getLogger(pname + USER_LOGGER).warning(
                         ErrorPkg.getMessage(
                             "xml.parser.feature.unsupported"));
             }

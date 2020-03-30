@@ -2,13 +2,14 @@ package neustar.registry.jtoolkit2.se;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import neustar.registry.jtoolkit2.se.app.DomainInfoApplicationResponseExtension;
-import neustar.registry.jtoolkit2.se.idn.ietf.DomainInfoIetfIdnResponseExtension;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
+import neustar.registry.jtoolkit2.se.app.DomainInfoApplicationResponseExtension;
 import neustar.registry.jtoolkit2.se.generic.DomainInfoKVResponseExtension;
 import neustar.registry.jtoolkit2.se.idn.DomainInfoIdnResponseExtension;
+import neustar.registry.jtoolkit2.se.idn.ietf.DomainInfoIetfIdnResponseExtension;
+import neustar.registry.jtoolkit2.se.maintenance.MaintenanceWindowInfoResponse;
 import neustar.registry.jtoolkit2.se.rgp.DomainInfoRgpResponseExtension;
 import neustar.registry.jtoolkit2.se.secdns.SecDnsDomainInfoResponseExtension;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
@@ -52,6 +53,7 @@ public class PollResponse extends Response {
     private DomainInfoRgpResponseExtension rgpDomainInfoResponseExtension;
     private DomainInfoKVResponseExtension kvDomainInfoResponseExtension;
     private DomainInfoApplicationResponseExtension domainInfoApplicationResponseExtension;
+    private MaintenanceWindowInfoResponse maintInfoResponse;
 
     public PollResponse() {
     }
@@ -88,6 +90,10 @@ public class PollResponse extends Response {
         return hostInfoResponse;
     }
 
+    public MaintenanceWindowInfoResponse getMaintInfoResponse() {
+        return maintInfoResponse;
+    }
+
     @Override
     public void fromXML(XMLDocument xmlDoc) {
         debugLogger.finest("enter");
@@ -100,7 +106,7 @@ public class PollResponse extends Response {
         try {
             Node resDataNode = xmlDoc.getElement(RES_DATA_EXPR);
 
-            if (resDataNode != null && resDataNode instanceof Element) {
+            if (resDataNode instanceof Element) {
                 resData = (Element) resDataNode;
             }
 
@@ -121,51 +127,62 @@ public class PollResponse extends Response {
                 return;
             }
 
-            String childName = childNode.getLocalName();
+            getChildNodeResponse(xmlDoc, childNode);
 
-            if (childNode.getNamespaceURI().equals(
-                        StandardObjectType.DOMAIN.getURI())) {
-                if (childName.equals(PAN_DATA)) {
-                    domNtfnResponse = new DomainNotificationResponse();
-                    domNtfnResponse.fromXML(xmlDoc);
-                    resDataResponse = domNtfnResponse;
-                } else if (childName.equals(TRN_DATA)) {
-                    domTrnResponse = new DomainTransferResponse();
-                    domTrnResponse.fromXML(xmlDoc);
-                    resDataResponse = domTrnResponse;
-                } else if (childName.equals(INF_DATA)) {
-                    domInfoResponse = new DomainInfoResponse();
-                    initialiseExtensions();
-                    domInfoResponse.fromXML(xmlDoc);
-                    resDataResponse = domInfoResponse;
-                }
-            } else if (childNode.getNamespaceURI().equals(
-                        StandardObjectType.CONTACT.getURI())) {
-                if (childName.equals(PAN_DATA)) {
-                    conNtfnResponse = new ContactNotificationResponse();
-                    conNtfnResponse.fromXML(xmlDoc);
-                    resDataResponse = conNtfnResponse;
-                } else if (childName.equals(TRN_DATA)) {
-                    conTrnResponse = new ContactTransferResponse();
-                    conTrnResponse.fromXML(xmlDoc);
-                    resDataResponse = conTrnResponse;
-                } else if (childName.equals(INF_DATA)) {
-                    conInfoResponse = new ContactInfoResponse();
-                    conInfoResponse.fromXML(xmlDoc);
-                    resDataResponse = conInfoResponse;
-                }
-            } else if (childNode.getNamespaceURI().equals(StandardObjectType.HOST.getURI())) {
-                if (childName.equals(INF_DATA)) {
-                    hostInfoResponse = new HostInfoResponse();
-                    hostInfoResponse.fromXML(xmlDoc);
-                    resDataResponse = hostInfoResponse;
-                }
-            }
         } catch (XPathExpressionException xpee) {
             maintLogger.warning(xpee.getMessage());
         }
 
         debugLogger.finest("exit");
+    }
+
+    private void getChildNodeResponse(XMLDocument xmlDoc, Node childNode) {
+        String childName = childNode.getLocalName();
+
+        if (childNode.getNamespaceURI().equals(
+                    StandardObjectType.DOMAIN.getURI())) {
+            if (childName.equals(PAN_DATA)) {
+                domNtfnResponse = new DomainNotificationResponse();
+                domNtfnResponse.fromXML(xmlDoc);
+                resDataResponse = domNtfnResponse;
+            } else if (childName.equals(TRN_DATA)) {
+                domTrnResponse = new DomainTransferResponse();
+                domTrnResponse.fromXML(xmlDoc);
+                resDataResponse = domTrnResponse;
+            } else if (childName.equals(INF_DATA)) {
+                domInfoResponse = new DomainInfoResponse();
+                initialiseExtensions();
+                domInfoResponse.fromXML(xmlDoc);
+                resDataResponse = domInfoResponse;
+            }
+        } else if (childNode.getNamespaceURI().equals(
+                    StandardObjectType.CONTACT.getURI())) {
+            if (childName.equals(PAN_DATA)) {
+                conNtfnResponse = new ContactNotificationResponse();
+                conNtfnResponse.fromXML(xmlDoc);
+                resDataResponse = conNtfnResponse;
+            } else if (childName.equals(TRN_DATA)) {
+                conTrnResponse = new ContactTransferResponse();
+                conTrnResponse.fromXML(xmlDoc);
+                resDataResponse = conTrnResponse;
+            } else if (childName.equals(INF_DATA)) {
+                conInfoResponse = new ContactInfoResponse();
+                conInfoResponse.fromXML(xmlDoc);
+                resDataResponse = conInfoResponse;
+            }
+        } else if (childNode.getNamespaceURI().equals(StandardObjectType.HOST.getURI())) {
+            if (childName.equals(INF_DATA)) {
+                hostInfoResponse = new HostInfoResponse();
+                hostInfoResponse.fromXML(xmlDoc);
+                resDataResponse = hostInfoResponse;
+            }
+        } else if (childNode.getNamespaceURI().equals(ExtendedObjectType.MAINT.getURI())) {
+            if (childName.equals(INF_DATA)) {
+                maintInfoResponse = new MaintenanceWindowInfoResponse();
+                maintInfoResponse.fromXML(xmlDoc);
+                resDataResponse = maintInfoResponse;
+            }
+        }
     }
 
     private void initialiseExtensions() {

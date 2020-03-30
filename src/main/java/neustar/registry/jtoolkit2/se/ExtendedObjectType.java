@@ -52,9 +52,15 @@ public enum ExtendedObjectType implements ObjectType {
     IETF_IDN("ietfIdn", "urn:ietf:params:xml:ns:idn-1.0", "ietf-idn-1.0.xsd", "ietfIdn"),
     /** References the Allocation Token XML namespace and schema file */
     ALLOCATION_TOKEN("allocationToken", "urn:ietf:params:xml:ns:allocationToken-1.0", "allocationToken-1.0.xsd",
-            "allocationToken");
+            "allocationToken"),
+    /** References the Allocation Token XML namespace and schema file */
+    MAINT("maint", "urn:ietf:params:xml:ns:maintenance-0.2", "maintenance-0.2.xsd",
+            "id");
 
-    private final String prefix, uri, schemaDefinition, identType;
+    private final String prefix;
+    private final String uri;
+    private final String schemaDefinition;
+    private final String identType;
 
     ExtendedObjectType(final String prefix, final String uri, final String schemaDefinition,
             final String identType) {

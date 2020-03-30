@@ -1,12 +1,10 @@
 package neustar.registry.jtoolkit2.se;
 
-import neustar.registry.jtoolkit2.EPPDateFormatter;
-
-import neustar.registry.jtoolkit2.xml.XMLDocument;
-
 import java.util.GregorianCalendar;
-
 import javax.xml.xpath.XPathExpressionException;
+
+import neustar.registry.jtoolkit2.EPPDateFormatter;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
  * Representation of the EPP info response, as defined in RFC5730.  Subclasses
@@ -39,8 +37,12 @@ public abstract class InfoResponse extends DataResponse {
     private static final String STATUS_LANG_EXPR = "/@lang";
 
     private String roid;
-    private String clID, crID, upID;
-    private GregorianCalendar crDate, upDate, trDate;
+    private String clID;
+    private String crID;
+    private String upID;
+    private GregorianCalendar crDate;
+    private GregorianCalendar upDate;
+    private GregorianCalendar trDate;
     private Status[] statuses;
 
     public InfoResponse(ObjectType objectType) {
@@ -101,14 +103,17 @@ public abstract class InfoResponse extends DataResponse {
             upDate = EPPDateFormatter.fromXSDateTime(upDateStr);
             trDate = EPPDateFormatter.fromXSDateTime(trDateStr);
 
-            int statusCount = xmlDoc.getNodeCount(statusCountExpr());
-            statuses = new Status[statusCount];
-            for (int i = 0; i < statuses.length; i++) {
-                String qry = ReceiveSE.replaceIndex(statusExpr(), i + 1);
-                String reason = xmlDoc.getNodeValue(qry + STATUS_REASON_EXPR);
-                String s = xmlDoc.getNodeValue(qry + STATUS_S_EXPR);
-                String lang = xmlDoc.getNodeValue(qry + STATUS_LANG_EXPR);
-                statuses[i] = new Status(s, reason, lang);
+            String statusCountExpr = statusCountExpr();
+            if (statusCountExpr != null) {
+                int statusCount = xmlDoc.getNodeCount(statusCountExpr);
+                statuses = new Status[statusCount];
+                for (int i = 0; i < statuses.length; i++) {
+                    String qry = ReceiveSE.replaceIndex(statusExpr(), i + 1);
+                    String reason = xmlDoc.getNodeValue(qry + STATUS_REASON_EXPR);
+                    String s = xmlDoc.getNodeValue(qry + STATUS_S_EXPR);
+                    String lang = xmlDoc.getNodeValue(qry + STATUS_LANG_EXPR);
+                    statuses[i] = new Status(s, reason, lang);
+                }
             }
         } catch (XPathExpressionException xpee) {
             maintLogger.warning(xpee.getMessage());
@@ -125,6 +130,7 @@ public abstract class InfoResponse extends DataResponse {
     protected abstract String statusExpr();
     protected abstract String statusCountExpr();
 
+    @Override
     public String toString() {
         String retval = super.toString();
         retval += "(roid = " + roid
