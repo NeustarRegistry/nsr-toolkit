@@ -39,8 +39,8 @@ public final class NamespaceContextImpl implements NamespaceContext {
          * No definite answer on why EPP has 2 prefixes, but it has been suggested that this may have to do with
          * compatibility with the old toolkits.
          */
-        NamespaceContextImpl.put("e", "urn:ietf:params:xml:ns:epp-1.0");
         NamespaceContextImpl.put("epp", "urn:ietf:params:xml:ns:epp-1.0");
+        NamespaceContextImpl.put("e", "urn:ietf:params:xml:ns:epp-1.0");
         for (StandardObjectType standardObjectType : StandardObjectType.values()) {
             NamespaceContextImpl.put(standardObjectType.getName(), standardObjectType.getURI());
         }
@@ -115,7 +115,8 @@ public final class NamespaceContextImpl implements NamespaceContext {
     @Override
     public String getPrefix(String namespaceURI) {
         if (uriPrefixMap.keySet().contains(namespaceURI)) {
-            return uriPrefixMap.get(namespaceURI).get(0);
+            List<String> prefixes = uriPrefixMap.get(namespaceURI);
+            return prefixes.get(prefixes.size() - 1);
         }
 
         return null;
