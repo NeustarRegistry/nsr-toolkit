@@ -1,0 +1,92 @@
+package neustar.registry.jtoolkit2.se.eps;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import javax.xml.xpath.XPathExpressionException;
+
+import neustar.registry.jtoolkit2.se.DataResponse;
+import neustar.registry.jtoolkit2.se.ExtendedObjectType;
+import neustar.registry.jtoolkit2.se.StandardCommandType;
+import neustar.registry.jtoolkit2.xml.XMLDocument;
+
+/**
+ * Use this to access roid data for blocks as provided in an EPP
+ * EPS check response compliant.  Such a service element is sent
+ * by a compliant EPP server in response to a valid EPS check
+ * command, implemented by the EpsCheckCommand class.
+ *
+ * @see EpsCheckCommand
+ */
+public class EpsCheckResponse extends DataResponse {
+
+    private static final long serialVersionUID = -7501698464402166104L;
+
+    private static final String EPS_CHKDATA_COUNT_EXPR = "count(" + RES_DATA_EXPR + "/eps:chkData/*)";
+    private static final String EPS_CHKDATA_IND_EXPR = RES_DATA_EXPR + "/eps:chkData/eps:cd[IDX]";
+    private static final String EPS_CHKDATA_IDENT_EXPR = "/eps:label/text()";
+
+    private Map<String, String[]> results;
+
+    public EpsCheckResponse() {
+        super(StandardCommandType.CHECK, ExtendedObjectType.EPS);
+        results = new HashMap<String, String[]>();
+    }
+
+    protected String chkDataCountExpr() {
+        return EPS_CHKDATA_COUNT_EXPR;
+    }
+
+    protected String chkDataIndexExpr() {
+        return EPS_CHKDATA_IND_EXPR;
+    }
+
+    protected String chkDataTextExpr() {
+        return EPS_CHKDATA_IDENT_EXPR;
+    }
+
+    protected String getKey(final XMLDocument xmlDoc, final String qry) throws XPathExpressionException {
+        return xmlDoc.getNodeValue(qry + chkDataTextExpr());
+    }
+
+    @Override
+    public void fromXML(XMLDocument xmlDoc) {
+        super.fromXML(xmlDoc);
+
+        if (!resultArray[0].succeeded()) {
+            return;
+        }
+
+        try {
+            int cdCount = xmlDoc.getNodeCount(chkDataCountExpr());
+
+            for (int i = 0; i < cdCount; i++) {
+                String qry = replaceIndex(chkDataIndexExpr(), i + 1);
+                results.put(getKey(xmlDoc, qry), getRoidStr(xmlDoc, qry));
+            }
+        } catch (XPathExpressionException xpee) {
+            maintLogger.warning(xpee.getMessage());
+        }
+    }
+
+    public Set<String> getNames() {
+        return results.keySet();
+    }
+
+    public String[] getRoids(String label) {
+        return results.get(label);
+    }
+
+    private String[] getRoidStr(XMLDocument xmlDoc, String qry) throws XPathExpressionException {
+        String[] roidStr;
+        final String roidQry = qry + "/eps:roids";
+        final int chkRoids = xmlDoc.getNodeCount("count(" + roidQry + "/*)");
+        roidStr = new String[chkRoids];
+        for (int j = 0; j < chkRoids; j++) {
+            roidStr[j] = xmlDoc.getNodeValue(replaceIndex(roidQry + "[IDX]/eps:roid", j + 1));
+        }
+        return roidStr;
+    }
+
+}
+

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://ns.uniregistry.net/eps-1.0"
+        xmlns:eps="http://ns.uniregistry.net/eps-1.0"
+        xmlns:eppcom="urn:ietf:params:xml:ns:eppcom-1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+    <!--Import common element types.-->
+    <import namespace="urn:ietf:params:xml:ns:eppcom-1.0" schemaLocation="eppcom-1.0.xsd"/>
+
+    <!--Child elements found in EPP commands.-->
+    <element name="check" type="eps:checkType"/>
+    <element name="exempt" type="eps:exemptType"/>
+    <element name="create" type="eps:createType"/>
+    <element name="release" type="eps:releaseType"/>
+    <element name="renew" type="eps:renewType"/>
+    <element name="delete" type="eps:deleteType"/>
+    <element name="update" type="eps:updateType"/>
+    <element name="info" type="eps:infoType"/>
+    <element name="transfer" type="eps:transferType"/>
+    <!--Child elements of the <check> command.-->
+    <complexType name="checkType">
+        <sequence maxOccurs="unbounded">
+            <element name="label" type="eppcom:labelType"/>
+        </sequence>
+    </complexType>
+    <!--Child elements of the <exempt> command.-->
+    <complexType name="exemptType">
+        <sequence maxOccurs="unbounded">
+            <element name="label" type="eppcom:labelType"/>
+        </sequence>
+    </complexType>
+    <!--Child elements of the <create> command.-->
+    <complexType name="createType">
+        <sequence>
+            <element name="labels" type="eps:mLabelType"/>
+            <element name="period" type="eps:periodType"/>
+            <element name="registrant" type="eppcom:clIDType"/>
+            <element name="iprID" type="eppcom:minTokenType" minOccurs="0"/>
+            <element name="authInfo" type="eps:authInfoType"/>
+        </sequence>
+        <attribute name=" type" type="eps:productType" use="required"/>
+    </complexType>
+    <complexType name="mLabelType">
+        <sequence>
+            <element name="label" type="eppcom:labelType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="mRoidType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <simpleType name="periodType">
+        <restriction base="unsignedShort">
+            <minInclusive value="1"/>
+            <maxInclusive value="99"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="productType">
+        <restriction base="token">
+            <enumeration value="standard"/>
+            <enumeration value="plus"/>
+        </restriction>
+    </simpleType>
+    <complexType name="authInfoType">
+        <choice>
+            <element name="pw" type="eppcom:pwAuthInfoType"/>
+            <element name="ext" type="eppcom:extAuthInfoType"/>
+        </choice>
+    </complexType>
+    <!--Child elements of the <release> command. 23-->
+    <complexType name="releaseType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="name" type="eppcom:labelType"/>
+            <element name="authInfo" type="eps:authInfoType" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <!--Child elements of the <renew> command.-->
+    <complexType name="renewType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="curExpDate" type="date"/>
+            <element name="period" type="eps:periodType"/>
+        </sequence>
+    </complexType>
+
+    <!--Child elements of the <delete> command.-->
+    <complexType name="deleteType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+        </sequence>
+    </complexType>
+
+    <!--Child elements of the <update> command.-->
+    <complexType name="updateType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="chg" type="eps:chgType"/>
+        </sequence>
+    </complexType>
+
+    <!--Data elements that can be changed.-->
+    <complexType name="chgType">
+        <sequence>
+            <element name="registrant" type="eppcom:clIDType" minOccurs="0"/>
+            <element name="authInfo" type="eps:authInfoChgType" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <!--Allow the authInfo value to be nullified by including an empty element within the choice.-->
+    <complexType name="authInfoChgType">
+        <choice>
+            <element name="pw" type="eppcom:pwAuthInfoType"/>
+            <element name="ext" type="eppcom:extAuthInfoType"/>
+            <element name="null"/>
+        </choice>
+    </complexType>
+
+    <!--Child elements of the <info> command.-->
+    <complexType name="infoType">
+        <sequence><element name="roid" type="eppcom:roidType"/>
+            <element name="authInfo" type="eps:authInfoType" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <!--Child elements of the <transfer> command.-->
+    <complexType name="transferType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="authInfo" type="eps:authInfoType"/>
+        </sequence>
+    </complexType>
+
+    <!--Child response elements.-->
+    <element name="chkData" type="eps:chkDataType"/>
+    <element name="empData" type="eps:empDataType"/>
+    <element name="creData" type="eps:creDataType"/>
+    <element name="renData" type="eps:renDataType"/>
+    <element name="infData" type="eps:infDataType"/>
+    <element name="trnData" type="eps:trnDataType"/>
+
+    <!-- <check> response elements.-->
+    <complexType name="chkDataType">
+        <sequence>
+            <element name="cd" type="eps:cdType"/>
+        </sequence>
+    </complexType>
+
+    <!--<exempt> response elements.-->
+    <complexType name="empDataType">
+        <sequence>
+            <element name="ed" type="eps:edType"/>
+        </sequence>
+    </complexType>
+
+    <!--<create> response elements.-->
+    <complexType name="creDataType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="crDate" type="dateTime"/>
+            <element name="exDate" type="dateTime" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <!--<renew> response elements. -->
+    <complexType name="renDataType">
+        <sequence>
+            <element name="roid" type="eppcom:labelType"/>
+            <element name="exDate" type="dateTime" minOccurs="0"/>
+        </sequence>
+    </complexType>
+
+    <!--<info> response elements.-->
+    <complexType name="infDataType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="labels" type="eps:mLabelType"/>
+            <element name="registrant" type="eppcom:clIDType"/>
+            <element name="clID" type="eppcom:clIDType"/>
+            <element name="crID" type="eppcom:clIDType" minOccurs="0"/>
+            <element name="crDate" type="dateTime" minOccurs="0"/>
+            <element name="upID" type="eppcom:clIDType" minOccurs="0"/>
+            <element name="upDate" type="dateTime" minOccurs="0"/>
+            <element name="exDate" type="dateTime" minOccurs="0"/>
+            <element name="trDate" type="dateTime" minOccurs="0"/>
+            <element name="releases" type="eps:releasesInfType" minOccurs="0" />
+            <element name="authInfo" type="eps:authInfoType" minOccurs="0"/>
+        </sequence>
+        <attribute name=" type" type="eps:productType" use="required"/>
+    </complexType>
+
+    <!--<transfer> response elements.-->
+    <complexType name="trnDataType">
+        <sequence>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="trStatus" type="eppcom:trStatusType"/>
+            <element name="reID" type="eppcom:clIDType"/>
+            <element name="reDate" type="dateTime"/>
+            <element name="acID" type="eppcom:clIDType"/>
+            <element name="acDate" type="dateTime"/>
+        </sequence>
+    </complexType>
+    <complexType name="cdType">
+        <all>
+            <element name="label" type="eppcom:labelType"/>
+            <element name="roids" type="eps:mRoidType" />
+        </all>
+    </complexType>
+    <complexType name="edType">
+        <all>
+            <element name="label" type="eppcom:labelType"/>
+            <element name="exemptions" type="eps:mExemptionType"/>
+        </all>
+    </complexType>
+    <complexType name="mExemptionType">
+        <sequence>
+            <element name="exemption" type="eps:exemptionType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="exemptionType">
+        <sequence>
+            <element name="iprID" type="eppcom:minTokenType"/>
+            <element name="labels" type="eps:mLabelType"/>
+        </sequence>
+    </complexType>
+    <complexType name="releasesInfType">
+        <sequence maxOccurs="unbounded" minOccurs="0">
+            <element name="release" type="eps:releaseInfType" minOccurs="0"/>
+        </sequence>
+    </complexType>
+    <complexType name="releaseInfType">
+        <sequence>
+            <element name="name" type="eppcom:labelType"/>
+            <element name="authInfo" type="eps:authInfoType"/>
+            <element name="crDate" type="dateTime"/>
+        </sequence>
+    </complexType>
+    <!--Endofschema.-->
+</schema>

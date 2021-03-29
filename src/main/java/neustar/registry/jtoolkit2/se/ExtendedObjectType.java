@@ -5,6 +5,7 @@ package neustar.registry.jtoolkit2.se;
  * in the resulting XML.
  */
 public enum ExtendedObjectType implements ObjectType {
+    EPS("eps", "http://ns.uniregistry.net/eps-1.0", "eps-1.0.xsd", "label"),
     AR_DOMAIN("ardom", "urn:X-ar:params:xml:ns:ardomain-1.0", "ardomain-1.0.xsd", "name"),
     AE_DOMAIN("aedom", "urn:X-ae:params:xml:ns:aedomain-1.0", "aedomain-1.0.xsd", "name"),
     AU_DOMAIN("audom", "urn:X-au:params:xml:ns:audomain-1.1", "audomain-1.1.xsd", "name"),

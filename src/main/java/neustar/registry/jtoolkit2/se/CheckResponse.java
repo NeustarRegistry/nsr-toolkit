@@ -2,7 +2,6 @@ package neustar.registry.jtoolkit2.se;
 
 import java.util.HashMap;
 import java.util.Set;
-
 import javax.xml.xpath.XPathExpressionException;
 
 import neustar.registry.jtoolkit2.xml.XMLDocument;
@@ -81,7 +80,8 @@ public abstract class CheckResponse<I> extends DataResponse {
             for (int i = 0; i < cdCount; i++) {
                 String qry = replaceIndex(chkDataIndexExpr(), i + 1);
                 final I key = getKey(xmlDoc, qry);
-                String availStr = xmlDoc.getNodeValue(qry + chkDataAvailExpr());
+                final String chkDataAvailExpr = chkDataAvailExpr();
+                String availStr = xmlDoc.getNodeValue(qry + chkDataAvailExpr);
                 boolean avail = (availStr.equals("1") ? true : false);
                 availArray[i] = avail;
                 String reason = xmlDoc.getNodeValue(qry + chkDataReasonExpr());
