@@ -31,7 +31,7 @@ public class EpsInfoResponse extends InfoResponse {
     protected static final String EPS_PW_EXPR = EPS_INF_DATA_EXPR + "/eps:authInfo/eps:pw/text()";
     protected static final String EPS_REGISTRANT_EXPR = EPS_INF_DATA_EXPR + "/eps:registrant/text()";
     protected static final String EPS_EX_DATE_EXPR = EPS_INF_DATA_EXPR + "/eps:exDate/text()";
-    protected static final String EPS_LABEL_EXPR = EPS_INF_DATA_EXPR + "/eps:label/text()";
+    protected static final String EPS_LABEL_EXPR = EPS_INF_DATA_EXPR + "/eps:labels/eps:label/text()";
 
     private static final long serialVersionUID = -5948394715740177139L;
 

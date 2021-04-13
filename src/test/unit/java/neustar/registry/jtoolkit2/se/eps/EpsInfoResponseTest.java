@@ -62,6 +62,18 @@ public class EpsInfoResponseTest {
         assertEquals(exp, act);
     }
 
+    @Test
+    public void shouldRetrieveLabels() throws Exception {
+        EpsInfoResponse response = new EpsInfoResponse();
+        XMLDocument doc = PARSER.parse(infoResponseBuilder("XXX-YYY").build());
+        response.fromXML(doc);
+        String exp = "fred";
+        final String[] labels = response.getLabels();
+        assertNotNull(labels);
+        assertEquals(1, labels.length);
+        assertEquals(exp, labels[0]);
+    }
+
     static final class EpsInfoResponseBuilder {
 
         private final String roid;

@@ -142,7 +142,7 @@ task wrapper(type: Wrapper) {
 
 jar {
     manifest {
-        attributes('Specification-Title': 'nsr java toolkit',
+        attributes('Specification-Title': 'gdreg jtk',
         'Specification-Version': "${version}",
         'Implementation-Version': "${version}",
         "Implementation-Timestamp": new Date())
