@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="urn:afilias:params:xml:ns:association-1.0"
+        xmlns:association="urn:afilias:params:xml:ns:association-1.0"
+        xmlns:eppcom="urn:ietf:params:xml:ns:eppcom-1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <!--
+     Import common element types.
+  -->
+  <import namespace="urn:ietf:params:xml:ns:eppcom-1.0"/>
+
+  <annotation>
+    <documentation>
+      Domain extension schemas for associating non-standard object processing
+    </documentation>
+  </annotation>
+
+  <!--
+    Child elements found in association extension
+  -->
+
+  <element name="create" type="association:createType"/>
+  <element name="update" type="association:updateType"/>
+
+  <!-- Child response elements -->
+
+  <element name="infData" type="association:infDataType" />
+
+  <!--
+    Child elements of the <create> command.
+  -->
+
+  <complexType name="createType">
+    <sequence>
+      <element name="contact" type="association:contactType"/>
+    </sequence>
+  </complexType>
+
+  <!--
+    Child elements of the <update> command.
+  -->
+
+  <complexType name="updateType">
+    <sequence>
+      <element name="add" type="association:addRemType"
+       minOccurs="0"/>
+      <element name="rem" type="association:addRemType"
+       minOccurs="0"/>
+      <element name="chg" type="association:chgType"
+       minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <!--
+   Data elements that can be added or removed.
+   -->
+   <complexType name="addRemType">
+    <sequence>
+      <element name="contact" type="association:contactType"
+       minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+   </complexType>
+
+  <!--
+   Data elements that can be changed. No supported yet
+   -->
+   <complexType name="chgType">
+   </complexType>
+
+  <complexType name="contactType">
+    <sequence>
+      <element name="id" type="eppcom:clIDType"/>
+      <element name="authInfo" type="association:authInfoType" minOccurs="0"/>
+    </sequence>
+    <attribute name="type" type="normalizedString" use="required"/>
+  </complexType>
+
+  <complexType  name="authInfoType">
+    <sequence>
+      <element name="pw" type="eppcom:pwAuthInfoType"/>
+    </sequence>
+  </complexType>
+
+  <!--
+    Child elements of the <infData> command.
+  -->
+
+  <complexType name="infDataType">
+    <sequence>
+      <element name="contact" type="association:contactType"/>
+    </sequence>
+  </complexType>
+
+<!--
+  End of schema
+-->
+</schema>

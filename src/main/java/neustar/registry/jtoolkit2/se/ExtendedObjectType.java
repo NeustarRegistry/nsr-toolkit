@@ -54,7 +54,8 @@ public enum ExtendedObjectType implements ObjectType {
     /** References the Allocation Token XML namespace and schema file */
     ALLOCATION_TOKEN("allocationToken", "urn:ietf:params:xml:ns:allocationToken-1.0", "allocationToken-1.0.xsd",
             "allocationToken"),
-    /** References the Allocation Token XML namespace and schema file */
+    ASSOCIATION("association", "urn:afilias:params:xml:ns:association-1.0", "association-1.0.xsd",
+            "id"),
     MAINT("maint", "urn:ietf:params:xml:ns:maintenance-0.2", "maintenance-0.2.xsd",
             "id");
 
