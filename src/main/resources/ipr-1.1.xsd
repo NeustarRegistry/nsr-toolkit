@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="urn:afilias:params:xml:ns:ipr-1.1"
+        xmlns:ipr="urn:afilias:params:xml:ns:ipr-1.1"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <!--
+     Import common element types.
+  -->
+  <import namespace="urn:ietf:params:xml:ns:eppcom-1.0"/>
+
+  <annotation>
+    <documentation>
+      Extensible Provisioning Protocol v1.1
+      domain name extension schema for ipr processing.
+    </documentation>
+  </annotation>
+
+  <!--
+   Child elements found in EPP commands.
+  -->
+  <element name="create" type="ipr:createType" />
+  <element name="update" type="ipr:updateType" />
+
+  <!--
+    Utility Types
+  -->
+
+  <complexType name="createType">
+      <group ref="ipr:domainIpr" />
+  </complexType>
+
+  <complexType name="updateType">
+      <choice>
+          <element name="chg" type="ipr:chgType" minOccurs="0" />
+          <element name="rem" type="ipr:remType" minOccurs="0" />
+      </choice>
+  </complexType>
+
+  <complexType name="chgType">
+      <group ref="ipr:domainIpr" />
+  </complexType>
+
+  <simpleType name="remType">
+    <restriction base="normalizedString">
+      <minLength value="0"/>
+      <maxLength value="0"/>
+    </restriction>
+  </simpleType>
+
+  <group name="domainIpr">
+     <sequence>
+        <element name="name" type="ipr:iprStringType" minOccurs="0" maxOccurs="1" />
+        <element name="number" type="ipr:iprStringType" minOccurs="0" maxOccurs="1" />
+        <element name="ccLocality" type="ipr:ccType" minOccurs="0" maxOccurs="1" />
+        <element name="entitlement" type="ipr:entitlementType" minOccurs="0" maxOccurs="1" />
+        <element name="appDate" type="date" minOccurs="0" maxOccurs="1" />
+        <element name="regDate" type="date" minOccurs="0" maxOccurs="1" />
+        <element name="form" type="ipr:formType" minOccurs="0" maxOccurs="1" />
+        <element name="class" type="ipr:iprStringType" minOccurs="0" maxOccurs="1" />
+        <element name="preVerified" type="ipr:iprPreverifiedType" minOccurs="0" maxOccurs="1" />
+        <element name="type" type="ipr:iprTypeType" minOccurs="0" maxOccurs="1"/>
+     </sequence>
+  </group>
+
+  <simpleType name="iprStringType">
+       <restriction base="normalizedString">
+         <minLength value="0" />
+         <maxLength value="128" />
+       </restriction>
+  </simpleType>
+
+  <simpleType name="ccType">
+       <restriction base="token">
+         <length value="2" />
+       </restriction>
+     </simpleType>
+
+  <simpleType name="iprPreverifiedType">
+       <restriction base="normalizedString">
+         <minLength value="0" />
+         <maxLength value="25" />
+       </restriction>
+  </simpleType>
+
+  <simpleType name="entitlementType">
+     <restriction base="normalizedString">
+        <enumeration value="owner" />
+        <enumeration value="co-owner" />
+        <enumeration value="assignee" />
+     </restriction>
+  </simpleType>
+
+  <simpleType name="formType">
+     <restriction base="normalizedString">
+        <enumeration value="corporation" />
+        <enumeration value="cooperative" />
+        <enumeration value="partnership" />
+        <enumeration value="government" />
+        <enumeration value="politicalParty" />
+        <enumeration value="society" />
+        <enumeration value="institution" />
+        <enumeration value="other" />
+      </restriction>
+  </simpleType>
+
+  <simpleType name="iprTypeType">
+     <restriction base="normalizedString">
+       <minLength value="0"/>
+       <maxLength value="16"/>
+     </restriction>
+  </simpleType>
+
+  <!--
+    response elements
+  -->
+
+  <element name="infData" type="ipr:infDataType" />
+
+  <complexType name="infDataType">
+     <group ref="ipr:domainIpr" />
+  </complexType>
+
+  <!--
+   End of schema.
+  -->
+</schema>

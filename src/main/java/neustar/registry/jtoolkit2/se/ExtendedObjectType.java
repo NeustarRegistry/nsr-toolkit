@@ -56,6 +56,7 @@ public enum ExtendedObjectType implements ObjectType {
             "allocationToken"),
     ASSOCIATION("association", "urn:afilias:params:xml:ns:association-1.0", "association-1.0.xsd",
             "id"),
+    IPR("ipr", "urn:afilias:params:xml:ns:ipr-1.1", "ipr-1.1.xsd", "name"),
     MAINT("maint", "urn:ietf:params:xml:ns:maintenance-0.2", "maintenance-0.2.xsd",
             "id");
 
