@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/NeustarRegistry/nsr-toolkit.png)](https://travis-ci.org/NeustarRegistry/nsr-toolkit)
 ## Downloads
 
-The latest nsr-toolkit is available for download. [nsr-toolkit v4.2.4](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.4/nsrjtk-4.2.4.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.4/nsrjtk-4.2.4-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.4/nsrjtk-4.2.4-javadoc.jar))
+The latest nsr-toolkit is available for download. [nsr-toolkit v4.2.5](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.5/nsrjtk-4.2.5.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.5/nsrjtk-4.2.5-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.5/nsrjtk-4.2.5-javadoc.jar))
 
 For more information, please read [Installation and Setup](#installation-and-setup).
 
@@ -43,7 +43,7 @@ This toolkit also provides a mechanism to perform the following Trademark Cleari
 
 #### Direct download
 
-Obtain the latest toolkit here: [Toolkit v4.2.4](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.4/nsrjtk-4.2.4.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.4/nsrjtk-4.2.4-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.4/nsrjtk-4.2.4-javadoc.jar))
+Obtain the latest toolkit here: [Toolkit v4.2.5](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.5/nsrjtk-4.2.5.jar) ([sources](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.5/nsrjtk-4.2.5-sources.jar) | [javadoc](http://neustarregistry.github.io/repo/neustar/registry/nsrjtk/4.2.5/nsrjtk-4.2.5-javadoc.jar))
 
 #### Dependency Management
 
@@ -52,7 +52,7 @@ Use your build's dependency management tool to automatically download the toolki
 * Repository: `http://neustarregistry.github.io/repo/`
 * groupId: `neustar.registry`
 * artifactId: `nsrjtk`
-* version: `4.2.4`
+* version: `4.2.5`
 
 For example (using Maven):
 
@@ -67,7 +67,7 @@ For example (using Maven):
        <dependency>
           <groupId>neustar.registry</groupId>
           <artifactId>nsrjtk</artifactId>
-          <version>4.2.4</version>
+          <version>4.2.5</version>
        </dependency>
     </dependencies>
 
