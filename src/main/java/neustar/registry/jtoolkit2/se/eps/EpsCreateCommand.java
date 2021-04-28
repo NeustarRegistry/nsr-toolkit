@@ -29,7 +29,7 @@ public class EpsCreateCommand extends ObjectCommand {
      * @throws IllegalArgumentException if {@code names} is {@code null}.
      */
     public EpsCreateCommand(EpsType type, List<String> labels, String pw, String registrantID, Period period,
-                            Integer intellectualPropertyRightsId) {
+                            String intellectualPropertyRightsId) {
         super(StandardCommandType.CREATE, ExtendedObjectType.EPS);
 
         if (labels == null || labels.isEmpty()) {
@@ -58,7 +58,7 @@ public class EpsCreateCommand extends ObjectCommand {
         }
 
         if (intellectualPropertyRightsId != null) {
-            xmlWriter.appendChild(objElement, "iprID").setTextContent(String.valueOf(intellectualPropertyRightsId));
+            xmlWriter.appendChild(objElement, "iprID").setTextContent(intellectualPropertyRightsId);
         }
         xmlWriter.appendChild(xmlWriter.appendChild(objElement, "authInfo"), "pw").setTextContent(pw);
     }
