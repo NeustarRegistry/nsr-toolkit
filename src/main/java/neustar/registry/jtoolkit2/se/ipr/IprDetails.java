@@ -21,6 +21,25 @@ public class IprDetails {
     private String preVerified;
     private String type;
 
+    @SuppressWarnings("checkstyle:parameternumber")
+    public IprDetails(String name, String number, String ccLocality, IprEntitlement entitlement, Date appDate,
+                      Date regDate, IprForm form, String classType, String preVerified, String type) {
+        this.name = name;
+        this.number = number;
+        this.ccLocality = ccLocality;
+        this.entitlement = entitlement;
+        this.appDate = appDate;
+        this.regDate = regDate;
+        this.form = form;
+        this.classType = classType;
+        this.preVerified = preVerified;
+        this.type = type;
+    }
+
+    public IprDetails() {
+
+    }
+
     public void appendToElement(XMLWriter xmlWriter, Element parent) {
 
         if (name != null) {
@@ -99,4 +118,45 @@ public class IprDetails {
     public void setType(String type) {
         this.type = type;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public String getCcLocality() {
+        return ccLocality;
+    }
+
+    public IprEntitlement getEntitlement() {
+        return entitlement;
+    }
+
+    public Date getAppDate() {
+        return appDate;
+    }
+
+    public Date getRegDate() {
+        return regDate;
+    }
+
+    public IprForm getForm() {
+        return form;
+    }
+
+    public String getClassType() {
+        return classType;
+    }
+
+    public String getPreVerified() {
+        return preVerified;
+    }
+
+    public String getType() {
+        return type;
+    }
+
 }
