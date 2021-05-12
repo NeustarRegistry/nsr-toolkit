@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,21 +15,21 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  * Such a service element is sent by a compliant EPP server in response to a valid EPS exempt
  * command, implemented by the EpsExemptCommand class.
  *
- * @see EpsExemptCommand
+ * @see MzbExemptCommand
  */
-public class EpsExemptResponse extends DataResponse {
+public class MzbExemptResponse extends DataResponse {
 
     private static final long serialVersionUID = -7501698464402166104L;
 
-    private static final String ED_COUNT_EXPR = "count(" + RES_DATA_EXPR + "/eps:empData/eps:ed)";
-    private static final String ED_INT_EXPR = RES_DATA_EXPR + "/eps:empData/eps:ed[IDX]";
+    private static final String ED_COUNT_EXPR = "count(" + RES_DATA_EXPR + "/mzb:empData/mzb:ed)";
+    private static final String ED_INT_EXPR = RES_DATA_EXPR + "/mzb:empData/mzb:ed[IDX]";
 
-    private static final String LABEL_IDENT_EXPR = "/eps:label/text()";
+    private static final String LABEL_IDENT_EXPR = "/mzb:label/text()";
 
-    private Map<String, EpsExemption[]> results;
+    private Map<String, MzbExemption[]> results;
 
-    public EpsExemptResponse() {
-        super(StandardCommandType.CHECK, ExtendedObjectType.EPS);
+    public MzbExemptResponse() {
+        super(StandardCommandType.CHECK, ExtendedObjectType.MZB);
         results = new HashMap<>();
     }
 
@@ -58,29 +58,29 @@ public class EpsExemptResponse extends DataResponse {
         }
     }
 
-    private EpsExemption[] createExemptions(XMLDocument xmlDoc, String edQuery) throws XPathExpressionException {
+    private MzbExemption[] createExemptions(XMLDocument xmlDoc, String edQuery) throws XPathExpressionException {
 
-        EpsExemption[] epsExemptions;
-        final String exemptionQry = edQuery + "/eps:exemptions/eps:exemption";
+        MzbExemption[] mzbExemptions;
+        final String exemptionQry = edQuery + "/mzb:exemptions/mzb:exemption";
         final int chkExemptions = xmlDoc.getNodeCount("count(" + exemptionQry + ")");
-        epsExemptions = new EpsExemption[chkExemptions];
+        mzbExemptions = new MzbExemption[chkExemptions];
         for (int j = 0; j < chkExemptions; j++) {
             final String exempt = replaceIndex(exemptionQry + "[IDX]", j + 1);
-            final String iprQuery = exempt + "/eps:iprID";
-            epsExemptions[j] = new EpsExemption(xmlDoc.getNodeValue(iprQuery));
-            epsExemptions[j].setLabels(getLabels(xmlDoc, exempt));
+            final String iprQuery = exempt + "/mzb:iprID";
+            mzbExemptions[j] = new MzbExemption(xmlDoc.getNodeValue(iprQuery));
+            mzbExemptions[j].setLabels(getLabels(xmlDoc, exempt));
         }
 
-        return epsExemptions;
+        return mzbExemptions;
     }
 
     private String[] getLabels(XMLDocument xmlDoc, String exempt) throws XPathExpressionException {
         String[] labelStr;
-        final String labelQry = exempt + "/eps:labels";
+        final String labelQry = exempt + "/mzb:labels";
         final int nodeCount = xmlDoc.getNodeCount("count(" + labelQry + "/*)");
         labelStr = new String[nodeCount];
         for (int j = 0; j < nodeCount; j++) {
-            labelStr[j] = xmlDoc.getNodeValue(replaceIndex(labelQry + "/eps:label[IDX]", j + 1));
+            labelStr[j] = xmlDoc.getNodeValue(replaceIndex(labelQry + "/mzb:label[IDX]", j + 1));
         }
         return labelStr;
     }
@@ -89,7 +89,7 @@ public class EpsExemptResponse extends DataResponse {
         return results.keySet();
     }
 
-    public EpsExemption[] getExemptions(String label) {
+    public MzbExemption[] getExemptions(String label) {
         return results.get(label);
     }
 

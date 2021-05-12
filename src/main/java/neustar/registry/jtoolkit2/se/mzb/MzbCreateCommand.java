@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import java.util.List;
 
@@ -17,20 +17,20 @@ import neustar.registry.jtoolkit2.se.StandardCommandType;
  * simple input parameters.  The toXML method in Command serialises this object
  * to XML.
  *
- * @see EpsCreateResponse
+ * @see MzbCreateResponse
  */
-public class EpsCreateCommand extends ObjectCommand {
+public class MzbCreateCommand extends ObjectCommand {
     private static final long serialVersionUID = -3723213074751854975L;
 
     /**
-     * Most verbose constructor for a eps:create EPP command. All core EPP
-     * eps:create attributes may be set using this constructor.
+     * Most verbose constructor for a mzb:create EPP command. All core EPP
+     * mzb:create attributes may be set using this constructor.
      *
      * @throws IllegalArgumentException if {@code names} is {@code null}.
      */
-    public EpsCreateCommand(EpsType type, List<String> labels, String pw, String registrantID, Period period,
+    public MzbCreateCommand(MzbType type, List<String> labels, String pw, String registrantID, Period period,
                             String intellectualPropertyRightsId) {
-        super(StandardCommandType.CREATE, ExtendedObjectType.EPS);
+        super(StandardCommandType.CREATE, ExtendedObjectType.MZB);
 
         if (labels == null || labels.isEmpty()) {
             throw new IllegalArgumentException(ErrorPkg.getMessage("se.eps.create.labels.missing_arg"));

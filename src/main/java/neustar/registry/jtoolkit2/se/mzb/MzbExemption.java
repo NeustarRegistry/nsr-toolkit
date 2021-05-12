@@ -1,11 +1,11 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
-public class EpsExemption {
+public class MzbExemption {
 
     private String iprId;
     private String[] labels;
 
-    public EpsExemption(String iprId) {
+    public MzbExemption(String iprId) {
         this.iprId = iprId;
     }
 

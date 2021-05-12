@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,13 +8,13 @@ import neustar.registry.jtoolkit2.EPPDateFormatter;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
 import neustar.registry.jtoolkit2.xml.XMLParser;
 
-public class EpsCreateResponseTest {
+public class MzbCreateResponseTest {
 
     private static final XMLParser PARSER = new XMLParser();
 
     @Test
     public void shouldReturnRoid() throws Exception {
-        final EpsCreateResponse response = new EpsCreateResponse();
+        final MzbCreateResponse response = new MzbCreateResponse();
         final XMLDocument doc = PARSER.parse(getCreateResponseExpectedXml("BXXX-YYY"));
         response.fromXML(doc);
         assertEquals("BXXX-YYY", response.getRoid());
@@ -22,7 +22,7 @@ public class EpsCreateResponseTest {
 
     @Test
     public void shouldReturnExpiryDate() throws Exception {
-        final EpsCreateResponse response = new EpsCreateResponse();
+        final MzbCreateResponse response = new MzbCreateResponse();
         final XMLDocument doc = PARSER.parse(getCreateResponseExpectedXml("BXXX-YYY"));
         response.fromXML(doc);
         assertEquals(EPPDateFormatter.fromXSDateTime("2001-04-03T22:00:00.0Z"), response.getExpiryDate());
@@ -30,7 +30,7 @@ public class EpsCreateResponseTest {
 
     @Test
     public void shouldReturnCreateDate() throws Exception {
-        final EpsCreateResponse response = new EpsCreateResponse();
+        final MzbCreateResponse response = new MzbCreateResponse();
         final XMLDocument doc = PARSER.parse(getCreateResponseExpectedXml("BXXX-YYY"));
         response.fromXML(doc);
         assertEquals(EPPDateFormatter.fromXSDateTime("1999-04-03T22:00:00.0Z"), response.getCreateDate());
@@ -47,12 +47,12 @@ public class EpsCreateResponseTest {
         result.append("<msg>Command completed successfully</msg>");
         result.append("</result>");
         result.append("<resData>");
-        result.append("<eps:creData xmlns:eps=\"http://ns.uniregistry.net/eps-1.0\"");
-        result.append(" xsi:schemaLocation=\"http://ns.uniregistry.net/eps-1.0 eps-1.0.xsd\">");
-        result.append("<eps:roid>").append(roid).append("</eps:roid>");
-        result.append("<eps:crDate>1999-04-03T22:00:00.0Z</eps:crDate>");
-        result.append("<eps:exDate>2001-04-03T22:00:00.0Z</eps:exDate>");
-        result.append("</eps:creData>");
+        result.append("<mzb:creData xmlns:mzb=\"urn:gdreg:params:xml:ns:mzb-1.0\"");
+        result.append(" xsi:schemaLocation=\"urn:gdreg:params:xml:ns:mzb-1.0 mzb-1.0.xsd\">");
+        result.append("<mzb:roid>").append(roid).append("</mzb:roid>");
+        result.append("<mzb:crDate>1999-04-03T22:00:00.0Z</mzb:crDate>");
+        result.append("<mzb:exDate>2001-04-03T22:00:00.0Z</mzb:exDate>");
+        result.append("</mzb:creData>");
         result.append("</resData>");
         result.append("<trID>");
         result.append("<clTRID>ABC-12345</clTRID>");

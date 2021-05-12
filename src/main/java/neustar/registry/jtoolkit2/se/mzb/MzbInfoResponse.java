@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import java.util.GregorianCalendar;
 import javax.xml.xpath.XPathExpressionException;
@@ -9,29 +9,29 @@ import neustar.registry.jtoolkit2.se.InfoResponse;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
- * Mapping of EPP eps:info command response
+ * Mapping of EPP mzb:info command response
  * specified by the GoDaddy Registry EPP extensions document.
  * Use this class to process an GoDaddy Registry-compliant XML document.
  * Such a service element is sent by a compliant EPP server in response
  * to a valid EPS info command, implemented by the EpsInfoCommand class.
  *
- * @see EpsInfoCommand
+ * @see MzbInfoCommand
  */
-public class EpsInfoResponse extends InfoResponse {
+public class MzbInfoResponse extends InfoResponse {
 
-    protected static final String EPS_ROID_EXPR = EpsInfoResponse.exprReplace(ROID_EXPR);
-    protected static final String EPS_CR_ID_EXPR = EpsInfoResponse.exprReplace(CR_ID_EXPR);
-    protected static final String EPS_UP_ID_EXPR = EpsInfoResponse.exprReplace(UP_ID_EXPR);
-    protected static final String EPS_CL_ID_EXPR = EpsInfoResponse.exprReplace(CL_ID_EXPR);
-    protected static final String EPS_CR_DATE_EXPR = EpsInfoResponse.exprReplace(CR_DATE_EXPR);
-    protected static final String EPS_UP_DATE_EXPR = EpsInfoResponse.exprReplace(UP_DATE_EXPR);
-    protected static final String EPS_TR_DATE_EXPR = EpsInfoResponse.exprReplace(TR_DATE_EXPR);
+    protected static final String EPS_ROID_EXPR = MzbInfoResponse.exprReplace(ROID_EXPR);
+    protected static final String EPS_CR_ID_EXPR = MzbInfoResponse.exprReplace(CR_ID_EXPR);
+    protected static final String EPS_UP_ID_EXPR = MzbInfoResponse.exprReplace(UP_ID_EXPR);
+    protected static final String EPS_CL_ID_EXPR = MzbInfoResponse.exprReplace(CL_ID_EXPR);
+    protected static final String EPS_CR_DATE_EXPR = MzbInfoResponse.exprReplace(CR_DATE_EXPR);
+    protected static final String EPS_UP_DATE_EXPR = MzbInfoResponse.exprReplace(UP_DATE_EXPR);
+    protected static final String EPS_TR_DATE_EXPR = MzbInfoResponse.exprReplace(TR_DATE_EXPR);
 
-    protected static final String EPS_INF_DATA_EXPR = EpsInfoResponse.exprReplace(INF_DATA_EXPR);
-    protected static final String EPS_PW_EXPR = EPS_INF_DATA_EXPR + "/eps:authInfo/eps:pw/text()";
-    protected static final String EPS_REGISTRANT_EXPR = EPS_INF_DATA_EXPR + "/eps:registrant/text()";
-    protected static final String EPS_EX_DATE_EXPR = EPS_INF_DATA_EXPR + "/eps:exDate/text()";
-    protected static final String EPS_LABEL_EXPR = EPS_INF_DATA_EXPR + "/eps:labels/eps:label/text()";
+    protected static final String EPS_INF_DATA_EXPR = MzbInfoResponse.exprReplace(INF_DATA_EXPR);
+    protected static final String EPS_PW_EXPR = EPS_INF_DATA_EXPR + "/mzb:authInfo/mzb:pw/text()";
+    protected static final String EPS_REGISTRANT_EXPR = EPS_INF_DATA_EXPR + "/mzb:registrant/text()";
+    protected static final String EPS_EX_DATE_EXPR = EPS_INF_DATA_EXPR + "/mzb:exDate/text()";
+    protected static final String EPS_LABEL_EXPR = EPS_INF_DATA_EXPR + "/mzb:labels/mzb:label/text()";
 
     private static final long serialVersionUID = -5948394715740177139L;
 
@@ -41,8 +41,8 @@ public class EpsInfoResponse extends InfoResponse {
     private String exDateStr;
     private String[] labels;
 
-    public EpsInfoResponse() {
-        super(ExtendedObjectType.EPS);
+    public MzbInfoResponse() {
+        super(ExtendedObjectType.MZB);
     }
 
     protected String roidExpr() {
@@ -84,7 +84,7 @@ public class EpsInfoResponse extends InfoResponse {
     }
 
     protected static String exprReplace(String expr) {
-        return expr.replaceAll(OBJ, "eps");
+        return expr.replaceAll(OBJ, "mzb");
     }
 
     public String getPW() {

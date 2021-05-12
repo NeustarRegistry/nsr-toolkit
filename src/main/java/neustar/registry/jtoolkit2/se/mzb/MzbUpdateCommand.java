@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import org.w3c.dom.Element;
 
@@ -9,15 +9,15 @@ import neustar.registry.jtoolkit2.se.Response;
 import neustar.registry.jtoolkit2.se.StandardCommandType;
 
 /**
- * Mapping of EPP eps:update command response
+ * Mapping of EPP mzb:update command response
  * specified by the GoDaddy Registry EPP extensions document.
- * Use this to access eps:update response data. Such a service element
- * is sent by a compliant EPP server in response to a valid eps:update
+ * Use this to access mzb:update response data. Such a service element
+ * is sent by a compliant EPP server in response to a valid mzb:update
  * command, implemented by the EpsUpdateCommand class.
  *
  * @see Response
  */
-public class EpsUpdateCommand extends ObjectCommand {
+public class MzbUpdateCommand extends ObjectCommand {
     private static final long serialVersionUID = 2409916920503111390L;
 
     /**
@@ -25,8 +25,8 @@ public class EpsUpdateCommand extends ObjectCommand {
      * RFC5731.
      * @throws IllegalArgumentException if {@code roid} is {@code null}.
      */
-    public EpsUpdateCommand(String roid, String pw, String registrantID, boolean removeAuthInfo) {
-        super(StandardCommandType.UPDATE, ExtendedObjectType.EPS);
+    public MzbUpdateCommand(String roid, String pw, String registrantID, boolean removeAuthInfo) {
+        super(StandardCommandType.UPDATE, ExtendedObjectType.MZB);
 
         if (roid == null) {
             throw new IllegalArgumentException(ErrorPkg.getMessage("se.eps.update.roid.missing"));

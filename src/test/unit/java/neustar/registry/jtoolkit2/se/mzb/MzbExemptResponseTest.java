@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -9,7 +9,7 @@ import org.junit.Test;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
 import neustar.registry.jtoolkit2.xml.XMLParser;
 
-public class EpsExemptResponseTest {
+public class MzbExemptResponseTest {
 
     private static final String XML =
     "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
@@ -19,26 +19,26 @@ public class EpsExemptResponseTest {
     + "    <msg>Command completed successfully</msg>"
     + "    </result>"
     + "    <resData>"
-    + "     <eps:empData xmlns:eps=\"http://ns.uniregistry.net/eps-1.0\">"
-    + "        <eps:ed>"
-    + "          <eps:label>test-validate</eps:label>"
-    + "          <eps:exemptions>"
-    + "            <eps:exemption>"
-    + "              <eps:iprID>3111246</eps:iprID>"
-    + "              <eps:labels>"
-    + "                <eps:label>test-andvalidate</eps:label>"
-    + "                <eps:label>test-validate</eps:label>"
-    + "              </eps:labels>"
-    + "            </eps:exemption>"
-    + "            <eps:exemption>"
-    + "              <eps:iprID>3111246</eps:iprID>"
-    + "              <eps:labels>"
-    + "                <eps:label>sunrise-registration</eps:label>"
-    + "              </eps:labels>"
-    + "            </eps:exemption>"
-    + "          </eps:exemptions>"
-    + "        </eps:ed>"
-    + "      </eps:empData>"
+    + "     <mzb:empData xmlns:mzb=\"urn:gdreg:params:xml:ns:mzb-1.0\">"
+    + "        <mzb:ed>"
+    + "          <mzb:label>test-validate</mzb:label>"
+    + "          <mzb:exemptions>"
+    + "            <mzb:exemption>"
+    + "              <mzb:iprID>3111246</mzb:iprID>"
+    + "              <mzb:labels>"
+    + "                <mzb:label>test-andvalidate</mzb:label>"
+    + "                <mzb:label>test-validate</mzb:label>"
+    + "              </mzb:labels>"
+    + "            </mzb:exemption>"
+    + "            <mzb:exemption>"
+    + "              <mzb:iprID>3111246</mzb:iprID>"
+    + "              <mzb:labels>"
+    + "                <mzb:label>sunrise-registration</mzb:label>"
+    + "              </mzb:labels>"
+    + "            </mzb:exemption>"
+    + "          </mzb:exemptions>"
+    + "        </mzb:ed>"
+    + "      </mzb:empData>"
     + "    </resData>"
     + "    <trID>"
     + "      <clTRID>ABC-12345</clTRID>"
@@ -47,11 +47,11 @@ public class EpsExemptResponseTest {
     + "  </response>"
     + "</epp>";
 
-    private EpsExemptResponse response;
+    private MzbExemptResponse response;
 
     @Before
     public void setUp() throws Exception {
-        response = new EpsExemptResponse();
+        response = new MzbExemptResponse();
         XMLParser parser = new XMLParser();
         XMLDocument doc = parser.parse(XML);
         response.fromXML(doc);
@@ -61,7 +61,7 @@ public class EpsExemptResponseTest {
     public void shouldReturnRoidsForLabel() {
         assertTrue(response.getNames().contains("test-validate"));
         assertEquals(1, response.getNames().size());
-        final EpsExemption[] exemptions = response.getExemptions("test-validate");
+        final MzbExemption[] exemptions = response.getExemptions("test-validate");
         assertEquals(2, exemptions.length);
         assertEquals("3111246", exemptions[0].getIprId());
         assertEquals(2, exemptions[0].getLabels().length);

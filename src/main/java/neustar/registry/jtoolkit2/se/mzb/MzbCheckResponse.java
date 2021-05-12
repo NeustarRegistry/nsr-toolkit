@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,33 +16,33 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  * by a compliant EPP server in response to a valid EPS check
  * command, implemented by the EpsCheckCommand class.
  *
- * @see EpsCheckCommand
+ * @see MzbCheckCommand
  */
-public class EpsCheckResponse extends DataResponse {
+public class MzbCheckResponse extends DataResponse {
 
     private static final long serialVersionUID = -7501698464402166104L;
 
-    private static final String EPS_CHKDATA_COUNT_EXPR = "count(" + RES_DATA_EXPR + "/eps:chkData/*)";
-    private static final String EPS_CHKDATA_IND_EXPR = RES_DATA_EXPR + "/eps:chkData/eps:cd[IDX]";
-    private static final String EPS_CHKDATA_IDENT_EXPR = "/eps:label/text()";
+    private static final String MZB_CHKDATA_COUNT_EXPR = "count(" + RES_DATA_EXPR + "/mzb:chkData/*)";
+    private static final String MZB_CHKDATA_IND_EXPR = RES_DATA_EXPR + "/mzb:chkData/mzb:cd[IDX]";
+    private static final String MZB_CHKDATA_IDENT_EXPR = "/mzb:label/text()";
 
     private Map<String, String[]> results;
 
-    public EpsCheckResponse() {
-        super(StandardCommandType.CHECK, ExtendedObjectType.EPS);
+    public MzbCheckResponse() {
+        super(StandardCommandType.CHECK, ExtendedObjectType.MZB);
         results = new HashMap<String, String[]>();
     }
 
     protected String chkDataCountExpr() {
-        return EPS_CHKDATA_COUNT_EXPR;
+        return MZB_CHKDATA_COUNT_EXPR;
     }
 
     protected String chkDataIndexExpr() {
-        return EPS_CHKDATA_IND_EXPR;
+        return MZB_CHKDATA_IND_EXPR;
     }
 
     protected String chkDataTextExpr() {
-        return EPS_CHKDATA_IDENT_EXPR;
+        return MZB_CHKDATA_IDENT_EXPR;
     }
 
     protected String getKey(final XMLDocument xmlDoc, final String qry) throws XPathExpressionException {
@@ -79,11 +79,11 @@ public class EpsCheckResponse extends DataResponse {
 
     private String[] getRoidStr(XMLDocument xmlDoc, String qry) throws XPathExpressionException {
         String[] roidStr;
-        final String roidQry = qry + "/eps:roids";
+        final String roidQry = qry + "/mzb:roids";
         final int chkRoids = xmlDoc.getNodeCount("count(" + roidQry + "/*)");
         roidStr = new String[chkRoids];
         for (int j = 0; j < chkRoids; j++) {
-            roidStr[j] = xmlDoc.getNodeValue(replaceIndex(roidQry + "[IDX]/eps:roid", j + 1));
+            roidStr[j] = xmlDoc.getNodeValue(replaceIndex(roidQry + "[IDX]/mzb:roid", j + 1));
         }
         return roidStr;
     }

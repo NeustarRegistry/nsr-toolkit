@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import neustar.registry.jtoolkit2.ErrorPkg;
 import neustar.registry.jtoolkit2.se.ExtendedObjectType;
@@ -6,22 +6,22 @@ import neustar.registry.jtoolkit2.se.ObjectCommand;
 import neustar.registry.jtoolkit2.se.StandardCommandType;
 
 /**
- * Mapping of EPP eps:delete command
+ * Mapping of EPP mzb:delete command
  * specified by the GoDaddy Registry EPP extensions document.
  * Use this class to generate an GoDaddy Registry-compliant XML document, given
  * simple input parameters.  The toXML method in Command serialises this object
  * to XML.
  *
- * @see EpsDeleteResponse
+ * @see MzbDeleteResponse
  */
-public class EpsDeleteCommand extends ObjectCommand {
+public class MzbDeleteCommand extends ObjectCommand {
     private static final long serialVersionUID = -3723213074751854975L;
 
     /**
      * @throws IllegalArgumentException if {@code roid} is {@code null}.
      */
-    public EpsDeleteCommand(String roid) {
-        super(StandardCommandType.DELETE, ExtendedObjectType.EPS);
+    public MzbDeleteCommand(String roid) {
+        super(StandardCommandType.DELETE, ExtendedObjectType.MZB);
 
         if (roid == null) {
             throw new IllegalArgumentException(ErrorPkg.getMessage("se.eps.delete.roid.missing_arg"));

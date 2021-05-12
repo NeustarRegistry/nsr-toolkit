@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import java.util.GregorianCalendar;
 import javax.xml.xpath.XPathExpressionException;
@@ -9,26 +9,26 @@ import neustar.registry.jtoolkit2.se.ExtendedObjectType;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
 
 /**
- * Mapping of EPP eps:create command response
+ * Mapping of EPP mzb:create command response
  * specified by the GoDaddy Registry EPP extensions document.
- * Use this to access eps:create response data. Such a service element
- * is sent by a compliant EPP server in response to a valid eps:create
+ * Use this to access mzb:create response data. Such a service element
+ * is sent by a compliant EPP server in response to a valid mzb:create
  * command, implemented by the EpsCreateCommand class.
  *
- * @see EpsCreateCommand
+ * @see MzbCreateCommand
  */
-public class EpsCreateResponse extends CreateResponse {
+public class MzbCreateResponse extends CreateResponse {
     private static final long serialVersionUID = -5724827272682186647L;
 
     private static final String EPS_CR_DATE_EXPR = exprReplace(CR_DATE_EXPR);
-    private static final String EPS_ROID_EXPR = exprReplace(CRE_DATA_EXPR) + "/eps:roid/text()";
-    private static final String EPS_EX_DATE_EXPR = exprReplace(CRE_DATA_EXPR) + "/eps:exDate/text()";
+    private static final String EPS_ROID_EXPR = exprReplace(CRE_DATA_EXPR) + "/mzb:roid/text()";
+    private static final String EPS_EX_DATE_EXPR = exprReplace(CRE_DATA_EXPR) + "/mzb:exDate/text()";
 
     private String roid;
     private GregorianCalendar exDate;
 
-    public EpsCreateResponse() {
-        super(ExtendedObjectType.EPS);
+    public MzbCreateResponse() {
+        super(ExtendedObjectType.MZB);
     }
 
     protected String crDateExpr() {
@@ -36,7 +36,7 @@ public class EpsCreateResponse extends CreateResponse {
     }
 
     protected static String exprReplace(String expr) {
-        return expr.replaceAll(OBJ, ExtendedObjectType.EPS.getName());
+        return expr.replaceAll(OBJ, ExtendedObjectType.MZB.getName());
     }
 
     public String getRoid() {

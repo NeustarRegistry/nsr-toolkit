@@ -1,6 +1,6 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
-import static neustar.registry.jtoolkit2.se.ExtendedObjectType.EPS;
+import static neustar.registry.jtoolkit2.se.ExtendedObjectType.MZB;
 
 import org.w3c.dom.Element;
 
@@ -13,9 +13,9 @@ import neustar.registry.jtoolkit2.se.StandardCommandType;
  * A EpsExemptCommand is used to locate the IPR Number and all the labels
  * that have valid IPR details for the requested label
  *
- * @see EpsExemptResponse
+ * @see MzbExemptResponse
  */
-public class EpsExemptCommand extends Command {
+public class MzbExemptCommand extends Command {
     private static final long serialVersionUID = 3050267498759687925L;
     private static final String SE_OBJECT_MISSING_ARG = "se.object.missing_arg";
 
@@ -24,14 +24,14 @@ public class EpsExemptCommand extends Command {
      *
      * @param name The name of the label to check the availability of.
      */
-    public EpsExemptCommand(String name) {
+    public MzbExemptCommand(String name) {
         super(StandardCommandType.CHECK);
 
         if (name == null) {
             throw new IllegalArgumentException(ErrorPkg.getMessage(SE_OBJECT_MISSING_ARG));
         }
 
-        xmlWriter.appendChild(addCommandDefinition(), EPS.getIdentType()).setTextContent(name);
+        xmlWriter.appendChild(addCommandDefinition(), MZB.getIdentType()).setTextContent(name);
     }
 
     /**
@@ -39,23 +39,23 @@ public class EpsExemptCommand extends Command {
      *
      * @param names The names of the labels to check the availability of.
      */
-    public EpsExemptCommand(String[] names) {
+    public MzbExemptCommand(String[] names) {
         super(StandardCommandType.CHECK);
 
         if (names == null || names.length == 0) {
             throw new IllegalArgumentException(ErrorPkg.getMessage(SE_OBJECT_MISSING_ARG));
         }
 
-        xmlWriter.appendChildren(addCommandDefinition(), EPS.getIdentType(), names);
+        xmlWriter.appendChildren(addCommandDefinition(), MZB.getIdentType(), names);
     }
 
     public ObjectType getObjectType() {
-        return EPS;
+        return MZB;
     }
 
     private Element addCommandDefinition() {
-        Element objElement = xmlWriter.appendChild(cmdElement, "exempt", EPS.getURI());
-        objElement.setAttribute("xsi:schemaLocation", EPS.getSchemaLocation());
+        Element objElement = xmlWriter.appendChild(cmdElement, "exempt", MZB.getURI());
+        objElement.setAttribute("xsi:schemaLocation", MZB.getSchemaLocation());
 
         return objElement;
     }

@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import neustar.registry.jtoolkit2.se.CheckCommand;
 import neustar.registry.jtoolkit2.se.ExtendedObjectType;
@@ -8,9 +8,9 @@ import neustar.registry.jtoolkit2.se.ExtendedObjectType;
  * in a Registry.  Instances of this class generate RFC5730 and RFC5731
  * compliant domain check EPP command service elements via the toXML method.
  *
- * @see EpsCheckResponse
+ * @see MzbCheckResponse
  */
-public class EpsCheckCommand extends CheckCommand {
+public class MzbCheckCommand extends CheckCommand {
     private static final long serialVersionUID = 3050267498759687925L;
 
     /**
@@ -18,8 +18,8 @@ public class EpsCheckCommand extends CheckCommand {
      *
      * @param name The name of the block to check the availability of.
      */
-    public EpsCheckCommand(String name) {
-        super(ExtendedObjectType.EPS, name);
+    public MzbCheckCommand(String name) {
+        super(ExtendedObjectType.MZB, name);
     }
 
     /**
@@ -27,8 +27,8 @@ public class EpsCheckCommand extends CheckCommand {
      *
      * @param names The names of the blocks to check the availability of.
      */
-    public EpsCheckCommand(String[] names) {
-        super(ExtendedObjectType.EPS, names);
+    public MzbCheckCommand(String[] names) {
+        super(ExtendedObjectType.MZB, names);
     }
 }
 

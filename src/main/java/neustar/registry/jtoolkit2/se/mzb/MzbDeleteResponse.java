@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import neustar.registry.jtoolkit2.se.Response;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
@@ -9,12 +9,12 @@ import neustar.registry.jtoolkit2.xml.XMLDocument;
  * is sent by a compliant EPP server in response to a valid EPS delete
  * command, implemented by the EpsDeleteCommand class.
  *
- * @see EpsDeleteCommand
+ * @see MzbDeleteCommand
  */
-public class EpsDeleteResponse extends Response {
+public class MzbDeleteResponse extends Response {
     private static final long serialVersionUID = -5724827272682186647L;
 
-    public EpsDeleteResponse() {
+    public MzbDeleteResponse() {
         super();
     }
 

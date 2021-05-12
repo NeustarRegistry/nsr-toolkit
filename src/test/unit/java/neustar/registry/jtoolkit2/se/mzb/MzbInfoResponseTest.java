@@ -1,6 +1,6 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
-import static neustar.registry.jtoolkit2.se.eps.EpsInfoResponseTest.EpsInfoResponseBuilder.infoResponseBuilder;
+import static neustar.registry.jtoolkit2.se.mzb.MzbInfoResponseTest.EpsInfoResponseBuilder.infoResponseBuilder;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -12,20 +12,20 @@ import neustar.registry.jtoolkit2.EPPDateFormatter;
 import neustar.registry.jtoolkit2.xml.XMLDocument;
 import neustar.registry.jtoolkit2.xml.XMLParser;
 
-public class EpsInfoResponseTest {
+public class MzbInfoResponseTest {
 
     private static final XMLParser PARSER = new XMLParser();
 
     @Test
     public void testFromXML() throws Exception {
-        EpsInfoResponse response = new EpsInfoResponse();
+        MzbInfoResponse response = new MzbInfoResponse();
         XMLDocument doc = PARSER.parse(infoResponseBuilder("XXX-YYY").build());
         response.fromXML(doc);
     }
 
     @Test
     public void testGetPW() throws Exception {
-        EpsInfoResponse response = new EpsInfoResponse();
+        MzbInfoResponse response = new MzbInfoResponse();
         XMLDocument doc = PARSER.parse(infoResponseBuilder("XXX-YYY").build());
         response.fromXML(doc);
         assertEquals("0192pqow", response.getPW());
@@ -33,7 +33,7 @@ public class EpsInfoResponseTest {
 
     @Test
     public void testGetCreateDate() throws Exception {
-        EpsInfoResponse response = new EpsInfoResponse();
+        MzbInfoResponse response = new MzbInfoResponse();
         XMLDocument doc = PARSER.parse(infoResponseBuilder("XXX-YYY").build());
         response.fromXML(doc);
         GregorianCalendar exp = EPPDateFormatter.fromXSDateTime("2006-02-09T15:44:58.0Z");
@@ -44,7 +44,7 @@ public class EpsInfoResponseTest {
 
     @Test
     public void testGetExpireDate() throws Exception {
-        EpsInfoResponse response = new EpsInfoResponse();
+        MzbInfoResponse response = new MzbInfoResponse();
         XMLDocument doc = PARSER.parse(infoResponseBuilder("XXX-YYY").build());
         response.fromXML(doc);
         GregorianCalendar exp = EPPDateFormatter.fromXSDateTime("2008-02-10T00:00:00.0Z");
@@ -54,7 +54,7 @@ public class EpsInfoResponseTest {
 
     @Test
     public void testGetRegistrantID() throws Exception {
-        EpsInfoResponse response = new EpsInfoResponse();
+        MzbInfoResponse response = new MzbInfoResponse();
         XMLDocument doc = PARSER.parse(infoResponseBuilder("XXX-YYY").build());
         response.fromXML(doc);
         String exp = "EXAMPLE";
@@ -64,7 +64,7 @@ public class EpsInfoResponseTest {
 
     @Test
     public void shouldRetrieveLabels() throws Exception {
-        EpsInfoResponse response = new EpsInfoResponse();
+        MzbInfoResponse response = new MzbInfoResponse();
         XMLDocument doc = PARSER.parse(infoResponseBuilder("XXX-YYY").build());
         response.fromXML(doc);
         String exp = "fred";
@@ -97,8 +97,8 @@ public class EpsInfoResponseTest {
             result.append("<msg>Command completed successfully</msg>");
             result.append("</result>");
             result.append("<resData>");
-            result.append("<infData xmlns=\"http://ns.uniregistry.net/eps-1.0\"");
-            result.append(" xsi:schemaLocation=\"http://ns.uniregistry.net/eps-1.0 eps-1.0.xsd\"");
+            result.append("<infData xmlns=\"urn:gdreg:params:xml:ns:mzb-1.0\"");
+            result.append(" xsi:schemaLocation=\"urn:gdreg:params:xml:ns:mzb-1.0 mzb-1.0.xsd\"");
             result.append(" type=\"standard\">");
 
             result.append("<roid>" + roid + "</roid>");

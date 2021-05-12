@@ -1,4 +1,4 @@
-package neustar.registry.jtoolkit2.se.eps;
+package neustar.registry.jtoolkit2.se.mzb;
 
 import neustar.registry.jtoolkit2.ErrorPkg;
 import neustar.registry.jtoolkit2.se.ExtendedObjectType;
@@ -6,35 +6,35 @@ import neustar.registry.jtoolkit2.se.ObjectCommand;
 import neustar.registry.jtoolkit2.se.StandardCommandType;
 
 /**
- * Mapping of EPP eps:info command
+ * Mapping of EPP mzb:info command
  * specified by the GoDaddy Registry EPP extensions document.
  * Use this class to generate an GoDaddy Registry-compliant XML document, given
  * simple input parameters.  The toXML method in Command serialises this object
  * to XML.
  *
- * @see EpsInfoResponse
+ * @see MzbInfoResponse
  */
-public class EpsInfoCommand extends ObjectCommand {
+public class MzbInfoCommand extends ObjectCommand {
     private static final long serialVersionUID = -9129030981710943397L;
 
     /**
-     * Create an eps:info command with the specified identifier.
+     * Create an mzb:info command with the specified identifier.
      *
      * @param roid The roid of the eps object to retrieve information about.
      */
-    public EpsInfoCommand(String roid) {
-        super(StandardCommandType.INFO, ExtendedObjectType.EPS);
+    public MzbInfoCommand(String roid) {
+        super(StandardCommandType.INFO, ExtendedObjectType.MZB);
         appendRoid(roid);
     }
 
     /**
-     * Create an eps:info command with the specified identifier and authorisation
+     * Create an mzb:info command with the specified identifier and authorisation
      * information.
      *  @param roid The roid of the eps object to retrieve information about.
      *
-     * @param pw The password of the identified eps:object (also known as authInfo)
+     * @param pw The password of the identified mzb:object (also known as authInfo)
      */
-    public EpsInfoCommand(String roid, String pw) {
+    public MzbInfoCommand(String roid, String pw) {
         this(roid);
         appendAuthInfo(pw);
     }
